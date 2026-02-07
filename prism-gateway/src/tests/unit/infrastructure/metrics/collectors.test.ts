@@ -274,7 +274,7 @@ describe('DataMetricsCollector', () => {
     const metrics = await collector.collect();
 
     // Metrics should include size information
-    const hasSize Metric = metrics.some(m => m.labels?.unit === 'bytes');
+    const hasSizeMetric = metrics.some(m => m.labels?.unit === 'bytes');
     // This is optional as data directories may not exist
   });
 });
