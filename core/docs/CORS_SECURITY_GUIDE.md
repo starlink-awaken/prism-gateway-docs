@@ -497,7 +497,7 @@ CORS_ALLOWED_ORIGINS=https://example.com,https://app.example.com
 
 ---
 
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team
 **文档版本：** 1.0.0
 **最后更新：** 2026-02-06
 **状态：** ✅ P0 安全修复完成

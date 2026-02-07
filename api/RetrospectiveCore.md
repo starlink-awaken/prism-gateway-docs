@@ -23,7 +23,7 @@ Creates a new RetrospectiveCore instance.
 
 **Example:**
 ```typescript
-import { RetrospectiveCore, RetroMode } from 'prism-gateway';
+import { RetrospectiveCore, RetroMode } from 'reflectguard';
 
 // Quick mode (default)
 const retro = new RetrospectiveCore();
@@ -374,7 +374,7 @@ interface ExtractionResult {
 ## Example: Complete Workflow
 
 ```typescript
-import { RetrospectiveCore, RetroMode, RetroTriggerType } from 'prism-gateway';
+import { RetrospectiveCore, RetroMode, RetroTriggerType } from 'reflectguard';
 
 // Initialize with standard mode
 const retro = new RetrospectiveCore({ type: RetroMode.STANDARD });
@@ -432,7 +432,7 @@ for (const [phase, time] of Object.entries(execution.metrics.phaseTimes)) {
 A singleton instance is exported for convenience:
 
 ```typescript
-import { retrospectiveCore } from 'prism-gateway';
+import { retrospectiveCore } from 'reflectguard';
 
 const execution = await retrospectiveCore.executeRetro(taskInput);
 ```

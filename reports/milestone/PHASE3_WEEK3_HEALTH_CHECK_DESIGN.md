@@ -11,7 +11,7 @@
 
 ### 1.1 核心目标
 
-为 PRISM-Gateway 系统设计和实现一个全面的健康检查系统，实时监控系统各组件的运行状态，及时发现和报告异常。
+为 ReflectGuard 系统设计和实现一个全面的健康检查系统，实时监控系统各组件的运行状态，及时发现和报告异常。
 
 **关键要求**:
 - **多维度检查**: 覆盖系统、应用、数据、网络等多个层面
@@ -382,7 +382,7 @@ export class DiskHealthChecker extends HealthChecker {
   interval = 60000; // 60 seconds
 
   protected async performCheck(): Promise<CheckResult> {
-    const dataRoot = '~/.prism-gateway';
+    const dataRoot = '~/.reflectguard';
     const usage = await this.getDiskUsage(dataRoot);
 
     // 磁盘空间阈值: >90% Error, >80% Degraded
@@ -612,7 +612,7 @@ export class DataHealthChecker extends HealthChecker {
 
     const results = await Promise.all(
       checks.map(async (check) => {
-        const fullPath = path.join('~/.prism-gateway', check.path);
+        const fullPath = path.join('~/.reflectguard', check.path);
         try {
           await fs.access(fullPath, fs.constants.R_OK);
           const stats = await fs.stat(fullPath);
@@ -967,7 +967,7 @@ async function handleUnhealthy(report: HealthReport): Promise<void> {
 /**
  * 健康状态存储格式:
  *
- * ~/.prism-gateway/health/
+ * ~/.reflectguard/health/
  * ├── current-health.json       # 当前健康状态（覆盖写入）
  * ├── health-history.jsonl      # 历史记录（追加写入，JSONL 格式）
  * └── health-alerts.jsonl       # 告警历史（追加写入）
@@ -1326,5 +1326,5 @@ export function HealthCheckList() {
 **文档版本**: 1.0.0
 **最后更新**: 2026-02-07
 **作者**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **下一步**: Task 3.3 监控指标收集设计

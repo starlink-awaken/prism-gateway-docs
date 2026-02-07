@@ -6,7 +6,7 @@
 
 ## 概述
 
-速率限制中间件是 PRISM-Gateway API 的核心安全组件，用于防止 API 滥用、暴力破解攻击和 DoS 攻击。
+速率限制中间件是 ReflectGuard API 的核心安全组件，用于防止 API 滥用、暴力破解攻击和 DoS 攻击。
 
 ### 核心特性
 

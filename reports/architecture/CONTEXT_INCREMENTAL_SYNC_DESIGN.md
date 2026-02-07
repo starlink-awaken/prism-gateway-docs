@@ -429,7 +429,7 @@ class IncrementalSyncService {
 ### 4.1 文件组织
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── level-1-hot/
 │   ├── context/
 │   │   ├── CLAUDE.md              # 主上下文文件（21KB）

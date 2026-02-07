@@ -1,4 +1,4 @@
-# PRISM-Gateway 快速开始指南
+# ReflectGuard 快速开始指南
 
 > 5分钟上手，10分钟第一次复盘，30分钟掌握核心功能
 
@@ -6,7 +6,7 @@
 
 ## 第一步: 了解核心概念（2分钟）
 
-### 什么是PRISM-Gateway？
+### 什么是ReflectGuard？
 一个融合了**Gateway行为准则检查**和**Retrospective复盘系统**的统一工具，帮助你：
 - ✅ **预防错误**: 事前检查，避免重复失败
 - ✅ **持续提升**: 事后复盘，提炼最佳实践
@@ -38,7 +38,7 @@
 ### 2.1 安装依赖
 ```bash
 # 克隆项目（假设已存在）
-cd prism-gateway
+cd reflectguard
 
 # 安装Python依赖
 pip install -r requirements.txt
@@ -406,13 +406,13 @@ prism memory archive --before=2024-01-01
 ## 学习资源
 
 ### 官方文档
-- 系统设计: `PRISM-Gateway统一系统设计.md`
-- 架构图: `PRISM-Gateway架构图与流程图.md`
-- 检查清单: `PRISM-Gateway快速检查清单.md`
+- 系统设计: `ReflectGuard统一系统设计.md`
+- 架构图: `ReflectGuard架构图与流程图.md`
+- 检查清单: `ReflectGuard快速检查清单.md`
 
 ### 示例代码
-- 技术实现: `PRISM-Gateway技术实现示例.py`
-- 运行示例: `python PRISM-Gateway技术实现示例.py`
+- 技术实现: `ReflectGuard技术实现示例.py`
+- 运行示例: `python ReflectGuard技术实现示例.py`
 
 ### 视频教程（待制作）
 - [ ] 5分钟快速入门
@@ -439,7 +439,7 @@ prism examples
 
 ### 反馈问题
 - GitHub Issues: [项目地址]/issues
-- 邮件支持: support@prism-gateway.com
+- 邮件支持: support@reflectguard.com
 - 讨论社区: [Discord/Slack链接]
 
 ---
@@ -499,7 +499,7 @@ prism examples
 
 ## 总结
 
-**PRISM-Gateway的核心价值**:
+**ReflectGuard的核心价值**:
 1. **预防错误**: Gateway事前检查，避免重复失败
 2. **持续提升**: Retrospective事后复盘，提炼最佳实践
 3. **知识积累**: 自动沉淀，形成组织智慧
@@ -508,7 +508,7 @@ prism examples
 **立即开始**:
 ```bash
 # 3步启动
-pip install prism-gateway
+pip install reflectguard
 prism init
 prism check "你的第一个任务"
 ```
@@ -520,5 +520,5 @@ Gateway会从每次复盘中学习，变得越来越智能！
 
 **版本**: v1.0
 **更新时间**: 2025-02-03
-**作者**: PRISM-Gateway Team
+**作者**: ReflectGuard Team
 **许可证**: MIT

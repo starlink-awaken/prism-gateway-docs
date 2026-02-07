@@ -1,6 +1,6 @@
 # 故障排查指南
 
-本指南帮助您诊断和解决 PRISM-Gateway 的常见问题。
+本指南帮助您诊断和解决 ReflectGuard 的常见问题。
 
 ## 诊断步骤
 
@@ -330,7 +330,7 @@ ls -la ~/.prism-gateway/.backups/
 
 ### 创建 Bug Report 时请包含：
 
-- PRISM-Gateway 版本：`prism --version`
+- ReflectGuard 版本：`prism --version`
 - 操作系统版本
 - 错误信息完整输出
 - 复现步骤

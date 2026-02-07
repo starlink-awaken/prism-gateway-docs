@@ -1,4 +1,4 @@
-# PRISM-Gateway Task 63-65 质量验证报告
+# ReflectGuard Task 63-65 质量验证报告
 
 **验证日期：** 2026-02-03
 **验证人员：** 质量分析师 (Vera Sterling - Algorithm Agent)

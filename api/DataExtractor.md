@@ -29,7 +29,7 @@ Creates a new DataExtractor instance.
 
 **Example:**
 ```typescript
-import { DataExtractor } from 'prism-gateway';
+import { DataExtractor } from 'reflectguard';
 
 const extractor = new DataExtractor({
   min_confidence_threshold: 0.7,
@@ -397,7 +397,7 @@ Input Messages
 ## Example: Full Workflow
 
 ```typescript
-import { DataExtractor } from 'prism-gateway';
+import { DataExtractor } from 'reflectguard';
 
 // Create extractor
 const extractor = new DataExtractor({
@@ -441,7 +441,7 @@ for (const [name, dimension] of Object.entries(result.dimensions)) {
 A singleton instance is exported for convenience:
 
 ```typescript
-import { dataExtractor } from 'prism-gateway';
+import { dataExtractor } from 'reflectguard';
 
 const result = await dataExtractor.extractDimensions('session_123', messages);
 ```

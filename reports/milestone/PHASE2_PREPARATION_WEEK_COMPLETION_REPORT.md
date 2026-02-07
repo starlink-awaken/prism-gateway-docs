@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 2.0 准备周完成报告
+# ReflectGuard Phase 2.0 准备周完成报告
 
 **完成时间：** 2026-02-03
 **状态：** ✅ 100% 完成

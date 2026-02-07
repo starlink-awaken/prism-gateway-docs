@@ -32,7 +32,7 @@ Creates a new TrapDetector instance.
 
 **Example:**
 ```typescript
-import { TrapDetector, MemoryStore } from 'prism-gateway';
+import { TrapDetector, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const detector = new TrapDetector(store);
@@ -214,7 +214,7 @@ Input Intent
 ## Example: Complete Workflow
 
 ```typescript
-import { TrapDetector, MemoryStore } from 'prism-gateway';
+import { TrapDetector, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const detector = new TrapDetector(store);
@@ -281,7 +281,7 @@ await analyzeTask('I will try the same approach again');
 ## Integration Example
 
 ```typescript
-import { TrapDetector, MemoryStore, GatewayGuard } from 'prism-gateway';
+import { TrapDetector, MemoryStore, GatewayGuard } from 'reflectguard';
 
 const store = new MemoryStore();
 const detector = new TrapDetector(store);

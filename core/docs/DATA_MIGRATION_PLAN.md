@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 1 to Phase 2 Data Migration Plan
+# ReflectGuard Phase 1 to Phase 2 Data Migration Plan
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04
@@ -26,7 +26,7 @@
 
 ### 1.1 Purpose
 
-Design a safe, reliable, and minimal-downtime migration plan for PRISM-Gateway data from Phase 1 to Phase 2 structure.
+Design a safe, reliable, and minimal-downtime migration plan for ReflectGuard data from Phase 1 to Phase 2 structure.
 
 ### 1.2 Key Principles
 
@@ -43,7 +43,7 @@ Design a safe, reliable, and minimal-downtime migration plan for PRISM-Gateway d
 ```
 Phase 1 Data                                    Phase 2 Data
 ============================                    ============================
-~/.prism-gateway/                              ~/.prism-gateway/
+~/.reflectguard/                              ~/.reflectguard/
 ├── level-1-hot/                               ├── level-1-hot/
 │   ├── principles.json          [KEEP]        │   ├── principles.json          [COMPATIBLE]
 │   └── patterns/                               │   └── patterns/
@@ -394,8 +394,8 @@ interface VersionedData<T> {
 │                                                                 │
 │  Step 1: Backup (Atomic)                                        │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │ tar -czf ~/.prism-gateway-backup-YYYYMMDD.tar.gz \       │   │
-│  │     ~/.prism-gateway                                     │   │
+│  │ tar -czf ~/.reflectguard-backup-YYYYMMDD.tar.gz \       │   │
+│  │     ~/.reflectguard                                     │   │
 │  └─────────────────────────────────────────────────────────┘   │
 │                                                                 │
 │  Step 2: Install Phase 2 (alongside Phase 1)                   │
@@ -407,11 +407,11 @@ interface VersionedData<T> {
 │                                                                 │
 │  Step 3: Initialize New Structures                             │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │ mkdir -p ~/.prism-gateway/analytics                     │   │
-│  │ mkdir -p ~/.prism-gateway/cache                         │   │
-│  │ mkdir -p ~/.prism-gateway/config                        │   │
-│  │ mkdir -p ~/.prism-gateway/logs                          │   │
-│  │ mkdir -p ~/.prism-gateway/.migration                    │   │
+│  │ mkdir -p ~/.reflectguard/analytics                     │   │
+│  │ mkdir -p ~/.reflectguard/cache                         │   │
+│  │ mkdir -p ~/.reflectguard/config                        │   │
+│  │ mkdir -p ~/.reflectguard/logs                          │   │
+│  │ mkdir -p ~/.reflectguard/.migration                    │   │
 │  └─────────────────────────────────────────────────────────┘   │
 │                                                                 │
 │  Step 4: Run Validation (Phase 1 → Phase 2)                    │
@@ -514,8 +514,8 @@ export class MigrationRunner {
   private steps: MigrationStep[] = [];
 
   constructor() {
-    this.basePath = join(homedir(), '.prism-gateway');
-    this.backupPath = join(homedir(), `.prism-gateway-backup-${Date.now()}`);
+    this.basePath = join(homedir(), '.reflectguard');
+    this.backupPath = join(homedir(), `.reflectguard-backup-${Date.now()}`);
     this.statePath = join(this.basePath, '.migration', 'state.json');
 
     this.registerSteps();
@@ -1045,7 +1045,7 @@ export class PreMigrationValidator {
   }
 
   private async checkPhase1Data(): Promise<ValidationCheck> {
-    const basePath = join(homedir(), '.prism-gateway');
+    const basePath = join(homedir(), '.reflectguard');
 
     const requiredFiles = [
       'level-1-hot/principles.json',
@@ -1067,7 +1067,7 @@ export class PreMigrationValidator {
   }
 
   private async checkFilePermissions(): Promise<ValidationCheck> {
-    const basePath = join(homedir(), '.prism-gateway');
+    const basePath = join(homedir(), '.reflectguard');
     // Check write permissions
     return { name: 'File Permissions', passed: true };
   }
@@ -1147,7 +1147,7 @@ export class DataIntegrityChecker {
   }
 
   async checkPrinciples(): Promise<DataCheckResult> {
-    const basePath = join(homedir(), '.prism-gateway');
+    const basePath = join(homedir(), '.reflectguard');
     const filePath = join(basePath, 'level-1-hot', 'principles.json');
 
     try {
@@ -1284,21 +1284,21 @@ prism migrate --rollback
 ### 9.1 User Migration Guide
 
 ```markdown
-# PRISM-Gateway Migration Guide: Phase 1 to Phase 2
+# ReflectGuard Migration Guide: Phase 1 to Phase 2
 
 ## Overview
-This guide will help you migrate from PRISM-Gateway Phase 1 to Phase 2.
+This guide will help you migrate from ReflectGuard Phase 1 to Phase 2.
 
 ## Prerequisites
 - Node.js 18+ or Bun 1.0+
-- Existing Phase 1 installation at ~/.prism-gateway
+- Existing Phase 1 installation at ~/.reflectguard
 - At least 100MB free disk space
 
 ## Migration Steps
 
 ### 1. Backup (Automatic)
 The migration process automatically creates a backup at:
-`~/.prism-gateway-backup-YYYYMMDD/`
+`~/.reflectguard-backup-YYYYMMDD/`
 
 ### 2. Run Migration
 \`\`\`bash
@@ -1330,11 +1330,11 @@ prism migrate --rollback
 ## What Changes?
 
 ### New Directories
-- `~/.prism-gateway/analytics/` - Metrics and analytics data
-- `~/.prism-gateway/cache/` - Cached data
-- `~/.prism-gateway/config/` - Configuration files
-- `~/.prism-gateway/logs/` - Activity logs
-- `~/.prism-gateway/.migration/` - Migration state
+- `~/.reflectguard/analytics/` - Metrics and analytics data
+- `~/.reflectguard/cache/` - Cached data
+- `~/.reflectguard/config/` - Configuration files
+- `~/.reflectguard/logs/` - Activity logs
+- `~/.reflectguard/.migration/` - Migration state
 
 ### Unchanged
 - All Phase 1 data remains compatible
@@ -1344,7 +1344,7 @@ prism migrate --rollback
 ## Support
 If you encounter issues:
 1. Check migration status: `prism migrate --status`
-2. Review logs: `~/.prism-gateway/logs/activity.jsonl`
+2. Review logs: `~/.reflectguard/logs/activity.jsonl`
 3. Rollback if needed: `prism migrate --rollback`
 4. Report issue with migration state file
 ```
@@ -1428,7 +1428,7 @@ Migration is successful if:
 ```
 Phase 1                              Phase 2
 =================================    ==================================
-~/.prism-gateway/                    ~/.prism-gateway/
+~/.reflectguard/                    ~/.reflectguard/
 ├── level-1-hot/                     ├── level-1-hot/ [UNCHANGED]
 │   ├── principles.json              │   └── (same files)
 │   └── patterns/                    ├── level-2-warm/ [UNCHANGED]

@@ -1,4 +1,4 @@
-# PRISM-Gateway 运维手册
+# ReflectGuard 运维手册
 
 > 日常运维、监控、备份和故障恢复的完整指南
 
@@ -309,7 +309,7 @@ fi
 # send-alert-email.sh
 
 recipient="ops@example.com"
-subject="[$1] PRISM-Gateway 告警"
+subject="[$1] ReflectGuard 告警"
 body="$2"
 
 echo "$body" | mail -s "$subject" "$recipient"
@@ -382,7 +382,7 @@ app.get('/metrics', async (c) => {
 ```json
 {
   "dashboard": {
-    "title": "PRISM-Gateway 监控",
+    "title": "ReflectGuard 监控",
     "panels": [
       {
         "title": "Gateway 检查速率",
@@ -1081,7 +1081,7 @@ curl -X POST http://localhost:3000/api/maintenance/on
 ./verify-deployment.sh
 
 # 6. 通知用户
-echo "服务已恢复" | mail -s "PRISM-Gateway 服务恢复" users@example.com
+echo "服务已恢复" | mail -s "ReflectGuard 服务恢复" users@example.com
 ```
 
 ### 事故报告模板
@@ -1135,6 +1135,6 @@ echo "服务已恢复" | mail -s "PRISM-Gateway 服务恢复" users@example.com
 
 ---
 
-**文档维护者：** PRISM-Gateway Team
+**文档维护者：** ReflectGuard Team
 **许可证：** MIT License
 **PAI 版本：** 2.5

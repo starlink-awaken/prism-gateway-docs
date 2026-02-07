@@ -133,7 +133,7 @@ Phase 3: Production Readiness (5 weeks, 160 hours)
 ### Test Files Created
 
 ```
-prism-gateway/src/tests/
+reflectguard/src/tests/
 ├── unit/
 │   ├── security/
 │   │   ├── JWTService.test.ts (107 tests) ✅
@@ -365,7 +365,7 @@ prism-gateway/src/tests/
 
 1. **Execute Test Suite**
    ```bash
-   cd prism-gateway
+   cd reflectguard
    bun test
    bun test --coverage
    ```

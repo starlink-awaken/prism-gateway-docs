@@ -1,4 +1,4 @@
-# PRISM-Gateway 部署指南
+# ReflectGuard 部署指南
 
 > 完整的系统安装、配置和验证文档
 
@@ -440,7 +440,7 @@ chmod 755 ~/.prism-gateway/logs
 #!/bin/bash
 # verify-deployment.sh
 
-echo "=== PRISM-Gateway 部署验证 ==="
+echo "=== ReflectGuard 部署验证 ==="
 echo ""
 
 # 1. 检查 Bun 版本
@@ -901,6 +901,6 @@ node src/api/server.ts
 
 ---
 
-**文档维护者：** PRISM-Gateway Team
+**文档维护者：** ReflectGuard Team
 **许可证：** MIT License
 **PAI 版本：** 2.5

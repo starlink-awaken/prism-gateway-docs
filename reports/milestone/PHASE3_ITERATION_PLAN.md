@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 3 迭代计划
+# ReflectGuard Phase 3 迭代计划
 
 > 从 v2.4.0 到 v3.0.0：聚焦核心功能完善和生产就绪
 
@@ -639,7 +639,7 @@ backup_strategy:
     enabled: true
     provider: s3|azure|gcs
     region: us-west-2
-    bucket: prism-gateway-backups
+    bucket: reflectguard-backups
 ```
 
 **验收标准：**
@@ -756,7 +756,7 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'prism-gateway'
+  - job_name: 'reflectguard'
     static_configs:
       - targets: ['localhost:3000']
     metrics_path: '/metrics'
@@ -1064,7 +1064,7 @@ performance_benchmarks:
 所有API请求需要JWT Token：
 ```bash
 curl -H "Authorization: Bearer <token>" \
-  https://api.prism-gateway.io/...
+  https://api.reflectguard.io/...
 ```
 
 ## 端点列表
@@ -1079,7 +1079,7 @@ curl -H "Authorization: Bearer <token>" \
   "intent": "实现用户登录功能",
   "context": {
     "user": "developer",
-    "project": "prism-gateway"
+    "project": "reflectguard"
   }
 }
 ```
@@ -1110,7 +1110,7 @@ curl -H "Authorization: Bearer <token>" \
 
 **示例：**
 ```bash
-curl "https://api.prism-gateway.io/api/analytics/dashboard?period=week"
+curl "https://api.reflectguard.io/api/analytics/dashboard?period=week"
 ```
 
 **响应：**
@@ -1356,9 +1356,9 @@ sleep 300 && ./scripts/verify-production.sh
 
 **发布渠道：**
 ```markdown
-# PRISM-Gateway v3.0.0 正式发布！
+# ReflectGuard v3.0.0 正式发布！
 
-我们很高兴地宣布 PRISM-Gateway v3.0.0 正式发布！
+我们很高兴地宣布 ReflectGuard v3.0.0 正式发布！
 
 ## 🎉 重大更新
 
@@ -1417,7 +1417,7 @@ open http://localhost:3000
 
 - GitHub Issues
 - Discord Community
-- Email: support@prism-gateway.io
+- Email: support@reflectguard.io
 ```
 
 **发布渠道：**
@@ -1527,7 +1527,7 @@ Phase 3 交付:
 
 ## 总结
 
-Phase 3 是 PRISM-Gateway 从"功能完整"到"生产就绪"的关键阶段。通过6周的系统化开发，我们将交付：
+Phase 3 是 ReflectGuard 从"功能完整"到"生产就绪"的关键阶段。通过6周的系统化开发，我们将交付：
 
 ✅ **安全可靠** - 通过OWASP审计，完整的认证授权
 ✅ **性能优异** - 响应时间<200ms，支持200并发
@@ -1535,7 +1535,7 @@ Phase 3 是 PRISM-Gateway 从"功能完整"到"生产就绪"的关键阶段。�
 ✅ **运维友好** - 自动备份，监控告警完善
 ✅ **生产就绪** - CI/CD流程，高可用部署
 
-让我们一起努力，将 PRISM-Gateway 打造成一个真正优秀的开源项目！
+让我们一起努力，将 ReflectGuard 打造成一个真正优秀的开源项目！
 
 ---
 

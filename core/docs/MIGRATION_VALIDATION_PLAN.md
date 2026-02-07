@@ -1,4 +1,4 @@
-# PRISM-Gateway Migration Validation Plan
+# ReflectGuard Migration Validation Plan
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04
@@ -110,8 +110,8 @@ const PRE_MIGRATION_CHECKS: SystemRequirement[] = [
   {
     name: 'Write Permissions',
     check: async () => {
-      // Can write to ~/.prism-gateway
-      const testPath = join(homedir(), '.prism-gateway', '.migration-test');
+      // Can write to ~/.reflectguard
+      const testPath = join(homedir(), '.reflectguard', '.migration-test');
       try {
         await writeFile(testPath, 'test');
         await unlink(testPath);
@@ -120,13 +120,13 @@ const PRE_MIGRATION_CHECKS: SystemRequirement[] = [
         return false;
       }
     },
-    errorMessage: 'Cannot write to ~/.prism-gateway directory',
+    errorMessage: 'Cannot write to ~/.reflectguard directory',
     critical: true,
   },
   {
     name: 'Phase 1 Installation',
     check: async () => {
-      const basePath = join(homedir(), '.prism-gateway');
+      const basePath = join(homedir(), '.reflectguard');
       return existsSync(join(basePath, 'level-1-hot'));
     },
     errorMessage: 'Phase 1 installation not found',
@@ -244,7 +244,7 @@ async function runPreMigrationValidation(): Promise<PreMigrationReport> {
 
   // Run data integrity checks
   for (const dataCheck of PHASE1_DATA_CHECKS) {
-    const filePath = join(homedir(), '.prism-gateway', dataCheck.path);
+    const filePath = join(homedir(), '.reflectguard', dataCheck.path);
 
     if (!existsSync(filePath)) {
       report.data_integrity.push({
@@ -302,7 +302,7 @@ const POST_MIGRATION_CHECKS: PostMigrationCheck[] = [
   {
     name: 'Phase 2 directories exist',
     check: async () => {
-      const basePath = join(homedir(), '.prism-gateway');
+      const basePath = join(homedir(), '.reflectguard');
       const dirs = ['analytics', 'cache', 'config', 'logs'];
       for (const dir of dirs) {
         if (!existsSync(join(basePath, dir))) {
@@ -315,7 +315,7 @@ const POST_MIGRATION_CHECKS: PostMigrationCheck[] = [
   {
     name: 'Configuration files created',
     check: async () => {
-      const configPath = join(homedir(), '.prism-gateway', 'config', 'default.json');
+      const configPath = join(homedir(), '.reflectguard', 'config', 'default.json');
       if (!existsSync(configPath)) return false;
 
       const content = await readFile(configPath, 'utf-8');
@@ -327,14 +327,14 @@ const POST_MIGRATION_CHECKS: PostMigrationCheck[] = [
     name: 'Phase 1 data still readable',
     check: async () => {
       // Verify Phase 1 data is unchanged
-      const principlesPath = join(homedir(), '.prism-gateway', 'level-1-hot', 'principles.json');
+      const principlesPath = join(homedir(), '.reflectguard', 'level-1-hot', 'principles.json');
       return existsSync(principlesPath);
     },
   },
   {
     name: 'Migration state recorded',
     check: async () => {
-      const statePath = join(homedir(), '.prism-gateway', '.migration', 'state.json');
+      const statePath = join(homedir(), '.reflectguard', '.migration', 'state.json');
       return existsSync(statePath);
     },
   },
@@ -342,7 +342,7 @@ const POST_MIGRATION_CHECKS: PostMigrationCheck[] = [
     name: 'Backup exists',
     check: async () => {
       // Verify backup was created
-      const basePath = join(homedir(), '.prism-gateway');
+      const basePath = join(homedir(), '.reflectguard');
       const state = JSON.parse(await readFile(join(basePath, '.migration', 'state.json'), 'utf-8'));
       return existsSync(state.backup_location);
     },
@@ -456,7 +456,7 @@ async function validateRecordCounts(): Promise<{
   passed: boolean;
   details: Array<{ dataType: string; count: number }>;
 }> {
-  const basePath = join(homedir(), '.prism-gateway');
+  const basePath = join(homedir(), '.reflectguard');
 
   const checks: RecordCountCheck[] = [
     {
@@ -540,7 +540,7 @@ async function calculateFileHash(filePath: string): Promise<string> {
 }
 
 async function verifyDataUnchanged(): Promise<HashVerification[]> {
-  const basePath = join(homedir(), '.prism-gateway');
+  const basePath = join(homedir(), '.reflectguard');
 
   const filesToVerify = [
     'level-1-hot/principles.json',
@@ -848,7 +848,7 @@ interface HealthCheckResult {
 }
 
 async function healthCheck(): Promise<HealthCheckResult> {
-  const basePath = join(homedir(), '.prism-gateway');
+  const basePath = join(homedir(), '.reflectguard');
 
   const checks = {
     data: existsSync(join(basePath, 'level-1-hot', 'principles.json')),
@@ -887,7 +887,7 @@ class MigrationErrorTracker {
   private logPath: string;
 
   constructor() {
-    this.logPath = join(homedir(), '.prism-gateway', 'logs', 'migration-errors.jsonl');
+    this.logPath = join(homedir(), '.reflectguard', 'logs', 'migration-errors.jsonl');
   }
 
   async logError(error: MigrationError): Promise<void> {

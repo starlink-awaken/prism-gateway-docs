@@ -179,7 +179,7 @@ Successfully completed **Phase 3 Week 4 testing and integration phase**, deliver
 ### Local Testing
 ```bash
 # Run all unit tests
-cd prism-gateway
+cd reflectguard
 bun test src/tests/unit/infrastructure/metrics/
 
 # Run integration tests

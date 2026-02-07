@@ -1,9 +1,9 @@
-# PRISM-Gateway 统一系统设计方案 - 总结报告
+# ReflectGuard 统一系统设计方案 - 总结报告
 
 ## 项目概述
 
 ### 核心目标
-融合现有的**Gateway Skill（门禁系统）**和**Retrospective Skill（复盘系统）**，形成一套**统一的轻量级7维度复盘体系**，命名为**PRISM-Gateway**。
+融合现有的**Gateway Skill（门禁系统）**和**Retrospective Skill（复盘系统）**，形成一套**统一的轻量级7维度复盘体系**，命名为**ReflectGuard**。
 
 ### 设计成果
 已生成完整的系统设计方案，包括：
@@ -81,7 +81,7 @@ Gateway检查（三层漏斗）:
 
 ### 组件构成
 ```
-PRISM-Gateway 统一系统
+ReflectGuard 统一系统
 ├── Gateway Guard（实时检查引擎）
 │   ├── 三层检查机制（原则+模式+陷阱）
 │   ├── 响应时间: <1秒
@@ -433,14 +433,14 @@ async def parallel_check(task_intent):
 
 已生成的完整文档：
 
-1. **PRISM-Gateway统一系统设计.md** (主文档)
+1. **ReflectGuard统一系统设计.md** (主文档)
    - 系统架构设计（Agent 1视角）
    - 7维度复盘流程（Agent 2视角）
    - Gateway功能设计（Agent 3视角）
    - 实施计划（Agent 4视角）
    - 最佳融合方案
 
-2. **PRISM-Gateway架构图与流程图.md**
+2. **ReflectGuard架构图与流程图.md**
    - 系统全景架构图
    - 双循环进化机制
    - Gateway三层检查流程
@@ -448,13 +448,13 @@ async def parallel_check(task_intent):
    - 数据流与MEMORY结构
    - 技术架构组件
 
-3. **PRISM-Gateway快速检查清单.md**
+3. **ReflectGuard快速检查清单.md**
    - Gateway实时检查清单（<2分钟）
    - Retrospective深度复盘清单（10-30分钟）
    - 7维度检查模板
    - 使用技巧
 
-4. **PRISM-Gateway技术实现示例.py**
+4. **ReflectGuard技术实现示例.py**
    - GatewayGuard类实现
    - RetrospectiveCore类实现
    - 完整的使用示例
@@ -465,7 +465,7 @@ async def parallel_check(task_intent):
 ## 核心价值总结
 
 ### 统一性
-- **一个系统**: PRISM-Gateway统一管理
+- **一个系统**: ReflectGuard统一管理
 - **一套MEMORY**: 三层分级，共享访问
 - **双循环机制**: Gateway预防 + 复盘提升
 
@@ -510,7 +510,7 @@ async def parallel_check(task_intent):
 
 ## 结论
 
-PRISM-Gateway是一个**统一、轻量、实用、可扩展**的7维度复盘体系，通过**双循环自进化架构**实现了Gateway行为准则和Retrospective复盘系统的完美融合。
+ReflectGuard是一个**统一、轻量、实用、可扩展**的7维度复盘体系，通过**双循环自进化架构**实现了Gateway行为准则和Retrospective复盘系统的完美融合。
 
 **核心创新**:
 - Gateway的违规触发复盘，复盘的输出更新Gateway规则

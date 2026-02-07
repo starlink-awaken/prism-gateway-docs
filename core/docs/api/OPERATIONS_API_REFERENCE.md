@@ -1,4 +1,4 @@
-# PRISM-Gateway Operations API Reference
+# ReflectGuard Operations API Reference
 
 > REST API documentation for Backup, Health Check, Metrics, and Alerting services
 
@@ -150,7 +150,7 @@ Create a new backup (full or incremental).
       "compressionRatio": 72.3,
       "duration": 12400
     },
-    "location": "~/.prism-gateway/backups/backup_20260207_140512.tar.gz",
+    "location": "~/.reflectguard/backups/backup_20260207_140512.tar.gz",
     "checksum": "sha256:abc123..."
   }
 }
@@ -247,7 +247,7 @@ Get detailed information about a specific backup.
       "compressionRatio": 72.3,
       "duration": 12400
     },
-    "location": "~/.prism-gateway/backups/backup_20260207_140512.tar.gz",
+    "location": "~/.reflectguard/backups/backup_20260207_140512.tar.gz",
     "checksum": "sha256:abc123...",
     "metadata": {
       "description": "Daily backup",
@@ -1135,7 +1135,7 @@ Get current alerting system configuration.
       },
       "file": {
         "enabled": true,
-        "path": "~/.prism-gateway/logs/alerts.log"
+        "path": "~/.reflectguard/logs/alerts.log"
       },
       "webhook": {
         "enabled": false

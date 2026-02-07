@@ -22,7 +22,7 @@ Creates a new QuickReview instance.
 
 **Example:**
 ```typescript
-import { QuickReview } from 'prism-gateway';
+import { QuickReview } from 'reflectguard';
 
 const qr = new QuickReview();
 ```
@@ -277,7 +277,7 @@ Input (projectId, context)
 ## Example: Complete Workflow
 
 ```typescript
-import { QuickReview } from 'prism-gateway';
+import { QuickReview } from 'reflectguard';
 
 const qr = new QuickReview();
 
@@ -324,7 +324,7 @@ qr.cleanup();
 ## CLI Usage Example
 
 ```typescript
-import { QuickReview } from 'prism-gateway';
+import { QuickReview } from 'reflectguard';
 import process from 'process';
 
 const qr = new QuickReview();
@@ -355,7 +355,7 @@ main();
 A singleton instance is exported for convenience:
 
 ```typescript
-import { quickReview } from 'prism-gateway';
+import { quickReview } from 'reflectguard';
 
 const result = await quickReview.review({
   projectId: 'my-project',

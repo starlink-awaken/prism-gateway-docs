@@ -1,4 +1,4 @@
-# PRISM-Gateway 统一7维度复盘体系设计方案
+# ReflectGuard 统一7维度复盘体系设计方案
 
 > **Principles, Reflection, Insights, Standards, Metrics - Gateway**
 > 融合Gateway行为准则与Retrospective复盘系统的轻量级统一解决方案
@@ -27,7 +27,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PRISM-Gateway 统一系统                    │
+│                    ReflectGuard 统一系统                    │
 ├─────────────────────────────────────────────────────────────┤
 │                                                               │
 │  ┌───────────────┐              ┌─────────────────────┐    │
@@ -916,7 +916,7 @@ M3 - Week 5结束: 系统成熟
 
 ### 5.1 统一系统命名
 
-**PRISM-Gateway**
+**ReflectGuard**
 - **P**rinciples（原则）
 - **R**eflection（复盘）
 - **I**nsights（洞察）
@@ -1305,7 +1305,7 @@ Week 5: 优化完善（20%工作量）
 ## 总结：最佳融合方案的核心价值
 
 ### 统一性
-- **一个系统**: PRISM-Gateway统一管理
+- **一个系统**: ReflectGuard统一管理
 - **一套MEMORY**: 三层分级，共享访问
 - **双循环机制**: Gateway预防 + 复盘提升
 
@@ -1331,7 +1331,7 @@ Week 5: 优化完善（20%工作量）
 ### 第一步: 初始化系统（5分钟）
 ```bash
 # 克隆项目
-git clone prism-gateway
+git clone reflectguard
 
 # 安装依赖
 pip install -r requirements.txt

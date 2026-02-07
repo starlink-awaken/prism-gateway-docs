@@ -1,10 +1,10 @@
 # 常见问题 (FAQ)
 
-以下是 PRISM-Gateway 用户最常问的问题和解答。
+以下是 ReflectGuard 用户最常问的问题和解答。
 
 ## 安装和配置
 
-### Q: 如何安装 PRISM-Gateway？
+### Q: 如何安装 ReflectGuard？
 
 **A:** 请参阅 [安装指南](installation.md)，主要有三种方式：
 - 从源码安装（推荐）
@@ -62,7 +62,7 @@ prism export --format json > backup.json
 
 ### Q: 如何在 Claude Desktop 中启用 MCP Server？
 
-**A:** 编辑 Claude Desktop 配置文件，添加 PRISM-Gateway server 配置。详见 [用户指南](user-guide.md#mcp-集成)。
+**A:** 编辑 Claude Desktop 配置文件，添加 ReflectGuard server 配置。详见 [用户指南](user-guide.md#mcp-集成)。
 
 ### Q: MCP Server 没有响应？
 

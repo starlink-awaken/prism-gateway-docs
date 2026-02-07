@@ -13,7 +13,7 @@
 ### 2.1 重构前
 
 ```
-prism-gateway-docs/
+reflectguard-docs/
 ├── docs/
 │   ├── CLAUDE.md
 │   ├── DATA_MIGRATION_PLAN.md
@@ -39,7 +39,7 @@ prism-gateway-docs/
 ### 2.2 重构后
 
 ```
-prism-gateway-docs/
+reflectguard-docs/
 ├── docs/
 │   ├── users/                    # 用户文档（7个文件）
 │   │   ├── INDEX.md
@@ -265,9 +265,9 @@ prism-gateway-docs/
 | CHANGELOG.md | ✅ |
 | CODE_OF_CONDUCT.md | ✅ |
 | GOVERNANCE.md | ✅ |
-| SECURITY.md | ✅（存在于 prism-gateway）|
+| SECURITY.md | ✅（存在于 reflectguard）|
 | CONTRIBUTING.md | ✅（开发者文档内）|
-| LICENSE | ✅（存在于 prism-gateway）|
+| LICENSE | ✅（存在于 reflectguard）|
 
 ## 10. 结论
 

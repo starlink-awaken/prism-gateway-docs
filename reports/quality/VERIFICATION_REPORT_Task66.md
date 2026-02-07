@@ -23,7 +23,7 @@
 
 ### 1. QuickReview.ts 源代码
 
-**文件路径**: `~/.prism-gateway/src/core/QuickReview.ts`
+**文件路径**: `~/.reflectguard/src/core/QuickReview.ts`
 
 **核心功能**:
 - 一键触发快速复盘 (`review()` 方法)
@@ -52,7 +52,7 @@ class QuickReview {
 
 ### 2. QuickReview.test.ts 测试代码
 
-**文件路径**: `~/.prism-gateway/src/tests/QuickReview.test.ts`
+**文件路径**: `~/.reflectguard/src/tests/QuickReview.test.ts`
 
 **测试覆盖**:
 - 基础功能测试 (3个测试)
@@ -69,7 +69,7 @@ class QuickReview {
 
 ### 3. 演示脚本
 
-**文件路径**: `~/.prism-gateway/examples/quickreview-demo.ts`
+**文件路径**: `~/.reflectguard/examples/quickreview-demo.ts`
 
 ---
 

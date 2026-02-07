@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 1 to Phase 2 Data Migration Plan
+# ReflectGuard Phase 1 to Phase 2 Data Migration Plan
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04
@@ -26,7 +26,7 @@
 
 ### 1.1 Purpose
 
-Design a safe, reliable, and minimal-downtime migration plan for PRISM-Gateway data from Phase 1 to Phase 2 structure.
+Design a safe, reliable, and minimal-downtime migration plan for ReflectGuard data from Phase 1 to Phase 2 structure.
 
 ### 1.2 Key Principles
 
@@ -1284,10 +1284,10 @@ prism migrate --rollback
 ### 9.1 User Migration Guide
 
 ```markdown
-# PRISM-Gateway Migration Guide: Phase 1 to Phase 2
+# ReflectGuard Migration Guide: Phase 1 to Phase 2
 
 ## Overview
-This guide will help you migrate from PRISM-Gateway Phase 1 to Phase 2.
+This guide will help you migrate from ReflectGuard Phase 1 to Phase 2.
 
 ## Prerequisites
 - Node.js 18+ or Bun 1.0+

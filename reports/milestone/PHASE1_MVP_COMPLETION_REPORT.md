@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 1 MVP 完成报告
+# ReflectGuard Phase 1 MVP 完成报告
 
 **完成时间：** 2026-02-03
 **项目状态：** ✅ Phase 1 MVP 基本完成

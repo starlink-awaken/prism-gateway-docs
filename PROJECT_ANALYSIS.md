@@ -1,4 +1,4 @@
-# PRISM-Gateway 项目深度分析报告
+# ReflectGuard 项目深度分析报告
 
 **分析日期：** 2026-02-07
 **分析范围：** 功能完成度、目录结构、项目命名
@@ -105,7 +105,7 @@ prism-gateway-docs/
 **现状：**
 - 仓库名：`prism-gateway-docs`
 - 子目录名：`prism-gateway`
-- 项目名：`PRISM-Gateway`
+- 项目名：`ReflectGuard`
 
 **问题：**
 1. 三层嵌套让人混淆："prism-gateway-docs" 仓库包含 "prism-gateway" 目录
@@ -230,7 +230,7 @@ prism-gateway-docs/
 
 ### 3.1 当前命名问题分析
 
-**当前名称：** `PRISM-Gateway`
+**当前名称：** `ReflectGuard`
 
 **问题：**
 1. **PRISM** 是什么的缩写？文档中没有明确说明

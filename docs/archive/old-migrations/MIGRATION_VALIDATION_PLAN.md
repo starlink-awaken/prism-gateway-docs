@@ -1,4 +1,4 @@
-# PRISM-Gateway Migration Validation Plan
+# ReflectGuard Migration Validation Plan
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04

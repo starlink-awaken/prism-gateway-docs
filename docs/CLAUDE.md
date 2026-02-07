@@ -6,7 +6,7 @@
 
 ## 模块概述
 
-docs/ 目录包含 PRISM-Gateway 系统的使用文档和指南，按角色分类组织。
+docs/ 目录包含 ReflectGuard 系统的使用文档和指南，按角色分类组织。
 
 ---
 

@@ -56,7 +56,7 @@ private getLock(lockName: string): FileLock {
 
 **3. SHARED 锁文件命名**
 ```
-~/.prism-gateway/locks/
+~/.reflectguard/locks/
 ├── principles.lock/          # EXCLUSIVE 锁目录（写操作）
 ├── principles.lock.meta      # 锁元数据
 ├── principles.shared.pid_123_1756987123_abc  # 实例1的 SHARED 锁文件

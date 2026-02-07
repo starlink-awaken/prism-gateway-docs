@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 1 MVP 深度复盘报告
+# ReflectGuard Phase 1 MVP 深度复盘报告
 
 **复盘类型：** Standard模式（25分钟深度复盘）
 **复盘时间：** 2026-02-04
@@ -11,7 +11,7 @@
 
 ### 核心发现
 
-PRISM-Gateway Phase 1 MVP 在 **6小时内完成**，比原计划10小时快 **40%**。项目在功能完整性、性能指标、代码质量等维度均达到或超过预期目标。
+ReflectGuard Phase 1 MVP 在 **6小时内完成**，比原计划10小时快 **40%**。项目在功能完整性、性能指标、代码质量等维度均达到或超过预期目标。
 
 ### 关键数字
 
@@ -877,7 +877,7 @@ export const memoryStore = new MemoryStore();
 
 ## 十四、结论
 
-PRISM-Gateway Phase 1 MVP 是一个**成功的项目**。在6小时内完成了原计划10小时的工作，所有核心功能都实现并通过测试，性能指标远超预期。
+ReflectGuard Phase 1 MVP 是一个**成功的项目**。在6小时内完成了原计划10小时的工作，所有核心功能都实现并通过测试，性能指标远超预期。
 
 ### 核心成功因素
 

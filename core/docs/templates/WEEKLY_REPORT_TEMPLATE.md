@@ -1,4 +1,4 @@
-# PRISM-Gateway 周报 - Week [X]
+# ReflectGuard 周报 - Week [X]
 
 **报告周期:** 2026-WXX (YYYY-MMDD - YYYY-MMDD)
 **报告人:** [姓名/组织]

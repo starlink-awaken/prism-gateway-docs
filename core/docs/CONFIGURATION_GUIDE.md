@@ -1,6 +1,6 @@
-# PRISM-Gateway Configuration Reference
+# ReflectGuard Configuration Reference
 
-> Complete guide for configuring PRISM-Gateway v3.0 operational systems
+> Complete guide for configuring ReflectGuard v3.0 operational systems
 
 **Version**: 3.0.0-rc1
 **Last Updated**: 2026-02-07
@@ -26,20 +26,20 @@
 
 ## Configuration Overview
 
-PRISM-Gateway uses a hierarchical configuration system with multiple sources:
+ReflectGuard uses a hierarchical configuration system with multiple sources:
 
 ```
 Priority (highest to lowest):
 1. Environment variables
 2. Command-line arguments
-3. Configuration file (~/.prism-gateway/config.json)
+3. Configuration file (~/.reflectguard/config.json)
 4. Default values
 ```
 
 ### Configuration Locations
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── config.json                    # Main configuration file
 ├── .env                           # Environment variables (optional)
 ├── level-1-hot/
@@ -54,7 +54,7 @@ Priority (highest to lowest):
 
 ### Main Configuration File
 
-**Location**: `~/.prism-gateway/config.json`
+**Location**: `~/.reflectguard/config.json`
 
 ```json
 {
@@ -72,7 +72,7 @@ Priority (highest to lowest):
     "jwt": {
       "secret": "${JWT_SECRET}",
       "expiresIn": "24h",
-      "issuer": "prism-gateway",
+      "issuer": "reflectguard",
       "audience": "prism-api"
     },
     "rbac": {
@@ -87,7 +87,7 @@ Priority (highest to lowest):
   },
   "backup": {
     "enabled": true,
-    "directory": "~/.prism-gateway/backups",
+    "directory": "~/.reflectguard/backups",
     "schedule": {
       "enabled": true,
       "cron": "0 2 * * *",
@@ -132,7 +132,7 @@ Priority (highest to lowest):
       "data": { "enabled": true, "interval": 60 }
     },
     "storage": {
-      "directory": "~/.prism-gateway/data/metrics",
+      "directory": "~/.reflectguard/data/metrics",
       "retention": {
         "raw": "24h",
         "1m": "7d",
@@ -148,7 +148,7 @@ Priority (highest to lowest):
       "console": { "enabled": true },
       "file": {
         "enabled": true,
-        "path": "~/.prism-gateway/logs/alerts.log"
+        "path": "~/.reflectguard/logs/alerts.log"
       },
       "webhook": {
         "enabled": false,
@@ -184,7 +184,7 @@ Priority (highest to lowest):
   },
   "logging": {
     "level": "info",
-    "directory": "~/.prism-gateway/logs",
+    "directory": "~/.reflectguard/logs",
     "maxSize": "10MB",
     "maxFiles": 10,
     "format": "json"
@@ -240,10 +240,10 @@ Priority (highest to lowest):
 ```json
 {
   "directories": {
-    "data": "~/.prism-gateway/data",
-    "backups": "~/.prism-gateway/backups",
-    "logs": "~/.prism-gateway/logs",
-    "temp": "~/.prism-gateway/tmp"
+    "data": "~/.reflectguard/data",
+    "backups": "~/.reflectguard/backups",
+    "logs": "~/.reflectguard/logs",
+    "temp": "~/.reflectguard/tmp"
   }
 }
 ```
@@ -262,7 +262,7 @@ Priority (highest to lowest):
       "algorithm": "HS256",            // Signing algorithm
       "expiresIn": "24h",              // Token expiration
       "refreshExpiresIn": "7d",        // Refresh token expiration
-      "issuer": "prism-gateway",       // Token issuer
+      "issuer": "reflectguard",       // Token issuer
       "audience": "prism-api",         // Token audience
       "rotation": {
         "enabled": true,               // Enable token rotation
@@ -360,7 +360,7 @@ openssl rand -base64 32
 {
   "backup": {
     "enabled": true,
-    "directory": "~/.prism-gateway/backups",
+    "directory": "~/.reflectguard/backups",
     "strategy": {
       "defaultType": "incremental",   // full | incremental
       "compression": {
@@ -449,7 +449,7 @@ openssl rand -base64 32
           "ioWait": 20                // I/O wait time (%)
         },
         "paths": [
-          "~/.prism-gateway",
+          "~/.reflectguard",
           "/tmp"
         ]
       },
@@ -605,7 +605,7 @@ openssl rand -base64 32
       }
     },
     "storage": {
-      "directory": "~/.prism-gateway/data/metrics",
+      "directory": "~/.reflectguard/data/metrics",
       "engine": "filesystem",         // filesystem | memory
       "retention": {
         "raw": "24h",                 // Raw data points
@@ -719,7 +719,7 @@ openssl rand -base64 32
       },
       "file": {
         "enabled": true,
-        "path": "~/.prism-gateway/logs/alerts.log",
+        "path": "~/.reflectguard/logs/alerts.log",
         "maxSize": "10MB",
         "maxFiles": 10,
         "format": "json"
@@ -757,7 +757,7 @@ openssl rand -base64 32
         "enabled": false,
         "webhookUrl": "${SLACK_WEBHOOK_URL}",
         "channel": "#alerts",
-        "username": "PRISM-Gateway",
+        "username": "ReflectGuard",
         "iconEmoji": ":warning:"
       }
     },
@@ -814,14 +814,14 @@ LOG_LEVEL=info
 
 ```bash
 # Database
-DB_PATH=~/.prism-gateway/data
+DB_PATH=~/.reflectguard/data
 
 # Backup
-BACKUP_DIR=~/.prism-gateway/backups
+BACKUP_DIR=~/.reflectguard/backups
 BACKUP_COMPRESSION=6
 
 # Metrics
-METRICS_DIR=~/.prism-gateway/data/metrics
+METRICS_DIR=~/.reflectguard/data/metrics
 METRICS_RETENTION_RAW=24h
 METRICS_RETENTION_1M=7d
 
@@ -841,10 +841,10 @@ RATE_LIMIT_MAX=100
 
 ### Environment File
 
-**Location**: `~/.prism-gateway/.env`
+**Location**: `~/.reflectguard/.env`
 
 ```bash
-# PRISM-Gateway v3.0 Configuration
+# ReflectGuard v3.0 Configuration
 # Copy this to .env and customize
 
 # Required
@@ -894,7 +894,7 @@ ALERTING_ENABLED=true
         "name": "custom_business_metric",
         "enabled": true,
         "interval": 60,
-        "script": "~/.prism-gateway/collectors/custom.js",
+        "script": "~/.reflectguard/collectors/custom.js",
         "config": {
           "param1": "value1"
         }
@@ -914,7 +914,7 @@ ALERTING_ENABLED=true
         "name": "external_service",
         "enabled": true,
         "interval": 60,
-        "script": "~/.prism-gateway/checkers/external.js",
+        "script": "~/.reflectguard/checkers/external.js",
         "timeout": 10000
       }
     ]
@@ -1109,7 +1109,7 @@ prism config test
 
 ### Configuration Schema
 
-PRISM-Gateway validates configuration against a JSON schema. View the schema:
+ReflectGuard validates configuration against a JSON schema. View the schema:
 
 ```bash
 prism config schema
@@ -1215,7 +1215,7 @@ echo $JWT_SECRET
 
 ```bash
 # Backup current configuration
-cp ~/.prism-gateway/config.json ~/.prism-gateway/config.v2.backup.json
+cp ~/.reflectguard/config.json ~/.reflectguard/config.v2.backup.json
 
 # Run migration tool
 prism config migrate --from 2.x --to 3.0
@@ -1250,7 +1250,7 @@ prism config metrics --help
 - [CLI Operations Guide](./cli/OPERATIONS_CLI_GUIDE.md)
 - [API Reference](./api/OPERATIONS_API_REFERENCE.md)
 - [Troubleshooting Guide](./troubleshooting/OPERATIONS_TROUBLESHOOTING.md)
-- [GitHub Issues](https://github.com/starlink-awaken/prism-gateway/issues)
+- [GitHub Issues](https://github.com/starlink-awaken/reflectguard/issues)
 
 ---
 

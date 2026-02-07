@@ -20,7 +20,7 @@
 
 ## Overview
 
-PRISM-Gateway uses a **two-layer security model**:
+ReflectGuard uses a **two-layer security model**:
 
 1. **Authentication Layer**: JWT-based token authentication
 2. **Authorization Layer**: Role-Based Access Control (RBAC)
@@ -860,7 +860,7 @@ For complete API documentation, see:
 
 ## Support
 
-- **Documentation:** https://github.com/starlink-awaken/prism-gateway-docs
+- **Documentation:** https://github.com/starlink-awaken/reflectguard-docs
 - **Issues:** https://github.com/starlink-awaken/prism-gateway/issues
 - **Security:** security@prism-gateway.io
 
@@ -868,4 +868,4 @@ For complete API documentation, see:
 
 **Last Updated:** 2026-02-07
 **Version:** 2.4.0
-**Authors:** PRISM-Gateway Security Team
+**Authors:** ReflectGuard Security Team

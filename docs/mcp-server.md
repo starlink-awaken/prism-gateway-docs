@@ -1,8 +1,8 @@
-# PRISM-Gateway MCP Server
+# ReflectGuard MCP Server
 
 ## 概述
 
-PRISM-Gateway MCP Server将Gateway违规检查能力暴露为MCP（Model Context Protocol）工具，供AI Agent调用。
+ReflectGuard MCP Server将Gateway违规检查能力暴露为MCP（Model Context Protocol）工具，供AI Agent调用。
 
 ## 安装
 
@@ -12,7 +12,7 @@ bun install
 
 ## 配置
 
-在MCP客户端配置中添加PRISM-Gateway服务器：
+在MCP客户端配置中添加ReflectGuard服务器：
 
 ```json
 {

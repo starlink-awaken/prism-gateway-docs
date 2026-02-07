@@ -1,6 +1,6 @@
 # 配置说明
 
-PRISM-Gateway 配置文件和选项的完整参考。
+ReflectGuard 配置文件和选项的完整参考。
 
 ## 配置文件位置
 

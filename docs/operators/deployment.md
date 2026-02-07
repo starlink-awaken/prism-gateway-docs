@@ -1,6 +1,6 @@
 # 部署指南
 
-PRISM-Gateway 的生产环境部署指南。
+ReflectGuard 的生产环境部署指南。
 
 ## 系统要求
 
@@ -83,7 +83,7 @@ docker run -d \
 
 ```ini
 [Unit]
-Description=PRISM-Gateway Service
+Description=ReflectGuard Service
 After=network.target
 
 [Service]
@@ -173,7 +173,7 @@ curl http://localhost:3000/health
 
 ### Prometheus 指标
 
-PRISM-Gateway 暴露以下指标：
+ReflectGuard 暴露以下指标：
 
 ```
 # HELP prism_checks_total Total number of checks

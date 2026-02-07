@@ -1,6 +1,6 @@
-# PRISM-Gateway v3.0 Quick Start Guide
+# ReflectGuard v3.0 Quick Start Guide
 
-> Get up and running with PRISM-Gateway in 5 minutes
+> Get up and running with ReflectGuard in 5 minutes
 
 **Version**: 3.0.0
 **Last Updated**: 2026-02-07
@@ -30,8 +30,8 @@ Before you begin, ensure you have:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/prism-gateway.git
-cd prism-gateway
+git clone https://github.com/your-org/reflectguard.git
+cd reflectguard
 
 # Install dependencies
 bun install
@@ -88,7 +88,7 @@ bun run api
 
 **Expected Output**:
 ```
-🚀 PRISM-Gateway v3.0.0
+🚀 ReflectGuard v3.0.0
 ✓ API Server listening on http://localhost:3000
 ✓ WebSocket Server listening on ws://localhost:3001
 ✓ Environment: development
@@ -232,7 +232,7 @@ prism retro quick
 # 6. Tools: What tools were used?
 # 7. Data: What data is relevant?
 
-# Result saved to: ~/.prism-gateway/level-2-warm/retros/YYYY-MM-DD-HHmmss.json
+# Result saved to: ~/.reflectguard/level-2-warm/retros/YYYY-MM-DD-HHmmss.json
 ```
 
 ---
@@ -372,7 +372,7 @@ BACKUP_ENABLED=true
 
 ## 📚 Next Steps
 
-Now that you have PRISM-Gateway running, explore these resources:
+Now that you have ReflectGuard running, explore these resources:
 
 ### Essential Documentation
 - **[CLI Operations Guide](./CLI_OPERATIONS.md)** - Complete CLI command reference (22 commands)
@@ -383,13 +383,13 @@ Now that you have PRISM-Gateway running, explore these resources:
 ### Learn More
 - **[Architecture Overview](../../reports/PHASE3_OVERALL_PROGRESS.md)** - System design and components
 - **[Security Guide](./SECURITY.md)** - Security best practices and audit results
-- **[Development Guide](../README.md#development)** - Contributing to PRISM-Gateway
+- **[Development Guide](../README.md#development)** - Contributing to ReflectGuard
 
 ### Try Advanced Features
 1. **Custom Health Checkers** - Create custom health check plugins
 2. **Alert Rules** - Configure smart alerting for your metrics
 3. **Backup Automation** - Set up automated backup schedules
-4. **API Integration** - Integrate PRISM-Gateway into your workflows
+4. **API Integration** - Integrate ReflectGuard into your workflows
 5. **WebSocket Streaming** - Real-time event subscriptions
 
 ---
@@ -446,13 +446,13 @@ bun --version
 
 ### Issue 4: Permission Denied
 
-**Error**: `EACCES: permission denied, mkdir '~/.prism-gateway'`
+**Error**: `EACCES: permission denied, mkdir '~/.reflectguard'`
 
 **Solution**:
 ```bash
 # Create data directory with proper permissions
-mkdir -p ~/.prism-gateway
-chmod 755 ~/.prism-gateway
+mkdir -p ~/.reflectguard
+chmod 755 ~/.reflectguard
 
 # Or run with sudo (not recommended)
 sudo bun run prism init
@@ -468,13 +468,13 @@ sudo bun run prism init
 - **CHANGELOG**: [CHANGELOG.md](../CHANGELOG.md)
 
 ### Community
-- **GitHub Issues**: [Report bugs or request features](https://github.com/your-org/prism-gateway/issues)
-- **Discussions**: [Ask questions and share ideas](https://github.com/your-org/prism-gateway/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/your-org/reflectguard/issues)
+- **Discussions**: [Ask questions and share ideas](https://github.com/your-org/reflectguard/discussions)
 
 ### Professional Support
-- **Email**: support@prism-gateway.io
-- **Documentation**: https://docs.prism-gateway.io
-- **Status Page**: https://status.prism-gateway.io
+- **Email**: support@reflectguard.io
+- **Documentation**: https://docs.reflectguard.io
+- **Status Page**: https://status.reflectguard.io
 
 ---
 
@@ -482,7 +482,7 @@ sudo bun run prism init
 
 After completing this quick start, you should have:
 
-- [x] Installed PRISM-Gateway and dependencies
+- [x] Installed ReflectGuard and dependencies
 - [x] Generated JWT secret and configured environment
 - [x] Started API and WebSocket servers
 - [x] Verified installation with health check
@@ -490,7 +490,7 @@ After completing this quick start, you should have:
 - [x] Executed first CLI command or API call
 - [x] Explored basic features (Gateway, Retro, Health, Backup)
 
-**You're ready to use PRISM-Gateway!** 🎉
+**You're ready to use ReflectGuard!** 🎉
 
 ---
 
@@ -516,9 +516,9 @@ After completing this quick start, you should have:
 
 ---
 
-**Welcome to PRISM-Gateway v3.0!** 🌟
+**Welcome to ReflectGuard v3.0!** 🌟
 
-**Maintained by**: PRISM-Gateway Team
+**Maintained by**: ReflectGuard Team
 **License**: MIT
 **Version**: 3.0.0
-**Documentation**: https://docs.prism-gateway.io
+**Documentation**: https://docs.reflectguard.io

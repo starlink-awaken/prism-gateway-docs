@@ -1,4 +1,4 @@
-# PRISM-Gateway 六组织协作框架 - 轻量级实施指南
+# ReflectGuard 六组织协作框架 - 轻量级实施指南
 
 **版本：** 2.1（轻量级）
 **创建日期：** 2026-02-04
@@ -535,7 +535,7 @@ Columns:
 ### B. 工具使用指南
 
 **GitHub Projects 配置：**
-- Board 名称：PRISM-Gateway Kanban
+- Board 名称：ReflectGuard Kanban
 - Columns：To Do, In Progress, In Review, Testing, Done
 - Labels：priority, type, component, milestone
 
@@ -547,7 +547,7 @@ Columns:
 已接受
 
 ## 上下文
-PRISM-Gateway 需要支持并发读取操作，当前的锁机制性能不足。
+ReflectGuard 需要支持并发读取操作，当前的锁机制性能不足。
 
 ## 决策
 采用 FileLock 实例唯一化 + SHARED 锁文件机制，实现真正的多读单写。
@@ -566,4 +566,4 @@ PRISM-Gateway 需要支持并发读取操作，当前的锁机制性能不足。
 
 **文档版本：** 2.1（轻量级）
 **最后更新：** 2026-02-04
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team

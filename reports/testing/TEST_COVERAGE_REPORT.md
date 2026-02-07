@@ -673,6 +673,6 @@ jobs:
 
 ---
 
-**报告生成者：** PRISM-Gateway Test Coverage Analyzer
+**报告生成者：** ReflectGuard Test Coverage Analyzer
 **维护者：** QA Team
 **最后更新：** 2026-02-07

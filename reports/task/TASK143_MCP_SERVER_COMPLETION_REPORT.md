@@ -2,7 +2,7 @@
 
 ## 概述
 
-成功完成MCP Server基础框架实现，将PRISM-Gateway的Gateway检查能力暴露为MCP工具。
+成功完成MCP Server基础框架实现，将ReflectGuard的Gateway检查能力暴露为MCP工具。
 
 ## ISC标准达成情况
 
@@ -93,10 +93,10 @@ bun add @modelcontextprotocol/sdk
 ```json
 {
   "mcpServers": {
-    "prism-gateway": {
+    "reflectguard": {
       "command": "bun",
       "args": [
-        "/Users/xiamingxing/.prism-gateway/src/integration/mcp/index.ts"
+        "/Users/xiamingxing/.reflectguard/src/integration/mcp/index.ts"
       ]
     }
   }
@@ -161,7 +161,7 @@ export {
 
 ## 总结
 
-Task #143已完成，成功实现MCP Server基础框架，将PRISM-Gateway的Gateway检查能力暴露为MCP工具，可以被AI Agent通过MCP协议调用。所有ISC标准已达成，测试覆盖率>80%，文档完整。
+Task #143已完成，成功实现MCP Server基础框架，将ReflectGuard的Gateway检查能力暴露为MCP工具，可以被AI Agent通过MCP协议调用。所有ISC标准已达成，测试覆盖率>80%，文档完整。
 
 ---
 

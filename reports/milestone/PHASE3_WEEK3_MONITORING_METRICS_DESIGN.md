@@ -11,7 +11,7 @@
 
 ### 1.1 核心目标
 
-为 PRISM-Gateway 系统设计和实现一个轻量级的监控指标收集系统，实时采集系统运行数据，为分析和告警提供数据支撑。
+为 ReflectGuard 系统设计和实现一个轻量级的监控指标收集系统，实时采集系统运行数据，为分析和告警提供数据支撑。
 
 **关键要求**:
 - **多维度指标**: 覆盖系统、应用、业务等多个层面
@@ -74,7 +74,7 @@
 │  ┌────────────────────────────────────────────────────────┐     │
 │  │              时序数据存储 (Time Series Store)           │     │
 │  ├────────────────────────────────────────────────────────┤     │
-│  │ ~/.prism-gateway/metrics/                              │     │
+│  │ ~/.reflectguard/metrics/                              │     │
 │  │   ├── raw/         (原始数据, 1s 粒度, 保留 1h)        │     │
 │  │   ├── 1m/          (1分钟聚合, 保留 24h)               │     │
 │  │   ├── 5m/          (5分钟聚合, 保留 7d)                │     │
@@ -635,7 +635,7 @@ export class WebSocketMetricsCollector extends MetricCollector {
 ```typescript
 /**
  * 业务指标采集器
- * 采集 PRISM-Gateway 业务相关指标
+ * 采集 ReflectGuard 业务相关指标
  */
 export class BusinessMetricsCollector extends MetricCollector {
   name = 'business';
@@ -698,7 +698,7 @@ export class BusinessMetricsCollector extends MetricCollector {
 
   private async getViolationStats(): Promise<{ total: number; today: number }> {
     // 读取 level-2-warm/violations.jsonl
-    const violationsPath = path.join(process.env.HOME!, '.prism-gateway/level-2-warm/violations.jsonl');
+    const violationsPath = path.join(process.env.HOME!, '.reflectguard/level-2-warm/violations.jsonl');
     const lines = (await fs.readFile(violationsPath, 'utf-8')).split('\n').filter(l => l.trim());
 
     const today = new Date().toISOString().split('T')[0];
@@ -719,7 +719,7 @@ export class BusinessMetricsCollector extends MetricCollector {
 
   private async getRetroStats(): Promise<{ total: number; today: number }> {
     // 读取 level-2-warm/retros/
-    const retrosPath = path.join(process.env.HOME!, '.prism-gateway/level-2-warm/retros');
+    const retrosPath = path.join(process.env.HOME!, '.reflectguard/level-2-warm/retros');
     const files = await fs.readdir(retrosPath);
 
     const today = new Date().toISOString().split('T')[0];
@@ -756,7 +756,7 @@ export class DataMetricsCollector extends MetricCollector {
 
   protected async performCollect(): Promise<Metric[]> {
     const metrics: Metric[] = [];
-    const dataRoot = path.join(process.env.HOME!, '.prism-gateway');
+    const dataRoot = path.join(process.env.HOME!, '.reflectguard');
 
     // level-1-hot 数据大小
     const hotSize = await this.getDirectorySize(path.join(dataRoot, 'level-1-hot'));
@@ -979,7 +979,7 @@ export interface TimeRange {
 /**
  * 时序数据存储策略:
  *
- * ~/.prism-gateway/metrics/
+ * ~/.reflectguard/metrics/
  * ├── raw/           # 原始数据（1秒粒度）
  * │   ├── 2026-02-07-12.jsonl   # 按小时分文件
  * │   ├── 2026-02-07-13.jsonl
@@ -1518,5 +1518,5 @@ router.get('/metrics/stats', async (c) => {
 **文档版本**: 1.0.0
 **最后更新**: 2026-02-07
 **作者**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **下一步**: Task 3.4 告警系统设计

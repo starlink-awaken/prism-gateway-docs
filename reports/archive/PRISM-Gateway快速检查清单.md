@@ -1,4 +1,4 @@
-# PRISM-Gateway 快速检查清单
+# ReflectGuard 快速检查清单
 
 > 7维度复盘 + Gateway行为准则的实用工具
 

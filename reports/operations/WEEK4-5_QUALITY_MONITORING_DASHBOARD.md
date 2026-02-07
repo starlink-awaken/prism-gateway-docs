@@ -491,7 +491,7 @@ export async function showDashboard(config: DashboardConfig = {}) {
 function printHeader() {
   console.log(`
 ╔══════════════════════════════════════════════════════════════╗
-║          PRISM-Gateway Week 4-5 质量监控看板                    ║
+║          ReflectGuard Week 4-5 质量监控看板                    ║
 ╚══════════════════════════════════════════════════════════════╝`);
 }
 

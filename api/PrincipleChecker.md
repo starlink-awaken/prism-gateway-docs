@@ -29,7 +29,7 @@ Creates a new PrincipleChecker instance.
 
 **Example:**
 ```typescript
-import { PrincipleChecker, MemoryStore } from 'prism-gateway';
+import { PrincipleChecker, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const checker = new PrincipleChecker(store);
@@ -204,7 +204,7 @@ Input Intent
 ## Example: Complete Workflow
 
 ```typescript
-import { PrincipleChecker, MemoryStore } from 'prism-gateway';
+import { PrincipleChecker, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const checker = new PrincipleChecker(store);

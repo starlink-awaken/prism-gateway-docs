@@ -1,4 +1,4 @@
-# PRISM-Gateway 项目状态
+# ReflectGuard 项目状态
 
 **更新日期：** 2026-02-07
 **当前阶段：** Phase 3 完成 - 生产就绪 ✅
@@ -8,7 +8,7 @@
 
 ## 项目概述
 
-**项目名称：** PRISM-Gateway
+**项目名称：** ReflectGuard
 **项目定位：** 个人 AI 基础设施系统（Personal AI Infrastructure）
 **核心能力：** Gateway（行为准则门禁）+ Retrospective（7维度复盘）
 
@@ -386,7 +386,7 @@
 
 ### C. 联系方式
 
-**项目维护者：** PRISM-Gateway Team
+**项目维护者：** ReflectGuard Team
 **支持渠道：** 见 [SUPPORT.md](SUPPORT.md)
 **贡献指南：** 见 [CONTRIBUTING.md](core/CONTRIBUTING.md)
 

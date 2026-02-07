@@ -2,7 +2,7 @@
 
 ## Overview
 
-MemoryStore is the core storage layer of PRISM-Gateway, implementing a three-tier MEMORY architecture:
+MemoryStore is the core storage layer of ReflectGuard, implementing a three-tier MEMORY architecture:
 
 - **Level-1 Hot**: Hot data (principles, patterns), response time <100ms, cached
 - **Level-2 Warm**: Warm data (retro records, violations), readable and writable
@@ -10,10 +10,10 @@ MemoryStore is the core storage layer of PRISM-Gateway, implementing a three-tie
 
 ## Storage Paths
 
-Data is stored in `~/.prism-gateway/`:
+Data is stored in `~/.reflectguard/`:
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── level-1-hot/          # Hot data (<100ms response)
 │   ├── principles.json
 │   └── patterns/
@@ -43,7 +43,7 @@ Creates a new MemoryStore instance.
 
 **Example:**
 ```typescript
-import { MemoryStore } from 'prism-gateway';
+import { MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 ```
@@ -171,7 +171,7 @@ Save a retrospective record.
 **Parameters:**
 - `record`: Retro record object
 
-**Storage Path:** `~/.prism-gateway/level-2-warm/retros/YYYY-MM/{type}/{id}.json`
+**Storage Path:** `~/.reflectguard/level-2-warm/retros/YYYY-MM/{type}/{id}.json`
 
 **Example:**
 ```typescript
@@ -223,7 +223,7 @@ Record a violation.
 **Parameters:**
 - `violation`: Violation record object
 
-**Storage Path:** `~/.prism-gateway/level-2-warm/violations.jsonl`
+**Storage Path:** `~/.reflectguard/level-2-warm/violations.jsonl`
 
 **Example:**
 ```typescript
@@ -298,7 +298,7 @@ Read an SOP document.
 
 **Returns:** SOP document content
 
-**Storage Path:** `~/.prism-gateway/level-3-cold/sops/{name}.md`
+**Storage Path:** `~/.reflectguard/level-3-cold/sops/{name}.md`
 
 **Example:**
 ```typescript
@@ -320,7 +320,7 @@ Read a checklist document.
 
 **Returns:** Checklist document content
 
-**Storage Path:** `~/.prism-gateway/level-3-cold/checklists/{name}.md`
+**Storage Path:** `~/.reflectguard/level-3-cold/checklists/{name}.md`
 
 **Example:**
 ```typescript
@@ -342,7 +342,7 @@ Read a template document.
 
 **Returns:** Template document content
 
-**Storage Path:** `~/.prism-gateway/level-3-cold/templates/{name}.md`
+**Storage Path:** `~/.reflectguard/level-3-cold/templates/{name}.md`
 
 **Example:**
 ```typescript
@@ -514,7 +514,7 @@ interface ViolationRecord {
 A singleton instance is exported for convenience:
 
 ```typescript
-import { memoryStore } from 'prism-gateway';
+import { memoryStore } from 'reflectguard';
 
 const principles = await memoryStore.getPrinciples();
 ```

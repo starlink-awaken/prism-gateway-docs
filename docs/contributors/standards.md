@@ -1,6 +1,6 @@
 # 项目标准
 
-PRISM-Gateway 项目的代码和文档标准。
+ReflectGuard 项目的代码和文档标准。
 
 ## 代码标准
 

@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 2 系统架构设计文档
+# ReflectGuard Phase 2 系统架构设计文档
 
 **文档版本：** 2.0.0
 **创建时间：** 2026-02-04
@@ -26,7 +26,7 @@
 
 ### 1.1 设计理念
 
-PRISM-Gateway Phase 2 基于 Phase 1 MVP 的成功经验，在保持**轻量级设计原则**的前提下，向**生产就绪系统**演进。
+ReflectGuard Phase 2 基于 Phase 1 MVP 的成功经验，在保持**轻量级设计原则**的前提下，向**生产就绪系统**演进。
 
 **核心理念：**
 1. **渐进式增强** - 在Phase 1基础上逐步增加能力，而非重构
@@ -39,7 +39,7 @@ PRISM-Gateway Phase 2 基于 Phase 1 MVP 的成功经验，在保持**轻量级�
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                          PRISM-Gateway Phase 2 架构                           │
+│                          ReflectGuard Phase 2 架构                           │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────┐ │
@@ -145,7 +145,7 @@ PRISM-Gateway Phase 2 基于 Phase 1 MVP 的成功经验，在保持**轻量级�
 
 ### 2.3 CAP定理应用
 
-PRISM-Gateway作为本地工具，其分布式约束较少：
+ReflectGuard作为本地工具，其分布式约束较少：
 
 - **一致性（Consistency）** - 高优先级
   - 单机部署，无一致性问题
@@ -183,7 +183,7 @@ PRISM-Gateway作为本地工具，其分布式约束较少：
 
 #### 3.2.1 MCP Server集成
 
-**目标：** 让PRISM-Gateway作为MCP服务对外暴露能力
+**目标：** 让ReflectGuard作为MCP服务对外暴露能力
 
 **接口定义：**
 ```typescript
@@ -486,7 +486,7 @@ interface NotificationType {
 ### 4.2 目录结构（Phase 2）
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── level-1-hot/                    # [保持] Hot数据
 ├── level-2-warm/                   # [保持] Warm数据
 ├── level-3-cold/                   # [保持] Cold知识
@@ -596,7 +596,7 @@ interface CacheLayer {
 
   // L2: 文件缓存（持久化）
   l2: {
-    path: string;       // ~/.prism-gateway/cache/
+    path: string;       // ~/.reflectguard/cache/
     ttl: number;        // 1小时
   };
 }
@@ -1175,7 +1175,7 @@ Notifier ───────────────────────�
 
 ### B. 参考资料
 
-1. PRISM-Gateway Phase 1 MVP完成报告
+1. ReflectGuard Phase 1 MVP完成报告
 2. PAI架构文档
 3. MCP协议规范
 4. REST API设计最佳实践
@@ -1191,4 +1191,4 @@ Notifier ───────────────────────�
 
 **文档结束**
 
-*本架构设计文档遵循PRISM-Gateway的轻量级设计原则，所有技术选择均以简单、可靠、可维护为优先考虑。*
+*本架构设计文档遵循ReflectGuard的轻量级设计原则，所有技术选择均以简单、可靠、可维护为优先考虑。*

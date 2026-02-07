@@ -1,6 +1,6 @@
 # Phase 3 Week 2 - Technology Stack Decision
 
-**Project:** PRISM-Gateway Web UI MVP
+**Project:** ReflectGuard Web UI MVP
 **Decision Date:** 2026-02-07
 **Decision Owner:** Frontend Architect
 **Status:** ✅ **APPROVED**
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This document evaluates frontend technology stacks for the PRISM-Gateway Web UI MVP and recommends **React 18 + Vite 5 + TypeScript** as the optimal choice for our requirements.
+This document evaluates frontend technology stacks for the ReflectGuard Web UI MVP and recommends **React 18 + Vite 5 + TypeScript** as the optimal choice for our requirements.
 
 **Decision:** ✅ **React + Vite + TypeScript**
 
@@ -322,7 +322,7 @@ web-ui/
 ### 1. Create Vite Project
 
 ```bash
-cd /home/runner/work/prism-gateway-docs/prism-gateway-docs
+cd /home/runner/work/reflectguard-docs/reflectguard-docs
 bun create vite web-ui --template react-ts
 cd web-ui
 ```

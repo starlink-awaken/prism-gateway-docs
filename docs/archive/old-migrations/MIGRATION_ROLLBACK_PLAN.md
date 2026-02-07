@@ -1,4 +1,4 @@
-# PRISM-Gateway Migration Rollback Plan
+# ReflectGuard Migration Rollback Plan
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04
@@ -410,7 +410,7 @@ export async function rollbackCommand(options: {
   reason?: string;
   force?: boolean;
 }): Promise<void> {
-  console.log('=== PRISM-Gateway Rollback ===\n');
+  console.log('=== ReflectGuard Rollback ===\n');
 
   // Confirm unless force flag is set
   if (!options.force) {
@@ -809,7 +809,7 @@ echo "Corrupted data saved to: $BASE_PATH.corrupted.*"
 ### B. Rollback Status Output
 
 ```
-=== PRISM-Gateway Rollback Status ===
+=== ReflectGuard Rollback Status ===
 
 Migration State: Not Migrated
 Last Rollback: 2026-02-04T15:30:00Z

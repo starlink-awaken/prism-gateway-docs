@@ -1,8 +1,8 @@
-# PRISM-Gateway 数据迁移指南
+# ReflectGuard 数据迁移指南
 
 ## 概述
 
-本文档提供从 PRISM-Gateway Phase 1 到 Phase 2 的完整数据迁移指南。
+本文档提供从 ReflectGuard Phase 1 到 Phase 2 的完整数据迁移指南。
 
 ### 迁移特点
 
@@ -34,14 +34,14 @@
 
 ```bash
 # 检查 Phase 1 数据目录
-ls -la ~/.prism-gateway/level-1-hot/
-ls -la ~/.prism-gateway/level-2-warm/
-ls -la ~/.prism-gateway/level-3-cold/
+ls -la ~/.reflectguard/level-1-hot/
+ls -la ~/.reflectguard/level-2-warm/
+ls -la ~/.reflectguard/level-3-cold/
 
 # 必需文件
-~/.prism-gateway/level-1-hot/principles.json
-~/.prism-gateway/level-1-hot/patterns/success_patterns.json
-~/.prism-gateway/level-1-hot/patterns/failure_patterns.json
+~/.reflectguard/level-1-hot/principles.json
+~/.reflectguard/level-1-hot/patterns/success_patterns.json
+~/.reflectguard/level-1-hot/patterns/failure_patterns.json
 ```
 
 ---
@@ -142,7 +142,7 @@ prism stats
 迁移后将创建以下新目录：
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── analytics/                    # [新增] 分析数据
 │   ├── metrics.jsonl             # 指标记录
 │   └── aggregated/               # 聚合数据
@@ -167,7 +167,7 @@ prism stats
 迁移会自动创建备份：
 
 ```
-~/.prism-gateway-backup-YYYYMMDD-MS/
+~/.reflectguard-backup-YYYYMMDD-MS/
 ├── level-1-hot/          # Phase 1 热数据备份
 ├── level-2-warm/         # Phase 1 温数据备份
 └── level-3-cold/         # Phase 1 冷数据备份
@@ -265,15 +265,15 @@ bun run src/migration/scripts/phase1-to-phase2.ts --rollback
 
 ```bash
 # 验证 Phase 1 数据完整
-ls -la ~/.prism-gateway/level-1-hot/
-ls -la ~/.prism-gateway/level-2-warm/
-ls -la ~/.prism-gateway/level-3-cold/
+ls -la ~/.reflectguard/level-1-hot/
+ls -la ~/.reflectguard/level-2-warm/
+ls -la ~/.reflectguard/level-3-cold/
 
 # 验证 Phase 2 目录已删除
-[ ! -d ~/.prism-gateway/analytics ] && echo "Analytics 已删除"
-[ ! -d ~/.prism-gateway/cache ] && echo "Cache 已删除"
-[ ! -d ~/.prism-gateway/config ] && echo "Config 已删除"
-[ ! -d ~/.prism-gateway/.migration ] && echo "Migration 状态已清除"
+[ ! -d ~/.reflectguard/analytics ] && echo "Analytics 已删除"
+[ ! -d ~/.reflectguard/cache ] && echo "Cache 已删除"
+[ ! -d ~/.reflectguard/config ] && echo "Config 已删除"
+[ ! -d ~/.reflectguard/.migration ] && echo "Migration 状态已清除"
 ```
 
 ---
@@ -291,8 +291,8 @@ ls -la ~/.prism-gateway/level-3-cold/
 
 ```bash
 # 检查必需文件
-cat ~/.prism-gateway/level-1-hot/principles.json | jq .
-cat ~/.prism-gateway/level-1-hot/patterns/success_patterns.json | jq .
+cat ~/.reflectguard/level-1-hot/principles.json | jq .
+cat ~/.reflectguard/level-1-hot/patterns/success_patterns.json | jq .
 ```
 
 ### 问题：迁移失败 - 备份失败
@@ -309,7 +309,7 @@ cat ~/.prism-gateway/level-1-hot/patterns/success_patterns.json | jq .
 df -h ~
 
 # 检查权限
-ls -la ~/.prism-gateway/
+ls -la ~/.reflectguard/
 ```
 
 ### 问题：迁移失败 - 配置创建失败
@@ -323,8 +323,8 @@ ls -la ~/.prism-gateway/
 
 ```bash
 # 手动创建目录
-mkdir -p ~/.prism-gateway/config
-chmod 755 ~/.prism-gateway/config
+mkdir -p ~/.reflectguard/config
+chmod 755 ~/.reflectguard/config
 ```
 
 ### 问题：Phase 2 功能异常
@@ -355,14 +355,14 @@ prism migrate --rollback
 
 ```bash
 # 手动清理
-rm -rf ~/.prism-gateway/analytics
-rm -rf ~/.prism-gateway/cache
-rm -rf ~/.prism-gateway/config
-rm -rf ~/.prism-gateway/logs
-rm -rf ~/.prism-gateway/.migration
+rm -rf ~/.reflectguard/analytics
+rm -rf ~/.reflectguard/cache
+rm -rf ~/.reflectguard/config
+rm -rf ~/.reflectguard/logs
+rm -rf ~/.reflectguard/.migration
 
 # 验证 Phase 1 数据完整
-ls -la ~/.prism-gateway/level-*/
+ls -la ~/.reflectguard/level-*/
 ```
 
 ---
@@ -399,10 +399,10 @@ ls -la ~/.prism-gateway/level-*/
 
 ### 自定义基础路径
 
-如果 PRISM-Gateway 安装在非标准位置：
+如果 ReflectGuard 安装在非标准位置：
 
 ```bash
-prism migrate --path /custom/path/to/prism-gateway
+prism migrate --path /custom/path/to/reflectguard
 ```
 
 ### 批量迁移
@@ -425,7 +425,7 @@ done
 
 ```yaml
 # GitHub Actions 示例
-- name: 迁移 PRISM-Gateway
+- name: 迁移 ReflectGuard
   run: |
     prism migrate --dry-run
     prism migrate
@@ -438,7 +438,7 @@ done
 
 ### Shadow Migration Pattern
 
-PRISM-Gateway 使用 Shadow Migration Pattern：
+ReflectGuard 使用 Shadow Migration Pattern：
 
 1. **Phase 1 数据永不修改**
 2. **备份在变更前创建**
@@ -475,7 +475,7 @@ Phase 2 完全兼容 Phase 1 数据格式：
 
 如遇到迁移问题，请提供以下信息：
 
-1. PRISM-Gateway 版本
+1. ReflectGuard 版本
 2. 迁移状态输出 (`prism migrate --status`)
 3. 错误日志
 4. 系统环境信息
@@ -502,13 +502,13 @@ Phase 2 完全兼容 Phase 1 数据格式：
     }
   ],
   "rollback_available": true,
-  "backup_location": "/Users/user/.prism-gateway-backup-1738665600000"
+  "backup_location": "/Users/user/.reflectguard-backup-1738665600000"
 }
 ```
 
 ### B. 配置文件格式
 
-`~/.prism-gateway/config/default.json`:
+`~/.reflectguard/config/default.json`:
 
 ```json
 {
@@ -551,4 +551,4 @@ Phase 2 完全兼容 Phase 1 数据格式：
 
 **文档版本**: 1.0.0
 **最后更新**: 2026-02-04
-**维护者**: PRISM-Gateway Team
+**维护者**: ReflectGuard Team

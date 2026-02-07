@@ -1,10 +1,10 @@
-# PRISM-Gateway
+# ReflectGuard
 
 **统一的7维度复盘和Gateway系统**
 
 > "从7个维度全面复盘，内化为Gateway实时检查，形成持续进化的智能系统"
 
-[![Version](https://img.shields.io/badge/version-3.0.0--rc1-blue.svg)](https://github.com/starlink-awaken/prism-gateway)
+[![Version](https://img.shields.io/badge/version-3.0.0--rc1-blue.svg)](https://github.com/starlink-awaken/reflectguard)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
 [![Test Coverage](https://img.shields.io/badge/coverage-90%25-brightgreen.svg)](#testing)
@@ -13,7 +13,7 @@
 
 ## 🎯 项目概述
 
-PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），融合了 Gateway（行为准则门禁）和 Retrospective（复盘系统）两大核心能力，形成持续进化的智能系统。
+ReflectGuard 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），融合了 Gateway（行为准则门禁）和 Retrospective（复盘系统）两大核心能力，形成持续进化的智能系统。
 
 ### 核心特性
 
@@ -49,7 +49,7 @@ Retrospective（外循环）→ 深度复盘 → 知识更新 → Gateway优化
 ## 📁 目录结构
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── level-1-hot/              # Gateway实时查询（~10MB）
 │   ├── principles.json       # 5大MANDATORY准则
 │   ├── patterns/             # 模式库
@@ -91,7 +91,7 @@ Retrospective（外循环）→ 深度复盘 → 知识更新 → Gateway优化
 ### 1. 安装依赖
 
 ```bash
-cd ~/.prism-gateway
+cd ~/.reflectguard
 
 # 使用 Bun（推荐）
 bun install
@@ -225,7 +225,7 @@ ws.onmessage = (event) => {
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                          PRISM-Gateway v3.0 架构                             │
+│                          ReflectGuard v3.0 架构                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────┐ │
@@ -328,7 +328,7 @@ bun test --coverage
 ### 项目结构
 
 ```
-prism-gateway/
+reflectguard/
 ├── src/
 │   ├── cli/                  # CLI 工具
 │   ├── api/                  # REST API 服务
@@ -563,9 +563,9 @@ bun run lint:security
 
 ## 📞 联系方式
 
-- **GitHub**: [starlink-awaken/prism-gateway](https://github.com/starlink-awaken/prism-gateway)
-- **Issues**: [报告问题](https://github.com/starlink-awaken/prism-gateway/issues)
-- **Discussions**: [讨论区](https://github.com/starlink-awaken/prism-gateway/discussions)
+- **GitHub**: [starlink-awaken/reflectguard](https://github.com/starlink-awaken/reflectguard)
+- **Issues**: [报告问题](https://github.com/starlink-awaken/reflectguard/issues)
+- **Discussions**: [讨论区](https://github.com/starlink-awaken/reflectguard/discussions)
 
 ---
 
@@ -596,5 +596,5 @@ bun run lint:security
 
 ---
 
-*PRISM-Gateway - 个人 AI 基础设施系统 (Personal AI Infrastructure)*
-*© 2026 PRISM-Gateway Team*
+*ReflectGuard - 个人 AI 基础设施系统 (Personal AI Infrastructure)*
+*© 2026 ReflectGuard Team*

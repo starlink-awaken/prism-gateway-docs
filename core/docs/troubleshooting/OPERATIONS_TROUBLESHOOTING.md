@@ -1,4 +1,4 @@
-# PRISM-Gateway Operations Troubleshooting Guide
+# ReflectGuard Operations Troubleshooting Guide
 
 > Comprehensive guide for diagnosing and resolving issues with Backup, Health Check, Metrics, and Alerting systems
 
@@ -39,8 +39,8 @@
 
 3. **Review Logs**
    ```bash
-   tail -f ~/.prism-gateway/logs/prism-gateway.log
-   tail -f ~/.prism-gateway/logs/errors.log
+   tail -f ~/.reflectguard/logs/reflectguard.log
+   tail -f ~/.reflectguard/logs/errors.log
    ```
 
 4. **Check Resource Usage**
@@ -50,7 +50,7 @@
 
 5. **Verify Configuration**
    ```bash
-   cat ~/.prism-gateway/config.json
+   cat ~/.reflectguard/config.json
    ```
 
 6. **Test Connectivity**
@@ -95,16 +95,16 @@ prism health history --status degraded --since 1h
 
 ```bash
 # 1. Check disk space
-df -h ~/.prism-gateway/backups
+df -h ~/.reflectguard/backups
 
 # 2. Check permissions
-ls -la ~/.prism-gateway/backups
+ls -la ~/.reflectguard/backups
 
 # 3. Try dry run
 prism backup create --type full --dry-run
 
 # 4. Check logs
-tail -100 ~/.prism-gateway/logs/backup.log | grep ERROR
+tail -100 ~/.reflectguard/logs/backup.log | grep ERROR
 ```
 
 **Solutions:**
@@ -122,8 +122,8 @@ prism backup schedule config --retention 30
 **Solution 2: Fix Permissions**
 ```bash
 # Ensure backup directory is writable
-chmod 755 ~/.prism-gateway/backups
-chown $USER ~/.prism-gateway/backups
+chmod 755 ~/.reflectguard/backups
+chown $USER ~/.reflectguard/backups
 ```
 
 **Solution 3: Exclude Problematic Files**
@@ -209,10 +209,10 @@ prism backup schedule enable --cron "0 2 * * *" --type incremental
 prism backup verify <backup-id> --deep
 
 # 2. Check available disk space
-df -h ~/.prism-gateway
+df -h ~/.reflectguard
 
 # 3. Check logs
-tail -100 ~/.prism-gateway/logs/backup.log | grep ERROR
+tail -100 ~/.reflectguard/logs/backup.log | grep ERROR
 
 # 4. Try dry run
 prism backup restore <backup-id> --dry-run
@@ -236,7 +236,7 @@ prism backup verify <alternative-backup-id>
 prism backup restore <backup-id> --target /tmp/restore
 
 # Then manually copy files
-cp -r /tmp/restore/* ~/.prism-gateway/
+cp -r /tmp/restore/* ~/.reflectguard/
 ```
 
 **Solution 3: Force Overwrite**
@@ -261,7 +261,7 @@ prism backup restore <backup-id> --overwrite
 prism backup list
 
 # 2. Check file permissions
-ls -la ~/.prism-gateway/backups/<backup-id>*
+ls -la ~/.reflectguard/backups/<backup-id>*
 
 # 3. Check if file is in use
 lsof | grep backup
@@ -278,8 +278,8 @@ prism backup delete <backup-id> --force
 **Solution 2: Manual Deletion**
 ```bash
 # Delete files manually
-rm -f ~/.prism-gateway/backups/<backup-id>*
-rm -f ~/.prism-gateway/metadata/backups/<backup-id>.json
+rm -f ~/.reflectguard/backups/<backup-id>*
+rm -f ~/.reflectguard/metadata/backups/<backup-id>.json
 ```
 
 ---
@@ -314,7 +314,7 @@ prism health check --systems api
 prism health check --timeout 60
 
 # 4. Check logs
-tail -100 ~/.prism-gateway/logs/health.log
+tail -100 ~/.reflectguard/logs/health.log
 ```
 
 **Solutions:**
@@ -446,7 +446,7 @@ prism health status
 prism health check --verbose
 
 # 4. Review configuration
-cat ~/.prism-gateway/config.json | jq '.health'
+cat ~/.reflectguard/config.json | jq '.health'
 ```
 
 **Solutions:**
@@ -498,7 +498,7 @@ prism metrics collectors list
 prism health check --systems service
 
 # 3. Check storage
-ls -la ~/.prism-gateway/data/metrics/
+ls -la ~/.reflectguard/data/metrics/
 
 # 4. Check stats
 prism metrics stats
@@ -519,8 +519,8 @@ prism metrics config set --enable-all-collectors
 
 **Solution 2: Restart Metrics Service**
 ```bash
-# Restart PRISM-Gateway
-systemctl restart prism-gateway
+# Restart ReflectGuard
+systemctl restart reflectguard
 # Or if running manually:
 # Kill and restart the process
 ```
@@ -528,8 +528,8 @@ systemctl restart prism-gateway
 **Solution 3: Check Storage Permissions**
 ```bash
 # Ensure metrics directory is writable
-chmod 755 ~/.prism-gateway/data/metrics
-chown -R $USER ~/.prism-gateway/data/metrics
+chmod 755 ~/.reflectguard/data/metrics
+chown -R $USER ~/.reflectguard/data/metrics
 ```
 
 ---
@@ -614,7 +614,7 @@ prism metrics config set --retention-5m 7d
 prism metrics stats
 
 # 2. Check disk usage
-du -sh ~/.prism-gateway/data/metrics/*
+du -sh ~/.reflectguard/data/metrics/*
 
 # 3. Check retention configuration
 prism metrics config show
@@ -651,7 +651,7 @@ prism metrics collectors config process --interval 30  # Default: 10
 prism metrics storage cleanup --older-than 30d
 
 # Or remove specific granularity
-rm -rf ~/.prism-gateway/data/metrics/raw/*
+rm -rf ~/.reflectguard/data/metrics/raw/*
 # Note: Aggregated data will remain
 ```
 
@@ -683,7 +683,7 @@ prism metrics collectors list --format json | jq '.[] | select(.errorCount > 0)'
 prism metrics snapshot --collector <collector-name>
 
 # 4. Check logs
-tail -100 ~/.prism-gateway/logs/metrics.log | grep ERROR
+tail -100 ~/.reflectguard/logs/metrics.log | grep ERROR
 ```
 
 **Solutions:**
@@ -871,7 +871,7 @@ prism alerts config channels list
 prism alerts config test --channel console
 
 # 4. Check logs
-tail -100 ~/.prism-gateway/logs/alerts.log | grep ERROR
+tail -100 ~/.reflectguard/logs/alerts.log | grep ERROR
 ```
 
 **Solutions:**
@@ -886,7 +886,7 @@ prism alerts config channels enable file
 **Solution 2: Fix Channel Configuration**
 ```bash
 # For file channel
-prism alerts config channels config file --path ~/.prism-gateway/logs/alerts.log
+prism alerts config channels config file --path ~/.reflectguard/logs/alerts.log
 
 # For webhook channel
 prism alerts config channels config webhook --url https://hooks.example.com/alerts
@@ -895,8 +895,8 @@ prism alerts config channels config webhook --url https://hooks.example.com/aler
 **Solution 3: Check Permissions**
 ```bash
 # Ensure log file is writable
-touch ~/.prism-gateway/logs/alerts.log
-chmod 644 ~/.prism-gateway/logs/alerts.log
+touch ~/.reflectguard/logs/alerts.log
+chmod 644 ~/.reflectguard/logs/alerts.log
 ```
 
 **Solution 4: Test Notification**
@@ -912,14 +912,14 @@ prism alerts config test --channel file --message "Test alert"
 ### Issue: High CPU Usage
 
 **Symptoms:**
-- PRISM-Gateway using excessive CPU
+- ReflectGuard using excessive CPU
 - System sluggish
 - High system load
 
 **Diagnostic Steps:**
 
 ```bash
-# 1. Check PRISM-Gateway CPU usage
+# 1. Check ReflectGuard CPU usage
 prism metrics query process.cpu.usage --start "-1h"
 
 # 2. Check system CPU
@@ -929,7 +929,7 @@ prism metrics query system.cpu.usage --start "-1h"
 prism metrics collectors list
 
 # 4. Check query frequency
-tail -100 ~/.prism-gateway/logs/metrics.log | grep "Query"
+tail -100 ~/.reflectguard/logs/metrics.log | grep "Query"
 ```
 
 **Solutions:**
@@ -966,7 +966,7 @@ prism health config set --interval 120
 ### Issue: High Memory Usage
 
 **Symptoms:**
-- PRISM-Gateway using excessive memory
+- ReflectGuard using excessive memory
 - Memory warnings
 - OOM errors
 
@@ -1000,7 +1000,7 @@ prism metrics storage cleanup --older-than 30d
 **Solution 3: Restart Service**
 ```bash
 # Restart to clear memory
-systemctl restart prism-gateway
+systemctl restart reflectguard
 ```
 
 ---
@@ -1018,12 +1018,12 @@ systemctl restart prism-gateway
 
 ```bash
 # 1. Check disk usage
-df -h ~/.prism-gateway
+df -h ~/.reflectguard
 
 # 2. Check what's using space
-du -sh ~/.prism-gateway/*
-du -sh ~/.prism-gateway/backups/*
-du -sh ~/.prism-gateway/data/metrics/*
+du -sh ~/.reflectguard/*
+du -sh ~/.reflectguard/backups/*
+du -sh ~/.reflectguard/data/metrics/*
 
 # 3. Check backup stats
 prism backup stats
@@ -1059,8 +1059,8 @@ prism metrics config set --retention-1m 3d
 **Solution 3: Move Data to Larger Disk**
 ```bash
 # Move data directory
-mv ~/.prism-gateway/data /larger/disk/prism-data
-ln -s /larger/disk/prism-data ~/.prism-gateway/data
+mv ~/.reflectguard/data /larger/disk/prism-data
+ln -s /larger/disk/prism-data ~/.reflectguard/data
 
 # Update configuration
 prism config set --data-path /larger/disk/prism-data
@@ -1090,7 +1090,7 @@ netstat -tlnp | grep 3000
 curl http://localhost:3000/api/v1/health
 
 # 4. Check logs
-tail -100 ~/.prism-gateway/logs/api.log
+tail -100 ~/.reflectguard/logs/api.log
 ```
 
 **Solutions:**
@@ -1098,7 +1098,7 @@ tail -100 ~/.prism-gateway/logs/api.log
 **Solution 1: Restart API Server**
 ```bash
 # Restart service
-systemctl restart prism-gateway
+systemctl restart reflectguard
 ```
 
 **Solution 2: Check Port Binding**
@@ -1142,10 +1142,10 @@ prism <command> --help
 **Solution**:
 ```bash
 # Check disk space
-df -h ~/.prism-gateway/backups
+df -h ~/.reflectguard/backups
 
 # Check logs
-tail -100 ~/.prism-gateway/logs/backup.log
+tail -100 ~/.reflectguard/logs/backup.log
 
 # Try with dry-run
 prism backup create --type full --dry-run
@@ -1205,7 +1205,7 @@ Generate a complete diagnostic report:
 #!/bin/bash
 # diagnostic-report.sh
 
-echo "=== PRISM-Gateway Diagnostic Report ==="
+echo "=== ReflectGuard Diagnostic Report ==="
 echo "Generated: $(date)"
 echo
 
@@ -1226,16 +1226,16 @@ prism alerts list
 echo
 
 echo "=== Disk Usage ==="
-df -h ~/.prism-gateway
-du -sh ~/.prism-gateway/*
+df -h ~/.reflectguard
+du -sh ~/.reflectguard/*
 echo
 
 echo "=== Recent Errors ==="
-tail -50 ~/.prism-gateway/logs/errors.log
+tail -50 ~/.reflectguard/logs/errors.log
 echo
 
 echo "=== Process Info ==="
-ps aux | grep prism-gateway
+ps aux | grep reflectguard
 echo
 
 echo "=== Network Status ==="
@@ -1243,7 +1243,7 @@ netstat -tlnp | grep prism
 echo
 
 echo "=== Configuration ==="
-cat ~/.prism-gateway/config.json
+cat ~/.reflectguard/config.json
 ```
 
 Run the report:
@@ -1261,7 +1261,7 @@ Analyze logs for common issues:
 #!/bin/bash
 # analyze-logs.sh
 
-LOG_DIR=~/.prism-gateway/logs
+LOG_DIR=~/.reflectguard/logs
 
 echo "=== Error Summary (Last 24 hours) ==="
 find $LOG_DIR -name "*.log" -mtime -1 -exec grep -i error {} \; | sort | uniq -c | sort -rn
@@ -1291,7 +1291,7 @@ Monitor system performance in real-time:
 
 while true; do
   clear
-  echo "=== PRISM-Gateway Performance Monitor ==="
+  echo "=== ReflectGuard Performance Monitor ==="
   echo "Time: $(date)"
   echo
 
@@ -1317,10 +1317,10 @@ done
 
 ### Resources
 
-- **Documentation**: https://docs.prism-gateway.dev
-- **GitHub Issues**: https://github.com/prism-gateway/prism-gateway/issues
-- **Community Discord**: https://discord.gg/prism-gateway
-- **Email Support**: support@prism-gateway.dev
+- **Documentation**: https://docs.reflectguard.dev
+- **GitHub Issues**: https://github.com/reflectguard/reflectguard/issues
+- **Community Discord**: https://discord.gg/reflectguard
+- **Email Support**: support@reflectguard.dev
 
 ### Reporting Issues
 
@@ -1340,7 +1340,7 @@ When reporting issues, include:
 
 3. **Relevant Logs**
    ```bash
-   tail -100 ~/.prism-gateway/logs/errors.log
+   tail -100 ~/.reflectguard/logs/errors.log
    ```
 
 4. **Steps to Reproduce**
@@ -1350,7 +1350,7 @@ When reporting issues, include:
 
 5. **Configuration** (sanitize sensitive data)
    ```bash
-   cat ~/.prism-gateway/config.json
+   cat ~/.reflectguard/config.json
    ```
 
 ---

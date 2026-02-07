@@ -1,4 +1,4 @@
-# PRISM-Gateway 重构工程实施计划
+# ReflectGuard 重构工程实施计划
 
 > **执行日期：** 2026-02-04
 > **执行模式：** Shadow Migration (零停机迁移)
@@ -147,7 +147,7 @@ cat > config/typedoc.json << 'EOF'
     "src/types/checks.ts"
   ],
   "out": "docs/api",
-  "name": "PRISM-Gateway API Documentation",
+  "name": "ReflectGuard API Documentation",
   "plugin": ["typedoc-plugin-markdown"],
   "theme": "markdown",
   "readme": "docs/api/README.md",
@@ -202,7 +202,7 @@ cat > package.json.tmp << 'EOF'
 {
   "name": "prism-gateway",
   "version": "1.0.0",
-  "description": "PRISM-Gateway: 统一的7维度复盘和Gateway系统",
+  "description": "ReflectGuard: 统一的7维度复盘和Gateway系统",
   "type": "module",
   "main": "src/index.ts",
   "bin": {
@@ -287,7 +287,7 @@ done
 
 # 3. 创建 reports/README.md
 cat > reports/README.md << 'EOF'
-# PRISM-Gateway 项目报告
+# ReflectGuard 项目报告
 
 本目录包含所有项目进度和复盘报告。
 
@@ -357,9 +357,9 @@ done
 
 # 3. 创建 .prism/README.md
 cat > .prism/README.md << 'EOF'
-# PRISM-Gateway 数据目录
+# ReflectGuard 数据目录
 
-本目录存储 PRISM-Gateway 的所有运行时数据。
+本目录存储 ReflectGuard 的所有运行时数据。
 
 ## 目录结构
 
@@ -440,7 +440,7 @@ done
 
 # 5. 创建 docs/README.md
 cat > docs/README.md << 'EOF'
-# PRISM-Gateway 文档
+# ReflectGuard 文档
 
 ## 文档结构
 

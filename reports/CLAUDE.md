@@ -6,7 +6,7 @@
 
 ## 模块概述
 
-reports/ 目录包含 PRISM-Gateway 项目的所有报告文档，按类型分类组织。
+reports/ 目录包含 ReflectGuard 项目的所有报告文档，按类型分类组织。
 
 ---
 

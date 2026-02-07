@@ -1,8 +1,8 @@
-# PRISM-Gateway 重构脚本快速参考
+# ReflectGuard 重构脚本快速参考
 
 ## 概述
 
-本目录包含 PRISM-Gateway 项目的重构执行脚本。所有脚本都经过设计，遵循 Shadow Migration Pattern，确保零停机迁移。
+本目录包含 ReflectGuard 项目的重构执行脚本。所有脚本都经过设计，遵循 Shadow Migration Pattern，确保零停机迁移。
 
 ## 脚本列表
 

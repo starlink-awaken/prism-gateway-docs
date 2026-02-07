@@ -1,6 +1,6 @@
 # 运维故障排查
 
-PRISM-Gateway 的运维故障排查指南。
+ReflectGuard 的运维故障排查指南。
 
 ## 诊断工具
 

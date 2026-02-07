@@ -312,7 +312,7 @@ Coverage: >90% (estimated)
 ### Test Directory Structure
 
 ```
-prism-gateway/src/tests/
+reflectguard/src/tests/
 ├── unit/
 │   ├── infrastructure/
 │   │   ├── backup/                    ← NEW

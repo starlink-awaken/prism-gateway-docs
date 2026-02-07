@@ -1,4 +1,4 @@
-# PRISM-Gateway REST API 完整指南
+# ReflectGuard REST API 完整指南
 
 > **API 版本：** 1.0.0
 > **最后更新：** 2026-02-06
@@ -33,25 +33,25 @@
 
 ### 基础信息
 
-- **基础 URL：** `https://api.prism-gateway.com`
+- **基础 URL：** `https://api.reflectguard.com`
 - **API 版本：** `v1`
 - **内容类型：** `application/json`
 - **字符编码：** `UTF-8`
 
 ```typescript
 // API 基础配置
-const API_BASE_URL = 'https://api.prism-gateway.com/api/v1';
+const API_BASE_URL = 'https://api.reflectguard.com/api/v1';
 ```
 
 ### 认证方式
 
-PRISM-Gateway REST API 使用 JWT（JSON Web Token）进行认证。
+ReflectGuard REST API 使用 JWT（JSON Web Token）进行认证。
 
 #### 1. 获取访问令牌
 
 ```bash
 # 登录获取 JWT
-curl -X POST "https://api.prism-gateway.com/api/v1/auth/login" \
+curl -X POST "https://api.reflectguard.com/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "your-username",
@@ -73,7 +73,7 @@ const headers = {
 
 ```bash
 # 刷新过期的令牌
-curl -X POST "https://api.prism-gateway.com/api/v1/auth/refresh" \
+curl -X POST "https://api.reflectguard.com/api/v1/auth/refresh" \
   -H "Authorization: Bearer ${refreshToken}"
 ```
 
@@ -171,7 +171,7 @@ X-RateLimit-Reset: 1672531200
 **示例：**
 
 ```bash
-curl -X POST "https://api.prism-gateway.com/api/v1/auth/login" \
+curl -X POST "https://api.reflectguard.com/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "admin",
@@ -201,7 +201,7 @@ Authorization: Bearer {refreshToken}
 **示例：**
 
 ```bash
-curl -X POST "https://api.prism-gateway.com/api/v1/auth/refresh" \
+curl -X POST "https://api.reflectguard.com/api/v1/auth/refresh" \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIs..."
 ```
 
@@ -225,7 +225,7 @@ Authorization: Bearer {accessToken}
 **示例：**
 
 ```bash
-curl -X POST "https://api.prism-gateway.com/api/v1/auth/logout" \
+curl -X POST "https://api.reflectguard.com/api/v1/auth/logout" \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIs..."
 ```
 
@@ -290,7 +290,7 @@ Authorization: Bearer {accessToken}
 **示例：**
 
 ```bash
-curl -X GET "https://api.prism-gateway.com/api/v1/analytics/dashboard?period=week&projectId=my-project" \
+curl -X GET "https://api.reflectguard.com/api/v1/analytics/dashboard?period=week&projectId=my-project" \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIs..."
 ```
 
@@ -587,7 +587,7 @@ Authorization: Bearer {accessToken}
 #!/bin/bash
 
 # 用户登录
-LOGIN_RESPONSE=$(curl -s -X POST "https://api.prism-gateway.com/api/v1/auth/login" \
+LOGIN_RESPONSE=$(curl -s -X POST "https://api.reflectguard.com/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "admin",
@@ -606,7 +606,7 @@ echo "登录成功，令牌: $ACCESS_TOKEN"
 #!/bin/bash
 
 # 获取仪表板数据
-curl -X GET "https://api.prism-gateway.com/api/v1/analytics/dashboard?period=week" \
+curl -X GET "https://api.reflectguard.com/api/v1/analytics/dashboard?period=week" \
   -H "Authorization: Bearer $ACCESS_TOKEN" \
   -H "Content-Type: application/json" | jq '.'
 ```
@@ -617,7 +617,7 @@ curl -X GET "https://api.prism-gateway.com/api/v1/analytics/dashboard?period=wee
 #!/bin/bash
 
 # 检测异常
-curl -X POST "https://api.prism-gateway.com/api/v1/analytics/detect-anomalies" \
+curl -X POST "https://api.reflectguard.com/api/v1/analytics/detect-anomalies" \
   -H "Authorization: Bearer $ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -636,7 +636,7 @@ class PrismGatewayAPIClient {
   private baseUrl: string;
   private token: string | null = null;
 
-  constructor(baseUrl: string = 'https://api.prism-gateway.com/api/v1') {
+  constructor(baseUrl: string = 'https://api.reflectguard.com/api/v1') {
     this.baseUrl = baseUrl;
   }
 
@@ -894,7 +894,7 @@ pnpm add axios
 // src/api/client.ts
 import axios from 'axios';
 
-const API_BASE_URL = 'https://api.prism-gateway.com/api/v1';
+const API_BASE_URL = 'https://api.reflectguard.com/api/v1';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -1103,7 +1103,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.prism-gateway.com',
+        target: 'https://api.reflectguard.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
@@ -1433,22 +1433,22 @@ export class AnalyticsAPIService extends APIService<DashboardData> {
 
 ## 总结
 
-PRISM-Gateway REST API 提供了完整的接口来：
+ReflectGuard REST API 提供了完整的接口来：
 
 1. **管理用户认证** - JWT 令牌认证、自动刷新
 2. **获取 Analytics 数据** - 仪表板、趋势、异常检测
 3. **监控系统状态** - 健康检查、统计信息
 4. **遵循最佳实践** - 错误处理、性能优化、类型安全
 
-通过使用本指南，您可以快速集成 PRISM-Gateway API 到您的应用程序中，并构建强大的监控和分析功能。
+通过使用本指南，您可以快速集成 ReflectGuard API 到您的应用程序中，并构建强大的监控和分析功能。
 
 ---
 
 **相关资源：**
 - [API 基础文档](README.md)
-- [Analytics 模块文档](../prism-gateway/src/core/analytics/README.md)
+- [Analytics 模块文档](../reflectguard/src/core/analytics/README.md)
 - [JWT 认证指南](./JWT_AUTH.md)
 - [CORS 部署指南](./CORS_GUIDE.md)
 
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team
 **许可证：** MIT License

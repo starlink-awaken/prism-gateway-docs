@@ -1,4 +1,4 @@
-# PRISM-Gateway 项目 AI 上下文文档
+# ReflectGuard 项目 AI 上下文文档
 
 > 统一的 7 维度复盘和 Gateway 系统
 
@@ -254,7 +254,7 @@
 
 ## 项目愿景
 
-PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），融合了 Gateway（行为准则门禁）和 Retrospective（复盘系统）两大核心能力，形成统一的轻量级系统。
+ReflectGuard 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），融合了 Gateway（行为准则门禁）和 Retrospective（复盘系统）两大核心能力，形成统一的轻量级系统。
 
 **核心使命：** 从 7 个维度全面复盘，内化为 Gateway 实时检查，形成持续进化的智能系统。
 
@@ -273,7 +273,7 @@ PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastruc
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                          PRISM-Gateway Phase 2 架构                           │
+│                          ReflectGuard Phase 2 架构                           │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────┐ │
@@ -337,7 +337,7 @@ PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastruc
 
 ```mermaid
 graph TD
-    ROOT["(根) PRISM-Gateway 文档"]
+    ROOT["(根) ReflectGuard 文档"]
 
     ROOT --> REPORTS["reports/"]
     ROOT --> DOCS["docs/"]
@@ -365,7 +365,7 @@ graph TD
     click DOCS "./docs/CLAUDE.md" "查看文档模块"
     click API "./api/CLAUDE.md" "查看 API 模块文档"
     click SCRIPTS "./scripts/README.md" "查看重构脚本"
-    click PRISM "./core/README.md" "查看 PRISM-Gateway 主项目"
+    click PRISM "./core/README.md" "查看 ReflectGuard 主项目"
 ```
 
 ---
@@ -400,7 +400,7 @@ graph TD
 
 ```bash
 # 克隆项目
-cd ~/.prism-gateway
+cd ~/.reflectguard
 
 # 安装依赖
 bun install
@@ -413,19 +413,19 @@ bun test
 
 ```bash
 # 检查任务意图
-prism check "实现用户登录功能"
+reflectguard check "实现用户登录功能"
 
 # 执行快速复盘
-prism retro quick
+reflectguard retro quick
 
 # 执行标准复盘
-prism retro standard
+reflectguard retro standard
 
 # 数据迁移
-prism migrate --dry-run
+reflectguard migrate --dry-run
 
 # 查看统计
-prism stats
+reflectguard stats
 ```
 
 ### 开发流程
@@ -551,7 +551,7 @@ async check(intent: string, context?: CheckContext): Promise<CheckResult>
 
 ### 对 AI 助手的期望
 
-当协助开发 PRISM-Gateway 时，AI 助手应：
+当协助开发 ReflectGuard 时，AI 助手应：
 
 1. **理解架构**：优先阅读本文档，了解系统分层和数据流
 2. **遵循原则**：严格遵守轻量级、类型安全、测试驱动的设计原则
@@ -599,7 +599,7 @@ async check(intent: string, context?: CheckContext): Promise<CheckResult>
 
 ### Shadow Migration Pattern
 
-PRISM-Gateway 采用 **Shadow Migration Pattern** 实现零停机迁移：
+ReflectGuard 采用 **Shadow Migration Pattern** 实现零停机迁移：
 
 1. **Phase 1 数据永不修改**
 2. **备份在变更前创建**
@@ -610,16 +610,16 @@ PRISM-Gateway 采用 **Shadow Migration Pattern** 实现零停机迁移：
 
 ```bash
 # 预检查
-prism migrate --dry-run
+reflectguard migrate --dry-run
 
 # 执行迁移
-prism migrate
+reflectguard migrate
 
 # 检查状态
-prism migrate --status
+reflectguard migrate --status
 
 # 回滚
-prism migrate --rollback
+reflectguard migrate --rollback
 ```
 
 **详细指南：** [MIGRATION_GUIDE.md](./docs/MIGRATION_GUIDE.md)
@@ -632,7 +632,7 @@ prism migrate --rollback
 
 ### 核心功能
 
-Analytics 模块是 PRISM-Gateway 的**数据分析引擎**，提供四大能力：
+Analytics 模块是 ReflectGuard 的**数据分析引擎**，提供四大能力：
 
 #### 1. 指标聚合（4 个聚合器）
 
@@ -821,6 +821,6 @@ console.log(`告警数量: ${dashboard.alerts.length}`);
 
 ---
 
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team
 **许可证：** MIT License
 **PAI 版本：** 2.5

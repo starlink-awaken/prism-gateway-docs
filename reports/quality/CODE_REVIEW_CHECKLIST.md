@@ -1,6 +1,6 @@
 # Code Review 检查清单
 
-> **PRISM-Gateway 项目 Code Review 三道关卡检查清单**
+> **ReflectGuard 项目 Code Review 三道关卡检查清单**
 
 **版本:** 1.0.0
 **创建日期:** 2026-02-06

@@ -1,6 +1,6 @@
 # 开发者快速开始
 
-本指南帮助开发者快速搭建 PRISM-Gateway 的开发环境。
+本指南帮助开发者快速搭建 ReflectGuard 的开发环境。
 
 ## 前置条件
 
@@ -16,7 +16,7 @@ git clone https://github.com/your-org/prism-gateway.git ~/.prism-gateway
 cd ~/.prism-gateway
 
 # 克隆文档仓库（可选）
-git clone https://github.com/your-org/prism-gateway-docs.git ~/workspace/prism-gateway-docs
+git clone https://github.com/your-org/reflectguard-docs.git ~/workspace/reflectguard-docs
 ```
 
 ## 2. 安装依赖

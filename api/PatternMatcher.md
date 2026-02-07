@@ -29,7 +29,7 @@ Creates a new PatternMatcher instance.
 
 **Example:**
 ```typescript
-import { PatternMatcher, MemoryStore } from 'prism-gateway';
+import { PatternMatcher, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const matcher = new PatternMatcher(store);
@@ -190,7 +190,7 @@ interface FailurePattern {
 ## Example: Complete Workflow
 
 ```typescript
-import { PatternMatcher, MemoryStore } from 'prism-gateway';
+import { PatternMatcher, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const matcher = new PatternMatcher(store);
@@ -283,7 +283,7 @@ Categorized by severity:
 ## Integration Example
 
 ```typescript
-import { PatternMatcher, MemoryStore, GatewayGuard } from 'prism-gateway';
+import { PatternMatcher, MemoryStore, GatewayGuard } from 'reflectguard';
 
 const store = new MemoryStore();
 const matcher = new PatternMatcher(store);
