@@ -1,8 +1,8 @@
 # PRISM-Gateway 项目文档索引
 
 **项目：** PRISM-Gateway - 统一的7维度复盘和Gateway系统
-**文档版本：** 1.1.0
-**最后更新：** 2026-02-03
+**文档版本：** 2.0.0
+**最后更新：** 2026-02-07
 
 ---
 
@@ -10,112 +10,111 @@
 
 ```
 prism-gateway-docs/
-├── reports/     # 项目报告和复盘
-├── design/      # 设计文档
-├── docs/        # 使用文档和指南
-└── api/         # API文档
+├── api/            # API文档
+├── docs/           # 使用文档和指南（按角色分类）
+├── reports/        # 项目报告和复盘（按类型分类）
+├── scripts/        # 重构执行脚本
+└── prism-gateway/  # 主项目代码
 ```
+
+---
+
+## 🎯 快速导航
+
+### 新手入门
+
+1. **[README.md](README.md)** - 项目简介和快速开始
+2. **[CLAUDE.md](CLAUDE.md)** - AI上下文文档（完整项目信息）
+3. **[FAQ.md](FAQ.md)** - 常见问题解答
+
+### 核心文档
+
+- **[API文档](api/)** - 完整的API参考文档
+- **[使用文档](docs/)** - 按角色分类的使用指南
+- **[项目报告](reports/)** - 按类型分类的项目报告
 
 ---
 
 ## 📊 项目报告 (reports/)
 
-### Phase 1 报告
+reports/ 目录按类型组织了所有项目报告。
 
-| 文档 | 描述 | 日期 |
+### 报告分类
+
+| 分类 | 目录 | 说明 |
 |------|------|------|
-| [PHASE1_MVP_COMPLETION_REPORT.md](reports/PHASE1_MVP_COMPLETION_REPORT.md) | Phase 1 MVP完成报告 | 2026-02-03 |
-| [PHASE1_MVP_DEEP_RETROSPECTIVE_REPORT.md](reports/PHASE1_MVP_DEEP_RETROSPECTIVE_REPORT.md) | Phase 1深度复盘报告（23KB） | 2026-02-03 |
-| [TASK68_COMPLETION_REPORT.md](reports/TASK68_COMPLETION_REPORT.md) | Task 68完成报告 | 2026-02-03 |
+| **里程碑报告** | milestone/ | Phase、Week完成报告、Release Notes |
+| **任务报告** | task/ | Task完成报告 |
+| **质量报告** | quality/ | 验证报告、测试报告、覆盖率报告 |
+| **架构报告** | architecture/ | 设计文档、重构报告 |
+| **项目管理** | project/ | 进度、路线图 |
+| **其他** | operations/, testing/, governance/, github/, archive/ | 运维、测试、治理等 |
 
-### Phase 2 报告
+### 重要报告快速访问
 
-| 文档 | 描述 | 日期 |
-|------|------|------|
-| [PHASE2_ARCHITECTURE.md](reports/PHASE2_ARCHITECTURE.md) | Phase 2系统架构设计（37KB） | 2026-02-03 |
-| [PHASE2_PREPARATION_WEEK_COMPLETION_REPORT.md](reports/PHASE2_PREPARATION_WEEK_COMPLETION_REPORT.md) | Phase 2.0准备周完成报告 | 2026-02-03 |
-| [WEEK2-3_COMPLETION_REPORT.md](reports/WEEK2-3_COMPLETION_REPORT.md) | Week 2-3完成报告 | 2026-02-03 |
-| [TASK143_MCP_SERVER_COMPLETION_REPORT.md](reports/TASK143_MCP_SERVER_COMPLETION_REPORT.md) | MCP Server实现报告 | 2026-02-03 |
-
-### 综合报告
-
-| 文档 | 描述 | 日期 |
-|------|------|------|
-| [DELIVERY_REPORT_Phase1_Retrospective_Phase2_Planning.md](reports/DELIVERY_REPORT_Phase1_Retrospective_Phase2_Planning.md) | Phase 1交付报告+Phase 2规划 | 2026-02-03 |
-
-### 验证报告
-
-| 文档 | 描述 | 任务 |
-|------|------|------|
-| [VERIFICATION_REPORT_Task63-65.md](reports/VERIFICATION_REPORT_Task63-65.md) | Task 63-65验证报告 | DataExtractor, RetrospectiveCore, QuickReview |
-| [VERIFICATION_REPORT_Task66.md](reports/VERIFICATION_REPORT_Task66.md) | Task 66验证报告 | Hooks |
-| [VERIFICATION_REPORT_Task67.md](reports/VERIFICATION_REPORT_Task67.md) | Task 67验证报告 | PatternMatcher |
-
----
-
-## 🏗️ 设计文档 (design/)
-
-*设计文档暂未单独分类，主要设计内容包含在报告中*
-
-### 核心设计文档
-
-- **PHASE2_ARCHITECTURE.md** - 5层系统架构设计
-  - 用户界面层
-  - 集成层
-  - 核心服务层
-  - 基础设施层
-  - 数据层
+| 文档 | 描述 |
+|------|------|
+| [PHASE2_ARCHITECTURE.md](reports/architecture/PHASE2_ARCHITECTURE.md) | Phase 2系统架构设计（37KB） |
+| [QA_ASSURANCE_FRAMEWORK.md](reports/QA_ASSURANCE_FRAMEWORK.md) | 质量保证框架 |
+| [README.md](reports/README.md) | 报告模块详细说明 |
+| [CLAUDE.md](reports/CLAUDE.md) | 报告模块导航 |
 
 ---
 
 ## 📖 使用文档 (docs/)
 
-### 数据迁移
+docs/ 目录包含按角色分类的使用文档和指南。
 
-| 文档 | 描述 | 大小 |
-|------|------|------|
-| [DATA_MIGRATION_PLAN.md](docs/DATA_MIGRATION_PLAN.md) | 数据迁移方案设计 | 46KB |
-| [DATA_MIGRATION_SUMMARY.md](docs/DATA_MIGRATION_SUMMARY.md) | 数据迁移总结 | 9.2KB |
-| [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) | 迁移指南 | 11KB |
-| [MIGRATION_ROLLBACK_PLAN.md](docs/MIGRATION_ROLLBACK_PLAN.md) | 回滚方案 | 26KB |
-| [MIGRATION_VALIDATION_PLAN.md](docs/MIGRATION_VALIDATION_PLAN.md) | 验证方案 | 28KB |
+### 按角色分类
 
-### 系统使用
+| 角色 | 目录 | 文档内容 |
+|------|------|----------|
+| **👤 用户** | users/ | 快速开始、安装、用户指南、配置、FAQ、故障排查 |
+| **👨‍💻 开发者** | developers/ | 开发环境、架构、API参考、贡献、测试、编码规范 |
+| **🤝 贡献者** | contributors/ | 工作流程、代码审查、项目标准 |
+| **🔧 运维** | operators/ | 部署、监控、故障排查 |
 
-| 文档 | 描述 | 大小 |
-|------|------|------|
-| [mcp-server.md](docs/mcp-server.md) | MCP Server使用文档 | 6.6KB |
-| [FILE_LOCK_USAGE.md](docs/FILE_LOCK_USAGE.md) | 文件锁使用文档 | 7.6KB |
-| [PROJECT_PROGRESS.md](docs/PROJECT_PROGRESS.md) | 项目进度跟踪 | 4.2KB |
-
-### 任务报告
+### 核心技术文档
 
 | 文档 | 描述 |
 |------|------|
-| [TASK144_COMPLETION_REPORT.md](docs/TASK144_COMPLETION_REPORT.md) | FileLock实现报告 |
+| [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) | 数据迁移指南 |
+| [FILE_LOCK_USAGE.md](docs/FILE_LOCK_USAGE.md) | 文件锁使用文档 |
+| [mcp-server.md](docs/mcp-server.md) | MCP Server集成文档 |
+| [CLAUDE.md](docs/CLAUDE.md) | 文档模块导航 |
 
 ---
 
 ## 🔌 API文档 (api/)
 
+api/ 目录包含完整的API参考文档。
+
 ### 核心 API
 
-| 文档 | 描述 | 大小 |
-|------|------|------|
-| [README.md](api/README.md) | API文档总览 | 13KB |
-| [GatewayGuard.md](api/GatewayGuard.md) | Gateway检查器 | 5.5KB |
-| [MemoryStore.md](api/MemoryStore.md) | 三层MEMORY架构 | 9.4KB |
-| [DataExtractor.md](api/DataExtractor.md) | 7维度数据提取 | 9.9KB |
-| [RetrospectiveCore.md](api/RetrospectiveCore.md) | 复盘核心引擎 | 8.7KB |
-| [QuickReview.md](api/QuickReview.md) | 快速复盘工具 | 7.0KB |
+| 文档 | 描述 |
+|------|------|
+| [README.md](api/README.md) | API文档总览和快速开始（13KB） ⭐ |
+| [GatewayGuard.md](api/GatewayGuard.md) | Gateway检查器 |
+| [MemoryStore.md](api/MemoryStore.md) | 三层MEMORY架构 |
+| [DataExtractor.md](api/DataExtractor.md) | 7维度数据提取 |
+| [RetrospectiveCore.md](api/RetrospectiveCore.md) | 复盘核心引擎 |
+| [QuickReview.md](api/QuickReview.md) | 快速复盘工具 |
 
 ### 模式匹配器
 
-| 文档 | 描述 | 大小 |
-|------|------|------|
-| [PatternMatcher.md](api/PatternMatcher.md) | 模式匹配器 | 6.7KB |
-| [PrincipleChecker.md](api/PrincipleChecker.md) | 原则检查器 | 7.8KB |
-| [TrapDetector.md](api/TrapDetector.md) | 陷阱检测器 | 7.8KB |
+| 文档 | 描述 |
+|------|------|
+| [PatternMatcher.md](api/PatternMatcher.md) | 模式匹配器 |
+| [PrincipleChecker.md](api/PrincipleChecker.md) | 原则检查器 |
+| [TrapDetector.md](api/TrapDetector.md) | 陷阱检测器 |
+
+### REST API
+
+| 文档 | 描述 |
+|------|------|
+| [REST_API_GUIDE.md](api/REST_API_GUIDE.md) | REST API使用指南 |
+| [CONTEXT_SYNC_API.md](api/CONTEXT_SYNC_API.md) | 上下文同步API |
+| [CLAUDE.md](api/CLAUDE.md) | API模块导航 |
 
 ---
 
@@ -123,48 +122,23 @@ prism-gateway-docs/
 
 ### 文档统计
 
-- **总文档数：** 38个
-- **总大小：** ~350KB
-- **报告文档：** 11个
-- **使用文档：** 8个
-- **API文档：** 10个
-- **设计文档：** 1个（包含在报告中）
+- **总文档数：** 189个（减少9个，优化4.5%）
+- **报告文档：** ~29个（按类型分类）
+- **使用文档：** ~43个（按角色分类）
+- **API文档：** 13个（统一位置）
+- **配置文件：** 6个（新增5个）
 
-### 时间线
+### 项目进度
 
-| 里程碑 | 日期 | 状态 |
-|--------|------|------|
-| Phase 1 MVP 完成 | 2026-02-03 | ✅ |
-| Phase 1 深度复盘 | 2026-02-03 | ✅ |
-| Phase 2 架构设计 | 2026-02-03 | ✅ |
-| Phase 2.0 准备周 | 2026-02-03 | ✅ |
-| Week 2-3 实施 | 2026-02-03 | ✅ |
+| 阶段 | 状态 | 完成度 |
+|------|------|--------|
+| Phase 1 MVP | ✅ 完成 | 100% |
+| Phase 2.0 准备周 | ✅ 完成 | 100% |
+| Week 2-3: 基础设施 | ✅ 完成 | 100% |
+| Week 4-5: Analytics+API | ✅ 完成 | 100% |
+| Week 6-7: Web UI | 🔜 待开始 | 0% |
 
----
-
-## 🎯 快速导航
-
-### 我想了解...
-
-**项目整体情况：**
-1. 先读 [PHASE1_MVP_DEEP_RETROSPECTIVE_REPORT.md](reports/PHASE1_MVP_DEEP_RETROSPECTIVE_REPORT.md)
-2. 再读 [PHASE2_ARCHITECTURE.md](reports/PHASE2_ARCHITECTURE.md)
-3. 最后读 [WEEK2-3_COMPLETION_REPORT.md](reports/WEEK2-3_COMPLETION_REPORT.md)
-
-**如何使用系统：**
-1. 读 [mcp-server.md](docs/mcp-server.md) 了解MCP集成
-2. 读 [FILE_LOCK_USAGE.md](docs/FILE_LOCK_USAGE.md) 了解文件锁
-3. 读 [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) 了解数据迁移
-
-**API开发参考：**
-1. 从 [api/README.md](api/README.md) 开始
-2. 查看具体模块文档
-3. 参考代码示例
-
-**数据迁移操作：**
-1. 读 [DATA_MIGRATION_PLAN.md](docs/DATA_MIGRATION_PLAN.md) 了解方案
-2. 读 [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) 按步骤操作
-3. 参考 [MIGRATION_ROLLBACK_PLAN.md](docs/MIGRATION_ROLLBACK_PLAN.md) 处理回滚
+**整体进度：** ~30% 完成（3/10周）
 
 ---
 
@@ -172,12 +146,20 @@ prism-gateway-docs/
 
 ### 更新日志
 
+**v2.0.0** (2026-02-07)
+- 🎉 **大规模文档整理和清理**
+  - 删除10个重复文件
+  - 重新组织20个报告文件
+  - 新增5个配置文件
+  - 精简CLAUDE.md文件1,030行
+  - 增强.gitignore文件（11行→87行）
+- 详见：[DOCUMENT_CLEANUP_REPORT.md](DOCUMENT_CLEANUP_REPORT.md)
+
 **v1.1.0** (2026-02-03)
 - 添加 Week 2-3 完成报告
 - 添加 MCP Server 完成报告
 - 添加数据迁移文档
 - 添加文件锁使用文档
-- 整理所有项目文档
 
 **v1.0.0** (2026-02-03)
 - Phase 1 MVP 完成报告
@@ -188,14 +170,29 @@ prism-gateway-docs/
 
 ## 🔗 相关链接
 
-- **主项目仓库：** `~/.prism-gateway/`
-- **知识库：** `~/.claude/MEMORY/LEARNING/Gateway/`
-- **PAI系统：** `~/.claude/`
+### 项目文档
+
+- **[README.md](README.md)** - 项目主页
+- **[CLAUDE.md](CLAUDE.md)** - AI上下文文档
+- **[CHANGELOG.md](CHANGELOG.md)** - 版本历史
+- **[CONTRIBUTING.md](prism-gateway/CONTRIBUTING.md)** - 贡献指南
+
+### 社区文档
+
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - 行为准则
+- **[GOVERNANCE.md](GOVERNANCE.md)** - 治理文档
+- **[SUPPORT.md](SUPPORT.md)** - 支持政策
+- **[CONTACT.md](CONTACT.md)** - 联系方式
+
+### 报告文档
+
+- **[PROJECT_STATE.md](PROJECT_STATE.md)** - 项目状态
+- **[DOCUMENT_CLEANUP_REPORT.md](DOCUMENT_CLEANUP_REPORT.md)** - 文档清理报告 ⭐ NEW
 
 ---
 
-**文档索引生成时间：** 2026-02-03
-**文档版本：** 1.1.0
+**文档索引生成时间：** 2026-02-07
+**文档版本：** 2.0.0
 
 *PAI - Personal AI Infrastructure*
 *Version: 2.5*
