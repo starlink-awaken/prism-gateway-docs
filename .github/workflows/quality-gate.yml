@@ -409,7 +409,7 @@ jobs:
 
       - name: 发布 PR 状态
         if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           script: |
             const results = {
