@@ -94,6 +94,7 @@ export function jwtMiddleware(options: JWTMiddlewareOptions) {
       const user: AuthUser = {
         sub: result.payload.sub,
         username: result.payload.username,
+        role: result.payload.role,
         jti: result.payload.jti
       };
       c.set('user', user);

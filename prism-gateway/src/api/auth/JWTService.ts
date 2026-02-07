@@ -99,11 +99,12 @@ export class JWTService {
    * ```ts
    * const token = jwtService.generateAccessToken({
    *   sub: 'user123',
-   *   username: 'alice'
+   *   username: 'alice',
+   *   role: 'user'
    * });
    * ```
    */
-  generateAccessToken(payload: { sub: string; username: string }): string {
+  generateAccessToken(payload: { sub: string; username: string; role?: string }): string {
     return this.generateToken(payload, 'access', this.config.accessTokenTTL);
   }
 
@@ -113,7 +114,7 @@ export class JWTService {
    * @param payload - 用户信息
    * @returns 刷新 Token
    */
-  generateRefreshToken(payload: { sub: string; username: string }): string {
+  generateRefreshToken(payload: { sub: string; username: string; role?: string }): string {
     return this.generateToken(
       payload,
       'refresh',
@@ -131,7 +132,8 @@ export class JWTService {
    * ```ts
    * const tokens = jwtService.generateTokens({
    *   sub: 'user123',
-   *   username: 'alice'
+   *   username: 'alice',
+   *   role: 'user'
    * });
    * console.log(tokens.accessToken);
    * console.log(tokens.refreshToken);
@@ -140,6 +142,7 @@ export class JWTService {
   generateTokens(payload: {
     sub: string;
     username: string;
+    role?: string;
   }): LoginResponse {
     const accessToken = this.generateAccessToken(payload);
     const refreshToken = this.generateRefreshToken(payload);
@@ -175,11 +178,11 @@ export class JWTService {
       );
     }
 
-    const { sub, username } = result.payload;
+    const { sub, username, role } = result.payload;
 
     // 生成新的 Token 对
-    const accessToken = this.generateAccessToken({ sub, username });
-    const newRefreshToken = this.generateRefreshToken({ sub, username });
+    const accessToken = this.generateAccessToken({ sub, username, role });
+    const newRefreshToken = this.generateRefreshToken({ sub, username, role });
 
     return {
       accessToken,
@@ -321,7 +324,7 @@ export class JWTService {
    * @returns JWT Token
    */
   private generateToken(
-    payload: { sub: string; username: string },
+    payload: { sub: string; username: string; role?: string },
     type: 'access' | 'refresh',
     ttl: number
   ): string {
@@ -331,6 +334,7 @@ export class JWTService {
     const jwtPayload: JWTPayload = {
       sub: payload.sub,
       username: payload.username,
+      role: payload.role,
       type,
       iat: now,
       exp: now + ttl,

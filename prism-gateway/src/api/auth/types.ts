@@ -18,6 +18,8 @@ export interface JWTPayload {
   sub: string;
   /** 用户名 */
   username: string;
+  /** 用户角色 (admin, user, viewer, guest) */
+  role?: string;
   /** Token 类型（access | refresh） */
   type: 'access' | 'refresh';
   /** 签发时间（Unix 时间戳） */
@@ -105,6 +107,8 @@ export interface AuthUser {
   sub: string;
   /** 用户名 */
   username: string;
+  /** 用户角色 */
+  role?: string;
   /** Token 唯一标识 */
   jti: string;
 }
