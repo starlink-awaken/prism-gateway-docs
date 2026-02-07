@@ -202,7 +202,7 @@ jobs:
 
       - name: 发布测试报告
         if: always()
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v2
         with:
           name: 单元测试报告
           path: '**/test-results/**/*.xml'
