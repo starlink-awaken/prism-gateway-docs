@@ -96,7 +96,7 @@ Bun 提供了：
 ### 数据存储在哪里？
 
 ```
-~/.prism-gateway/
+~/.core/
 ├── level-1-hot/          # 热数据（实时查询）
 │   ├── principles.json   # 行为准则
 │   └── patterns/         # 模式
@@ -158,7 +158,7 @@ PRISM-Gateway 实现了完整的 Model Context Protocol (MCP)：
 
 ### 如何自定义行为准则？
 
-编辑 `~/.prism-gateway/level-1-hot/principles.json`：
+编辑 `~/.core/level-1-hot/principles.json`：
 
 ```json
 {

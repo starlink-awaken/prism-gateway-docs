@@ -318,7 +318,7 @@ PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastruc
 ### 三层 MEMORY 架构
 
 ```
-~/.prism-gateway/
+~/.core/
 ├── level-1-hot/          # Hot 数据（实时查询，响应 <100ms）
 │   ├── principles.json   # 5 条行为准则
 │   └── patterns/         # 成功/失败模式
@@ -343,7 +343,7 @@ graph TD
     ROOT --> DOCS["docs/"]
     ROOT --> API["api/"]
     ROOT --> SCRIPTS["scripts/"]
-    ROOT --> PRISM["prism-gateway/"]
+    ROOT --> PRISM["core/"]
 
     REPORTS --> PHASE1["Phase 1 报告"]
     REPORTS --> PHASE2["Phase 2 报告"]
@@ -365,7 +365,7 @@ graph TD
     click DOCS "./docs/CLAUDE.md" "查看文档模块"
     click API "./api/CLAUDE.md" "查看 API 模块文档"
     click SCRIPTS "./scripts/README.md" "查看重构脚本"
-    click PRISM "./prism-gateway/README.md" "查看 PRISM-Gateway 主项目"
+    click PRISM "./core/README.md" "查看 PRISM-Gateway 主项目"
 ```
 
 ---
@@ -378,7 +378,7 @@ graph TD
 | **docs/** | 使用文档和指南 | ✅ 完成 | [模块文档](./docs/CLAUDE.md) | 8 |
 | **api/** | API 文档 | ✅ 完成 | [模块文档](./api/CLAUDE.md) | 10 |
 | **scripts/** | 重构执行脚本 | ✅ 完成 | [快速参考](./scripts/README.md) | 8 |
-| **prism-gateway/** | 主项目代码 | ✅ 完成 | [README](./prism-gateway/README.md) | - |
+| **core/** | 主项目代码 | ✅ 完成 | [README](./core/README.md) | - |
 
 ---
 
@@ -442,7 +442,7 @@ prism stats
 ### 测试组织
 
 ```
-~/.prism-gateway/tests/
+~/.core/tests/
 ├── unit/              # 单元测试
 │   ├── core/          # 核心类测试
 │   ├── integration/   # 集成层测试
@@ -711,7 +711,7 @@ console.log(`告警数量: ${dashboard.alerts.length}`);
 1. **Bun 模块解析问题**：AnalyticsService 在集成测试中无法直接导入（使用内联实现替代）
 2. **LRU 测试不稳定**：时间精度问题导致个别测试失败（已标记为 todo）
 
-**完整文档：** [Analytics 模块 README](./prism-gateway/src/core/analytics/README.md)
+**完整文档：** [Analytics 模块 README](./core/src/core/analytics/README.md)
 
 ---
 
@@ -724,12 +724,12 @@ console.log(`告警数量: ${dashboard.alerts.length}`);
 - [MCP Server 使用指南](./docs/mcp-server.md)
 - [文件锁使用文档](./docs/FILE_LOCK_USAGE.md)
 - [API 文档总览](./api/README.md)
-- [Analytics 模块文档](./prism-gateway/src/core/analytics/README.md) ⭐ NEW
+- [Analytics 模块文档](./core/src/core/analytics/README.md) ⭐ NEW
 - [Week 4-5 风险监控框架](./reports/WEEK4-5_RISK_MONITORING_FRAMEWORK.md) ⭐ NEW
 
 ### 外部链接
 
-- **主项目仓库：** `~/.prism-gateway/`
+- **主项目仓库：** `~/.core/`
 - **知识库：** `~/.claude/MEMORY/LEARNING/Gateway/`
 - **MCP 协议规范：** https://modelcontextprotocol.io/
 

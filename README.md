@@ -54,7 +54,7 @@ prism stats
 prism ui
 ```
 
-更多详情请参考 [快速入门指南](prism-gateway/docs/QUICK_START.md)
+更多详情请参考 [快速入门指南](core/docs/QUICK_START.md)
 
 ---
 
@@ -155,9 +155,9 @@ if (result.status === 'BLOCKED') {
 ## 文档导航
 
 ### 📖 用户文档
-- [快速入门](prism-gateway/docs/QUICK_START.md) - 5分钟上手
-- [配置指南](prism-gateway/docs/CONFIGURATION_GUIDE.md) - 完整配置参考
-- [迁移指南](prism-gateway/docs/MIGRATION_GUIDE_V3.md) - v2.x → v3.0 升级
+- [快速入门](core/docs/QUICK_START.md) - 5分钟上手
+- [配置指南](core/docs/CONFIGURATION_GUIDE.md) - 完整配置参考
+- [迁移指南](core/docs/MIGRATION_GUIDE_V3.md) - v2.x → v3.0 升级
 - [常见问题](FAQ.md)
 
 ### 👨‍💻 开发者文档
@@ -174,7 +174,7 @@ if (result.status === 'BLOCKED') {
 ### 📊 项目状态
 - [项目状态](PROJECT_STATE.md) - 当前进度和规划
 - [变更日志](CHANGELOG.md) - 版本历史
-- [发布说明](prism-gateway/RELEASE_NOTES_V3.0.md) - v3.0.0 新功能
+- [发布说明](core/RELEASE_NOTES_V3.0.md) - v3.0.0 新功能
 
 ---
 
@@ -251,7 +251,7 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 ## 相关链接
 
-- **主项目:** [prism-gateway/](prism-gateway/)
+- **主项目:** [core/](core/) (核心代码和实现)
 - **文档索引:** [INDEX.md](INDEX.md)
 - **完整文档:** [docs/](docs/)
 - **API 文档:** [api/](api/)
