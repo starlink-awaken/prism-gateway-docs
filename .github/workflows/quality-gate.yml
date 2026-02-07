@@ -145,7 +145,7 @@ jobs:
 
       - name: 上传 Lint 结果
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: lint-results
           path: ${{ env.WORKING_DIRECTORY }}/eslint-report.json
@@ -192,7 +192,7 @@ jobs:
 
       - name: 上传测试结果
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: test-results
           path: |
@@ -348,7 +348,7 @@ jobs:
 
       - name: 上传安全扫描报告
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: security-report
           path: security-audit-report.txt
