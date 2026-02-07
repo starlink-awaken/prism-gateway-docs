@@ -42,3 +42,21 @@ export type {
   LockStats,
   LockMonitorOptions
 } from './lock/index.js';
+
+// 备份模块
+export { BackupService, BackupEngine, StorageManager, BackupScheduler } from './backup/index.js';
+export type {
+  BackupConfig,
+  BackupMetadata,
+  BackupFilter,
+  BackupStats,
+  VerifyResult,
+  RestoreOptions,
+  StorageStats,
+  FileDiff,
+  CompressResult,
+  BackupManifest,
+  RetentionPolicy,
+  ScheduleConfig
+} from './backup/index.js';
+export { BackupType, BackupStatus } from './backup/index.js';
