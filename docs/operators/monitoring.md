@@ -1,6 +1,6 @@
 # 监控指南
 
-PRISM-Gateway 的监控指标和告警配置。
+ReflectGuard 的监控指标和告警配置。
 
 ## 核心指标
 
@@ -75,7 +75,7 @@ sum(rate(prism_violations_total[1h])) by (category)
   labels:
     severity: critical
   annotations:
-    summary: "PRISM-Gateway 服务宕机"
+    summary: "ReflectGuard 服务宕机"
     description: "{{ $labels.instance }} 已经宕机超过 1 分钟"
 ```
 

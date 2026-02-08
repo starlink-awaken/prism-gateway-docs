@@ -77,7 +77,7 @@ README.md 新增内容:
 
 1. **安装依赖**
 ```bash
-cd ~/.prism-gateway && bun install
+cd ~/.reflectguard && bun install
 ```
 
 2. **运行测试**

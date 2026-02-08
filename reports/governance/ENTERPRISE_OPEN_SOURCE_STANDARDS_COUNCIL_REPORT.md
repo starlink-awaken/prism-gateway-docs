@@ -3,7 +3,7 @@
 > **任务编号：** Task #142 - 企业级开源项目标准研讨（Council模式）
 > **生成日期：** 2026-02-07
 > **辩论模式：** 5位专家多视角辩论
-> **目标：** 确定 PRISM-Gateway 应遵循的企业级开源项目标准
+> **目标：** 确定 ReflectGuard 应遵循的企业级开源项目标准
 
 ---
 
@@ -35,7 +35,7 @@
 
 **目录结构建议：**
 ```
-prism-gateway/
+reflectguard/
 ├── src/              # 源代码
 ├── docs/            # 用户文档
 ├── CONTRIBUTING.md   # 根目录核心文件
@@ -82,7 +82,7 @@ prism-gateway/
 
 **目录结构建议：**
 ```
-prism-gateway/
+reflectguard/
 ├── cmd/              # 命令行工具入口
 ├── pkg/              # 库代码
 ├── docs/            # 文档（按用户类型）
@@ -136,7 +136,7 @@ prism-gateway/
 
 **目录结构建议：**
 ```
-prism-gateway/
+reflectguard/
 ├── src/              # 源代码
 ├── tests/           # 测试代码（与源码对应）
 ├── docs/            # 文档
@@ -184,7 +184,7 @@ prism-gateway/
 
 **目录结构建议：**
 ```
-prism-gateway/
+reflectguard/
 ├── src/             # 源代码
 ├── docs/           # 文档
 ├── tests/          # 测试
@@ -208,7 +208,7 @@ prism-gateway/
 
 ### 1.5 Architect代表
 
-**立场：** 从 PRISM-Gateway 项目架构本身出发
+**立场：** 从 ReflectGuard 项目架构本身出发
 
 **关键观点：**
 - **模块化设计**：src/ 分层清晰（api/core/infrastructure/ui）
@@ -217,7 +217,7 @@ prism-gateway/
 - **技术债务管理**：明确的测试覆盖率、代码质量门禁
 - **实际可操作性**：标准不能过度设计，必须可落地
 
-**参考项目：** PRISM-Gateway 当前架构
+**参考项目：** ReflectGuard 当前架构
 
 **项目现状分析：**
 - ✅ 模块化：src/ 分为 api/core/infrastructure/ui 四层
@@ -240,7 +240,7 @@ prism-gateway/
 
 **目录结构建议：**
 ```
-prism-gateway/
+reflectguard/
 ├── README.md                # 项目主页（保持）
 ├── CONTRIBUTING.md          # 贡献指南（保持）
 ├── LICENSE                  # MIT许可证（保持）
@@ -289,7 +289,7 @@ prism-gateway/
 
 ### 2.1 必需文件清单
 
-**综合5个视角，PRISM-Gateway 应该包含以下文件：**
+**综合5个视角，ReflectGuard 应该包含以下文件：**
 
 #### 📌 P0 - 必须有（7个）- 影响开源发布
 
@@ -352,7 +352,7 @@ prism-gateway/
 **综合5个视角，推荐的结构（最小改动原则）：**
 
 ```
-prism-gateway/
+reflectguard/
 ├── README.md                # 项目主页（保持）
 ├── CONTRIBUTING.md          # 贡献指南（保持）
 ├── LICENSE                  # MIT许可证（保持）
@@ -433,7 +433,7 @@ prism-gateway/
 
 ### 2.3 文档组织方案
 
-**综合5个视角，PRISM-Gateway 的文档组织方案：**
+**综合5个视角，ReflectGuard 的文档组织方案：**
 
 #### 📁 docs/ 目录结构
 
@@ -472,7 +472,7 @@ docs/
 #### 📝 INDEX.md 结构
 
 ```markdown
-# PRISM-Gateway 文档索引
+# ReflectGuard 文档索引
 
 ## 用户文档
 - [快速开始](users/GETTING_STARTED.md)
@@ -515,13 +515,13 @@ docs/
 
 ### 3.1 核心标准（70%权重）
 
-基于5个视角的辩论，PRISM-Gateway 应该遵循以下标准的组合：
+基于5个视角的辩论，ReflectGuard 应该遵循以下标准的组合：
 
 #### 🏛️ CNCF标准（40%权重）- 主导标准
 
 **选择理由：**
-- ✅ **云原生架构**：PRISM-Gateway 虽然是轻量级项目，但采用了现代化的架构（MCP Server + WebSocket + Web UI）
-- ✅ **安全合规**：CNCF 对 SECURITY.md 的要求符合 PRISM-Gateway 的 P0/P1/P2/P3 威胁响应流程
+- ✅ **云原生架构**：ReflectGuard 虽然是轻量级项目，但采用了现代化的架构（MCP Server + WebSocket + Web UI）
+- ✅ **安全合规**：CNCF 对 SECURITY.md 的要求符合 ReflectGuard 的 P0/P1/P2/P3 威胁响应流程
 - ✅ **文档分层**：按用户类型分类（users/developers/contributors/operators/）最适合文档重组
 - ✅ **企业级可用性**：虽然是个人项目，但目标是企业级质量
 
@@ -537,7 +537,7 @@ docs/
 
 **选择理由：**
 - ✅ **透明治理**：虽然是 BDFL（仁慈独裁者）模式，但需要明确的决策流程
-- ✅ **社区驱动**：PRISM-Gateway 未来目标是成为社区项目
+- ✅ **社区驱动**：ReflectGuard 未来目标是成为社区项目
 - ✅ **发布流程**：严格的版本发布流程（dev → staging → release）
 - ✅ **Apache 2.0 许可证**：虽然当前使用 MIT，但可以参考 Apache 的许可证条款
 
@@ -554,7 +554,7 @@ docs/
 #### 🌍 Google标准（15%权重）- 开发者体验
 
 **选择理由：**
-- ✅ **开发者友好**：PRISM-Gateway 重视开发者体验
+- ✅ **开发者友好**：ReflectGuard 重视开发者体验
 - ✅ **高质量代码**：86% 测试覆盖率，严格的代码审查
 - ✅ **简洁文档**：文档应该简洁实用，不过度设计
 
@@ -569,7 +569,7 @@ docs/
 #### 🏢 Microsoft标准（15%权重）- 企业级支持
 
 **选择理由：**
-- ✅ **企业级支持**：PRISM-Gateway 目标是企业级用户
+- ✅ **企业级支持**：ReflectGuard 目标是企业级用户
 - ✅ **安全合规**：Microsoft 对安全政策的高标准
 - ✅ **商业友好**：MIT 许可证是商业友好的选择
 
@@ -585,7 +585,7 @@ docs/
 
 #### 🔓 开源基金会标准（Open Source Initiative）
 
-- ✅ **MIT 许可证**：PRISM-Gateway 已使用 MIT，符合 OSI 标准
+- ✅ **MIT 许可证**：ReflectGuard 已使用 MIT，符合 OSI 标准
 - ✅ **开源定义**：确保项目符合开源定义（自由使用、修改、分发）
 
 ---
@@ -772,7 +772,7 @@ docs/
 
 1. **采用 CNCF 文档分层结构**
    - users/developers/contributors/operators/
-   - 最适合 PRISM-Gateway 的多用户群体
+   - 最适合 ReflectGuard 的多用户群体
 
 2. **采用 Apache 治理模式**
    - BDFL（仁慈独裁者）模式
@@ -920,7 +920,7 @@ https://docs.github.com/en/communities/using-templates-to-encourage-useful-issue
 
 ✅ **5位专家一致同意：**
 
-1. **CNCF 文档分层结构**是最适合 PRISM-Gateway 的
+1. **CNCF 文档分层结构**是最适合 ReflectGuard 的
 2. **P0 文件必须全部完成**才能开源发布
 3. **渐进式实施**是降低风险的最佳策略
 4. **文档与代码同步**是长期维护的关键
@@ -944,7 +944,7 @@ https://docs.github.com/en/communities/using-templates-to-encourage-useful-issue
 ## 🎉 Council 辩论圆满结束
 
 **成果：**
-- ✅ 确定 PRISM-Gateway 企业级开源项目标准
+- ✅ 确定 ReflectGuard 企业级开源项目标准
 - ✅ 设计完整的目录结构
 - ✅ 制定分阶段实施计划
 - ✅ 识别潜在风险并提供缓解措施

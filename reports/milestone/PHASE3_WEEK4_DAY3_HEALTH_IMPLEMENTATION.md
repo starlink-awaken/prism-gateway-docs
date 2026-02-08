@@ -445,7 +445,7 @@ import { HealthCheckService } from './src/infrastructure/health';
 
 // Initialize service
 const service = new HealthCheckService({
-  dataRoot: '~/.prism-gateway',
+  dataRoot: '~/.reflectguard',
   enableBuiltInCheckers: true,
   alertConfig: {
     degradedThreshold: 25,

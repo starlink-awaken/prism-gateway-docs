@@ -159,7 +159,7 @@
 
 #### 2. API E2E 测试（1个失败）
 
-**测试名称：** `PRISM-Gateway API 端到端集成测试`
+**测试名称：** `ReflectGuard API 端到端集成测试`
 
 **文件：** `src/tests/api/e2e/api-e2e.test.ts`
 

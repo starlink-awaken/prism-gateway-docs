@@ -272,8 +272,8 @@ cache.set: 43万 请求/秒 → 166万 请求/秒（+286%）
 
 ## 📞 相关报告
 
-- **诊断报告：** `prism-gateway/TEST_FAILURE_DIAGNOSIS.md`
-- **修复报告：** `prism-gateway/TEST_FAILURE_FIX_REPORT.md`
+- **诊断报告：** `reflectguard/TEST_FAILURE_DIAGNOSIS.md`
+- **修复报告：** `reflectguard/TEST_FAILURE_FIX_REPORT.md`
 - **项目状态报告：** `reports/PROJECT_STATUS_REPORT.md`
 - **Week 9-10报告：** `reports/WEEK9-10_MULTI_TEAM_EXECUTION_REPORT.md`
 

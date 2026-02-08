@@ -1,6 +1,6 @@
-# PRISM-Gateway 项目文档索引
+# ReflectGuard 项目文档索引
 
-**项目：** PRISM-Gateway - 统一的7维度复盘和Gateway系统
+**项目：** ReflectGuard - 统一的7维度复盘和Gateway系统
 **文档版本：** 3.0.0
 **最后更新：** 2026-02-07
 
@@ -9,12 +9,12 @@
 ## 📚 文档结构
 
 ```
-prism-gateway-docs/
+reflectguard-docs/
 ├── api/            # API文档
 ├── docs/           # 使用文档和指南（按角色分类）
 ├── reports/        # 项目报告和复盘（按类型分类）
 ├── scripts/        # 重构执行脚本
-└── prism-gateway/  # 主项目代码
+└── core/  # 主项目代码
 ```
 
 ---
@@ -188,7 +188,7 @@ api/ 目录包含完整的API参考文档。
 - **[README.md](README.md)** - 项目主页
 - **[CLAUDE.md](CLAUDE.md)** - AI上下文文档
 - **[CHANGELOG.md](CHANGELOG.md)** - 版本历史
-- **[CONTRIBUTING.md](prism-gateway/CONTRIBUTING.md)** - 贡献指南
+- **[CONTRIBUTING.md](core/CONTRIBUTING.md)** - 贡献指南
 
 ### 社区文档
 

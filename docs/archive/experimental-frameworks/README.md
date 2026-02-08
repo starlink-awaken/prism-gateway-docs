@@ -27,7 +27,7 @@ The Six-Organization Framework proposed a structured collaboration model with:
 ### Why Archived?
 
 - Framework was designed for larger team structures (5-20+ people)
-- Current PRISM-Gateway development is effectively handled by lightweight agile practices
+- Current ReflectGuard development is effectively handled by lightweight agile practices
 - The overhead of maintaining six separate organizations was deemed unnecessary
 - Core practices (TDD, code review, retrospectives) are maintained without formal org structure
 

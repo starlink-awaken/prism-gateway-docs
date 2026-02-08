@@ -10,7 +10,7 @@
 
 ### GitHub Release
 
-**Release URL：** https://github.com/starlink-awaken/prism-gateway-docs/releases/tag/v2.4.0
+**Release URL：** https://github.com/starlink-awaken/reflectguard-docs/releases/tag/v2.4.0
 
 **Release 标题：**
 ```
@@ -95,7 +95,7 @@ Features:
 
 ### 阶段 5：创建 GitHub Release ✅
 
-**Release URL：** https://github.com/starlink-awaken/prism-gateway-docs/releases/tag/v2.4.0
+**Release URL：** https://github.com/starlink-awaken/reflectguard-docs/releases/tag/v2.4.0
 
 **Release 内容：**
 - 标题：v2.4.0 - 100% Tests Passing, 92% Performance Improvement
@@ -140,16 +140,16 @@ Features:
 
 ### 仓库链接
 
-- **仓库主页**：https://github.com/starlink-awaken/prism-gateway-docs
-- **Release页面**：https://github.com/starlink-awaken/prism-gateway-docs/releases/tag/v2.4.0
-- **提交详情**：https://github.com/starlink-awaken/prism-gateway-docs/commit/01344bb
+- **仓库主页**：https://github.com/starlink-awaken/reflectguard-docs
+- **Release页面**：https://github.com/starlink-awaken/reflectguard-docs/releases/tag/v2.4.0
+- **提交详情**：https://github.com/starlink-awaken/reflectguard-docs/commit/01344bb
 
 ### 文档链接
 
-- **CHANGELOG**：https://github.com/starlink-awaken/prism-gateway-docs/blob/main/CHANGELOG.md
-- **CONTRIBUTING**：https://github.com/starlink-awaken/prism-gateway-docs/blob/main/CONTRIBUTING.md
-- **LICENSE**：https://github.com/starlink-awaken/prism-gateway-docs/blob/main/LICENSE
-- **SECURITY**：https://github.com/starlink-awaken/prism-gateway-docs/blob/main/SECURITY.md
+- **CHANGELOG**：https://github.com/starlink-awaken/reflectguard-docs/blob/main/CHANGELOG.md
+- **CONTRIBUTING**：https://github.com/starlink-awaken/reflectguard-docs/blob/main/CONTRIBUTING.md
+- **LICENSE**：https://github.com/starlink-awaken/reflectguard-docs/blob/main/LICENSE
+- **SECURITY**：https://github.com/starlink-awaken/reflectguard-docs/blob/main/SECURITY.md
 
 ---
 
@@ -251,16 +251,16 @@ Features:
 
 ## 🎊 总结
 
-**PRISM-Gateway v2.4.0 已成功发布到 GitHub！**
+**ReflectGuard v2.4.0 已成功发布到 GitHub！**
 
 - ✅ 代码已提交：01344bb
 - ✅ Tag已创建：v2.4.0
 - ✅ 代码已推送：origin/main
-- ✅ Release已发布：https://github.com/starlink-awaken/prism-gateway-docs/releases/tag/v2.4.0
+- ✅ Release已发布：https://github.com/starlink-awaken/reflectguard-docs/releases/tag/v2.4.0
 - ✅ 所有测试通过：100%
 - ✅ 性能优化达成：92%
 
-**这是 PRISM-Gateway 项目的一个重要里程碑！**
+**这是 ReflectGuard 项目的一个重要里程碑！**
 
 **感谢隔壁老王的所有支持和指导！** 🙏
 
@@ -274,6 +274,6 @@ Features:
 
 ## 🎉 恭喜！
 
-**PRISM-Gateway v2.4.0 现在已经在 GitHub 上公开发布了！**
+**ReflectGuard v2.4.0 现在已经在 GitHub 上公开发布了！**
 
 🚀 **可以开始使用了！** 🎊

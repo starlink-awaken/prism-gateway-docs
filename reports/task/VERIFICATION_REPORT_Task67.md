@@ -1,7 +1,7 @@
 # Task 67: Hook系统集成 - 验证报告
 
 ## 概述
-PRISM-Gateway Hook系统成功实现，实现了在Claude Code关键事件中自动触发Gateway检查和复盘功能。
+ReflectGuard Hook系统成功实现，实现了在Claude Code关键事件中自动触发Gateway检查和复盘功能。
 
 ## 实现内容
 

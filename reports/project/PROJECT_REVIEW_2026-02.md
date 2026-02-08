@@ -1,4 +1,4 @@
-# PRISM-Gateway 项目全面审查报告
+# ReflectGuard 项目全面审查报告
 
 > 2026年2月项目状态评估、成熟度分析与未来规划
 
@@ -399,7 +399,7 @@ Phase 2: 基础设施 (2026-02-04 ~ 2026-02-17)
 
 ### 6.1 与行业标准对比
 
-| 指标 | 行业标准 | PRISM-Gateway | 达成率 | 评价 |
+| 指标 | 行业标准 | ReflectGuard | 达成率 | 评价 |
 |------|---------|---------------|--------|------|
 | **测试覆盖率** | >80% | >90% | 112% | ✅ 超标 |
 | **代码复杂度** | <15 | ~8 | 187% | ✅ 优秀 |
@@ -412,7 +412,7 @@ Phase 2: 基础设施 (2026-02-04 ~ 2026-02-17)
 
 | 项目 | 代码行数 | 测试数量 | 覆盖率 | 文档数 | 评分 |
 |------|---------|---------|--------|--------|------|
-| **PRISM-Gateway** | 5,000 | 1,500+ | >90% | 55+ | 8.5/10 |
+| **ReflectGuard** | 5,000 | 1,500+ | >90% | 55+ | 8.5/10 |
 | Project A | 8,000 | 800 | 75% | 30 | 7.5/10 |
 | Project B | 12,000 | 1,200 | 85% | 40 | 8.0/10 |
 | Project C | 3,500 | 500 | 70% | 20 | 7.0/10 |
@@ -501,7 +501,7 @@ Phase 2: 基础设施 (2026-02-04 ~ 2026-02-17)
 
 ### 8.1 总体评价
 
-PRISM-Gateway 项目经过2个多月的开发，已经取得了显著的成果：
+ReflectGuard 项目经过2个多月的开发，已经取得了显著的成果：
 
 **✅ 成功之处：**
 1. **高质量代码**：严格类型安全，测试覆盖率>90%
@@ -572,7 +572,7 @@ Phase 2 Week 4-5: ~5,000行 (+32%)
 ### 9.2 参考文档
 
 - [CLAUDE.md](../CLAUDE.md) - AI上下文文档
-- [CHANGELOG.md](../prism-gateway/CHANGELOG.md) - 版本变更记录
+- [CHANGELOG.md](../reflectguard/CHANGELOG.md) - 版本变更记录
 - [WEEK4-5_ITERATION_PLAN.md](../reports/operations/WEEK4-5_ITERATION_PLAN.md) - 迭代计划
 - [WEEK9-10_ROADMAP.md](../reports/project/WEEK9-10_ROADMAP.md) - 执行路线图
 - [PHASE2_ARCHITECTURE.md](../reports/architecture/PHASE2_ARCHITECTURE.md) - 架构设计

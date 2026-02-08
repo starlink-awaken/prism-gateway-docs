@@ -1,4 +1,4 @@
-# PRISM-Gateway 项目状态
+# ReflectGuard 项目状态
 
 **更新日期：** 2026-02-07
 **当前阶段：** Phase 3 完成 - 生产就绪 ✅
@@ -8,7 +8,7 @@
 
 ## 项目概述
 
-**项目名称：** PRISM-Gateway
+**项目名称：** ReflectGuard
 **项目定位：** 个人 AI 基础设施系统（Personal AI Infrastructure）
 **核心能力：** Gateway（行为准则门禁）+ Retrospective（7维度复盘）
 
@@ -363,10 +363,10 @@
 - `CHANGELOG.md` - 版本历史（v3.0.0）
 
 **技术文档：**
-- `prism-gateway/docs/QUICK_START.md` - 快速入门
-- `prism-gateway/docs/CONFIGURATION_GUIDE.md` - 配置指南
-- `prism-gateway/docs/MIGRATION_GUIDE_V3.md` - v2→v3 迁移
-- `prism-gateway/RELEASE_NOTES_V3.0.md` - v3.0.0 发布说明
+- `core/docs/QUICK_START.md` - 快速入门
+- `core/docs/CONFIGURATION_GUIDE.md` - 配置指南
+- `core/docs/MIGRATION_GUIDE_V3.md` - v2→v3 迁移
+- `core/RELEASE_NOTES_V3.0.md` - v3.0.0 发布说明
 
 **报告文档：**
 - `reports/milestone/PHASE3_*` - Phase 3 完成报告（22 个）
@@ -380,15 +380,15 @@
 - `reports/milestone/PHASE3_WEEK3_*_DESIGN.md` - Phase 3 设计（4 个）
 
 **运维文档：**
-- `prism-gateway/level-3-cold/sops/backup-operations.md` - 备份运维
-- `prism-gateway/level-3-cold/sops/monitoring-operations.md` - 监控运维
-- `prism-gateway/level-3-cold/checklists/operations-deployment.md` - 部署检查清单
+- `core/level-3-cold/sops/backup-operations.md` - 备份运维
+- `core/level-3-cold/sops/monitoring-operations.md` - 监控运维
+- `core/level-3-cold/checklists/operations-deployment.md` - 部署检查清单
 
 ### C. 联系方式
 
-**项目维护者：** PRISM-Gateway Team
+**项目维护者：** ReflectGuard Team
 **支持渠道：** 见 [SUPPORT.md](SUPPORT.md)
-**贡献指南：** 见 [CONTRIBUTING.md](prism-gateway/CONTRIBUTING.md)
+**贡献指南：** 见 [CONTRIBUTING.md](core/CONTRIBUTING.md)
 
 ---
 

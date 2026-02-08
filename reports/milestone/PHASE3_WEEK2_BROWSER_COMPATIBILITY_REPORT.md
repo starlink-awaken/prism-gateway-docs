@@ -9,7 +9,7 @@
 
 ## 执行摘要
 
-本报告记录了 PRISM-Gateway Web UI 在主流浏览器和不同设备尺寸上的兼容性测试结果。测试覆盖了 4 大桌面浏览器、3 种设备尺寸、核心功能、视觉渲染和性能指标。
+本报告记录了 ReflectGuard Web UI 在主流浏览器和不同设备尺寸上的兼容性测试结果。测试覆盖了 4 大桌面浏览器、3 种设备尺寸、核心功能、视觉渲染和性能指标。
 
 **测试结论**: 所有浏览器兼容性测试通过，响应式设计完美适配移动端/平板/桌面。
 
@@ -602,7 +602,7 @@
 - Firefox: NVDA (Windows)
 
 **测试结果**: ✅ 通过
-- 页面标题: "PRISM-Gateway Dashboard"
+- 页面标题: "ReflectGuard Dashboard"
 - 区域标签: `<main>`, `<header>`, `<nav>` 语义化
 - 图表描述: `aria-label` 属性完整
 - 按钮描述: 清晰明确
@@ -764,5 +764,5 @@
 
 **报告生成时间**: 2026-02-07 15:00:00
 **测试执行人**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **下一步行动**: Phase 3 Week 2 完成，进入 Week 3 运维工具开发

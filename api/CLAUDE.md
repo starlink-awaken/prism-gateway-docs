@@ -6,7 +6,7 @@
 
 ## 模块概述
 
-API 模块提供 PRISM-Gateway 系统的完整 API 文档，包括核心类、接口定义、使用示例和类型说明。
+API 模块提供 ReflectGuard 系统的完整 API 文档，包括核心类、接口定义、使用示例和类型说明。
 
 ---
 
@@ -36,7 +36,7 @@ API 模块提供 PRISM-Gateway 系统的完整 API 文档，包括核心类、�
 ## 快速开始
 
 ```typescript
-import { prismGateway } from 'prism-gateway';
+import { prismGateway } from 'reflectguard';
 
 // 快速复盘
 const retroResult = await prismGateway.quickRetro('my-project', {

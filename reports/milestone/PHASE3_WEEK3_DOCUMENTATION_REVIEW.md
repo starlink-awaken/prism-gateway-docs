@@ -2,7 +2,7 @@
 
 > **评审日期**: 2026-02-07
 > **评审版本**: 1.0.0
-> **评审人员**: PRISM-Gateway Team
+> **评审人员**: ReflectGuard Team
 > **状态**: ✅ 评审通过
 
 ---
@@ -19,9 +19,9 @@
 
 | 文档 | 位置 | 大小 | 状态 |
 |------|------|------|------|
-| **备份操作 SOP** | `prism-gateway/level-3-cold/sops/backup-operations.md` | 45KB | ✅ 通过 |
-| **监控运维 SOP** | `prism-gateway/level-3-cold/sops/monitoring-operations.md` | 55KB | ✅ 通过 |
-| **运维工具部署清单** | `prism-gateway/level-3-cold/checklists/operations-deployment.md` | 70KB | ✅ 通过 |
+| **备份操作 SOP** | `reflectguard/level-3-cold/sops/backup-operations.md` | 45KB | ✅ 通过 |
+| **监控运维 SOP** | `reflectguard/level-3-cold/sops/monitoring-operations.md` | 55KB | ✅ 通过 |
+| **运维工具部署清单** | `reflectguard/level-3-cold/checklists/operations-deployment.md` | 70KB | ✅ 通过 |
 
 ### 1.2 评审标准
 
@@ -475,13 +475,13 @@ prism alerts ack <id> --by "admin"                 ✅
 - [PHASE3_WEEK4_IMPLEMENTATION_PLAN.md](./PHASE3_WEEK4_IMPLEMENTATION_PLAN.md)
 
 **运维文档**:
-- [backup-operations.md](../prism-gateway/level-3-cold/sops/backup-operations.md)
-- [monitoring-operations.md](../prism-gateway/level-3-cold/sops/monitoring-operations.md)
-- [operations-deployment.md](../prism-gateway/level-3-cold/checklists/operations-deployment.md)
+- [backup-operations.md](../reflectguard/level-3-cold/sops/backup-operations.md)
+- [monitoring-operations.md](../reflectguard/level-3-cold/sops/monitoring-operations.md)
+- [operations-deployment.md](../reflectguard/level-3-cold/checklists/operations-deployment.md)
 
 ---
 
 **评审报告生成时间**: 2026-02-07 12:45:00
-**报告作者**: PRISM-Gateway Documentation Review Team
-**审核人**: PRISM-Gateway Team
+**报告作者**: ReflectGuard Documentation Review Team
+**审核人**: ReflectGuard Team
 **版本**: 1.0.0

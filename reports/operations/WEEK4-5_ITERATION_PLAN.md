@@ -1,4 +1,4 @@
-# PRISM-Gateway Week 4-5 迭代目标规划
+# ReflectGuard Week 4-5 迭代目标规划
 
 **文档版本：** 1.0.0
 **创建时间：** 2026-02-06
@@ -450,7 +450,7 @@ const authBypassRisk: RiskPriority = {
   - 输出：
     - API Key 生成方案（UUID + HMAC 签名）
     - 认证中间件设计（Hono middleware）
-    - 密钥存储方案（~/.prism-gateway/keys.json）
+    - 密钥存储方案（~/.reflectguard/keys.json）
   - 验收：Architect 审核通过
 
 - [ ] **Task 1.2：实现认证中间件**
@@ -517,7 +517,7 @@ const authBypassRisk: RiskPriority = {
   - 输出：
     - `src/infrastructure/logger/audit.ts` - 审计日志
     - 日志格式：timestamp, actor, action, resource, result
-    - 日志文件：~/.prism-gateway/logs/audit.jsonl
+    - 日志文件：~/.reflectguard/logs/audit.jsonl
   - 测试：15 个单元测试
   - 验收：100% API 操作记录
 
@@ -1513,7 +1513,7 @@ const rpn = calculateRPN({
 **文档版本：** 1.0.0
 **创建时间：** 2026-02-06
 **维护者：** Nova (高能力问题解决者)
-**审核者：** PRISM-Gateway Council
+**审核者：** ReflectGuard Council
 
 ---
 

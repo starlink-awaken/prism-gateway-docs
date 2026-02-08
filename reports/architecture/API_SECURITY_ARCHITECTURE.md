@@ -1,4 +1,4 @@
-# PRISM-Gateway API 安全架构设计方案
+# ReflectGuard API 安全架构设计方案
 
 **文档版本：** 1.0.0
 **创建时间：** 2026-02-06
@@ -25,7 +25,7 @@
 
 ### 1.1 威胁建模结果总结
 
-基于 Pentester 的威胁建模分析，PRISM-Gateway REST API 存在以下安全风险：
+基于 Pentester 的威胁建模分析，ReflectGuard REST API 存在以下安全风险：
 
 | 严重级别 | 数量 | 关键问题 |
 |---------|------|----------|
@@ -62,7 +62,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         PRISM-Gateway API 安全架构                            │
+│                         ReflectGuard API 安全架构                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌──────────────────────────────────────────────────────────────────────┐   │
@@ -203,7 +203,7 @@ const SECURITY_HEADERS = {
 密钥长度: 256 bits (32 bytes)
 Token 有效期: 15 分钟 (access token)
 Refresh Token 有效期: 7 天
-签发者: prism-gateway
+签发者: reflectguard
 受众: prism-api
 ```
 
@@ -220,7 +220,7 @@ Refresh Token 有效期: 7 天
 ```typescript
 interface JWTPayload {
   // 标准声明
-  iss: string;        // 签发者: prism-gateway
+  iss: string;        // 签发者: reflectguard
   sub: string;        // 主题: 用户 ID
   aud: string;        // 受众: prism-api
   exp: number;        // 过期时间
@@ -1678,7 +1678,7 @@ PRISM_HTTPS_PORT=443
 # ====================
 
 # 审计日志路径
-PRISM_AUDIT_LOG_PATH=/var/log/prism-gateway/audit.jsonl
+PRISM_AUDIT_LOG_PATH=/var/log/reflectguard/audit.jsonl
 
 # 审计日志级别
 PRISM_AUDIT_LOG_LEVEL=info
@@ -1844,11 +1844,11 @@ const newKey = await kms.rotateMasterKey();
 3. 密钥定期轮换
 4. 敏感数据备份
 
-**完整文档：** [KeyManagementService README](../prism-gateway/src/api/security/README.md)
+**完整文档：** [KeyManagementService README](../reflectguard/src/api/security/README.md)
 
 **代码实现：**
-- 服务：`prism-gateway/src/api/security/KeyManagementService.ts` (~300 行)
-- 测试：`prism-gateway/src/tests/api/security/KeyManagementService.test.ts` (21 测试)
+- 服务：`reflectguard/src/api/security/KeyManagementService.ts` (~300 行)
+- 测试：`reflectguard/src/tests/api/security/KeyManagementService.test.ts` (21 测试)
 
 ### 6.4 密钥轮换策略
 

@@ -1,6 +1,6 @@
 # Phase 3 Week 2 完成报告
 
-> PRISM-Gateway Web UI MVP 开发完成
+> ReflectGuard Web UI MVP 开发完成
 
 **报告日期：** 2026-02-07
 **报告版本：** 1.0.0
@@ -422,7 +422,7 @@ interface Event {
 **布局结构：**
 ```
 Header
-├── 标题："PRISM-Gateway 仪表板"
+├── 标题："ReflectGuard 仪表板"
 └── 周期选择器：[今日] [本周] [本月] [本年]
 
 Main Content
@@ -609,7 +609,7 @@ export function cn(...inputs: ClassValue[]) {
 #### 计划内容
 
 1. **后端 API 验证**
-   - 启动 prism-gateway API 服务器
+   - 启动 reflectguard API 服务器
    - 验证 4 个 Analytics 端点
    - 测试 WebSocket 连接
 
@@ -1096,7 +1096,7 @@ npm audit fix --force  # 可能引入破坏性变更
 
 1. **启动后端 API 服务器**
    ```bash
-   cd prism-gateway
+   cd reflectguard
    bun run api:start
    ```
 
@@ -1237,10 +1237,10 @@ npm run build                    # 构建
 - Zustand: https://github.com/pmndrs/zustand
 - Chart.js: https://www.chartjs.org/
 
-**PRISM-Gateway 文档：**
+**ReflectGuard 文档：**
 - Phase 3 Iteration Plan: `reports/PHASE3_ITERATION_PLAN.md`
 - Analytics API: `api/analytics-api.md`
-- Main Project: `prism-gateway/README.md`
+- Main Project: `reflectguard/README.md`
 
 ---
 
@@ -1270,6 +1270,6 @@ Phase 3 Week 2 **Web UI MVP 核心脚手架搭建** 已顺利完成，达成以�
 ---
 
 **报告编制：** AI Assistant (Claude Sonnet 4.5)
-**审核：** PRISM-Gateway Team
+**审核：** ReflectGuard Team
 **发布日期：** 2026-02-07
 **版本：** v1.0.0

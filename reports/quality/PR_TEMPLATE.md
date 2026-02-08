@@ -1,6 +1,6 @@
 # Pull Request 模板
 
-> **PRISM-Gateway 项目标准化 Pull Request 模板**
+> **ReflectGuard 项目标准化 Pull Request 模板**
 
 **版本:** 1.0.0
 **创建日期:** 2026-02-06

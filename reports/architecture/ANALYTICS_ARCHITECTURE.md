@@ -1,4 +1,4 @@
-# PRISM-Gateway Analytics 模块架构设计
+# ReflectGuard Analytics 模块架构设计
 
 **文档版本：** 1.0.0
 **创建时间：** 2026-02-04
@@ -25,7 +25,7 @@
 
 ### 1.1 模块定位
 
-Analytics 模块是 PRISM-Gateway Phase 2 的核心新增模块，负责**数据聚合、指标计算、趋势分析和异常检测**。
+Analytics 模块是 ReflectGuard Phase 2 的核心新增模块，负责**数据聚合、指标计算、趋势分析和异常检测**。
 
 **核心职责：**
 - 从 MemoryStore 读取 warm/ 目录数据
@@ -2035,7 +2035,7 @@ describe('Analytics Performance', () => {
 
 ### B. 参考资料
 
-1. PRISM-Gateway Phase 2 架构设计
+1. ReflectGuard Phase 2 架构设计
 2. IAnalyticsService 接口定义
 3. MemoryStore API 文档
 4. 统计分析最佳实践
@@ -2050,4 +2050,4 @@ describe('Analytics Performance', () => {
 
 **文档结束**
 
-*本架构设计遵循 PRISM-Gateway 的 SOLID 原则和 KISS 原则，确保代码简单、可维护、可扩展。*
+*本架构设计遵循 ReflectGuard 的 SOLID 原则和 KISS 原则，确保代码简单、可维护、可扩展。*

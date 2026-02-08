@@ -1,4 +1,4 @@
-# PRISM-Gateway 常见问题（FAQ）
+# ReflectGuard 常见问题（FAQ）
 
 ## 目录
 
@@ -13,9 +13,9 @@
 
 ## 项目简介
 
-### PRISM-Gateway 是什么？
+### ReflectGuard 是什么？
 
-PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），融合了 Gateway（行为准则门禁）和 Retrospective（复盘系统）两大核心能力。
+ReflectGuard 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），融合了 Gateway（行为准则门禁）和 Retrospective（复盘系统）两大核心能力。
 
 它帮助您：
 
@@ -23,22 +23,22 @@ PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastruc
 - **多维复盘**：从 7 个维度全面复盘工作
 - **持续进化**：通过模式识别不断改进
 
-### 谁应该使用 PRISM-Gateway？
+### 谁应该使用 ReflectGuard？
 
 - **AI 助手用户**：希望 AI 助手遵循特定行为准则
 - **开发者**：需要复盘和改进开发流程
 - **知识工作者**：希望系统化复盘和改进工作方式
 - **研究者**：研究 AI 行为控制和复盘系统
 
-### PRISM-Gateway 是免费的吗？
+### ReflectGuard 是免费的吗？
 
-是的，PRISM-Gateway 完全开源，使用 MIT 许可证。您可以免费使用、修改和分发。
+是的，ReflectGuard 完全开源，使用 MIT 许可证。您可以免费使用、修改和分发。
 
 ---
 
 ## 快速开始
 
-### 如何安装 PRISM-Gateway？
+### 如何安装 ReflectGuard？
 
 ```bash
 # 克隆项目
@@ -96,7 +96,7 @@ Bun 提供了：
 ### 数据存储在哪里？
 
 ```
-~/.prism-gateway/
+~/.core/
 ├── level-1-hot/          # 热数据（实时查询）
 │   ├── principles.json   # 行为准则
 │   └── patterns/         # 模式
@@ -113,7 +113,7 @@ Bun 提供了：
 
 ```bash
 # 完整备份
-cp -r ~/.prism-gateway ~/.prism-gateway.backup.$(date +%Y%m%d)
+cp -r ~/.reflectguard ~/.reflectguard.backup.$(date +%Y%m%d)
 
 # 或使用内置命令
 prism backup
@@ -123,21 +123,21 @@ prism backup
 
 ```bash
 # 1. 在旧机器上打包数据
-cd ~/.prism-gateway
+cd ~/.reflectguard
 tar czf prism-gateway-data.tar.gz *
 
 # 2. 传输到新机器
 scp prism-gateway-data.tar.gz new-machine:~
 
 # 3. 在新机器上解压
-mkdir -p ~/.prism-gateway
-cd ~/.prism-gateway
+mkdir -p ~/.reflectguard
+cd ~/.reflectguard
 tar xzf ~/prism-gateway-data.tar.gz
 ```
 
 ### 支持哪些 MCP 协议？
 
-PRISM-Gateway 实现了完整的 Model Context Protocol (MCP)：
+ReflectGuard 实现了完整的 Model Context Protocol (MCP)：
 
 - **资源访问**：读取原则、模式、复盘数据
 - **工具调用**：检查意图、创建复盘、获取分析
@@ -158,7 +158,7 @@ PRISM-Gateway 实现了完整的 Model Context Protocol (MCP)：
 
 ### 如何自定义行为准则？
 
-编辑 `~/.prism-gateway/level-1-hot/principles.json`：
+编辑 `~/.core/level-1-hot/principles.json`：
 
 ```json
 {
@@ -212,7 +212,7 @@ prism export --format markdown --output retros.md
 
 ### 如何与其他工具集成？
 
-PRISM-Gateway 提供多种集成方式：
+ReflectGuard 提供多种集成方式：
 
 1. **MCP Server**：与支持 MCP 的 AI 助手集成
 2. **REST API**：通过 HTTP 调用
@@ -326,7 +326,7 @@ bun test --coverage
 
 ### 可以在商业项目中使用吗？
 
-是的！PRISM-Gateway 使用 MIT 许可证，允许商业使用。
+是的！ReflectGuard 使用 MIT 许可证，允许商业使用。
 
 ---
 
@@ -359,7 +359,7 @@ bun test --coverage
 
 ### 与其他工具的区别？
 
-| 特性 | PRISM-Gateway | 其他工具 |
+| 特性 | ReflectGuard | 其他工具 |
 |------|--------------|----------|
 | 开源 | 完全开源 | 部分开源 |
 | 轻量级 | 文件系统存储 | 需要数据库 |

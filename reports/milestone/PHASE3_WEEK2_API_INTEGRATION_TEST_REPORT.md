@@ -9,7 +9,7 @@
 
 ## 执行摘要
 
-本报告记录了 PRISM-Gateway Web UI 与后端 API 服务的集成测试结果。测试覆盖了所有 REST API 端点、WebSocket 实时通信、错误处理机制和性能指标。
+本报告记录了 ReflectGuard Web UI 与后端 API 服务的集成测试结果。测试覆盖了所有 REST API 端点、WebSocket 实时通信、错误处理机制和性能指标。
 
 **测试结论**: 所有 API 集成测试通过，系统满足 Phase 3 Week 2 验收标准。
 
@@ -29,7 +29,7 @@
 
 ### 1.2 测试数据
 
-- **模拟数据源**: `~/.prism-gateway/level-2-warm/violations.jsonl`
+- **模拟数据源**: `~/.reflectguard/level-2-warm/violations.jsonl`
 - **时间范围**: 2026-02-01 至 2026-02-07
 - **数据量**: 50+ 违规记录，10+ 复盘记录
 
@@ -718,7 +718,7 @@ function reconnect() {
 // 生产环境应限制来源
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? 'https://prism-gateway.example.com'
+    ? 'https://reflectguard.example.com'
     : 'http://localhost:5173'
 }));
 ```
@@ -802,5 +802,5 @@ app.use(cors({
 
 **报告生成时间**: 2026-02-07 14:30:00
 **测试执行人**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **下一步行动**: 进入 Task 2.5 浏览器兼容性测试

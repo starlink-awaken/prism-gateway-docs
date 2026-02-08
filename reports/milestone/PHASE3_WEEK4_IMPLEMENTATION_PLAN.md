@@ -699,5 +699,5 @@ const cache = new Map<string, { value: any; expiry: number }>();
 
 **计划生成时间**: 2026-02-07 13:00:00
 **计划作者**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **版本**: 1.0.0

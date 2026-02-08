@@ -2,7 +2,7 @@
 
 ## Overview
 
-GatewayGuard is the violation checking engine of PRISM-Gateway. It implements a three-layer checking mechanism:
+GatewayGuard is the violation checking engine of ReflectGuard. It implements a three-layer checking mechanism:
 
 1. **Layer 1: Principle Checking** (MANDATORY) - Based on 5 behavioral guidelines
 2. **Layer 2: Pattern Matching** (WARNING) - Identify success/failure patterns
@@ -23,7 +23,7 @@ Creates a new GatewayGuard instance.
 
 **Example:**
 ```typescript
-import { GatewayGuard, MemoryStore } from 'prism-gateway';
+import { GatewayGuard, MemoryStore } from 'reflectguard';
 
 const store = new MemoryStore();
 const guard = new GatewayGuard(store);
@@ -255,7 +255,7 @@ The system checks against 5 MANDATORY principles:
 A singleton instance is exported for convenience:
 
 ```typescript
-import { gatewayGuard } from 'prism-gateway';
+import { gatewayGuard } from 'reflectguard';
 
 const result = await gatewayGuard.check('Task description');
 ```

@@ -1,4 +1,4 @@
-# PRISM-Gateway 故障排查指南
+# ReflectGuard 故障排查指南
 
 > 系统问题的快速诊断和解决方案
 
@@ -812,7 +812,7 @@ bun run src/cli/migrate.ts --status
 
 INFO_FILE="prism-debug-info-$(date +%s).txt"
 
-echo "=== PRISM-Gateway 调试信息 ===" > $INFO_FILE
+echo "=== ReflectGuard 调试信息 ===" > $INFO_FILE
 echo "" >> $INFO_FILE
 
 echo "1. 系统信息" >> $INFO_FILE
@@ -873,7 +873,7 @@ chmod +x collect-info.sh
 ## 环境信息
 - 操作系统：[macOS 14 / Ubuntu 22.04 / Windows 11]
 - Bun 版本：[1.0.0]
-- PRISM-Gateway 版本：[2.2.0]
+- ReflectGuard 版本：[2.2.0]
 
 ## 错误日志
 \`\`\`
@@ -894,7 +894,7 @@ chmod +x collect-info.sh
 #!/bin/bash
 # health-check-weekly.sh
 
-echo "=== PRISM-Gateway 每周健康检查 ==="
+echo "=== ReflectGuard 每周健康检查 ==="
 
 # 1. 服务状态
 echo "1. 服务状态..."
@@ -937,6 +937,6 @@ echo "=== 检查完成 ==="
 
 ---
 
-**文档维护者：** PRISM-Gateway Team
+**文档维护者：** ReflectGuard Team
 **许可证：** MIT License
 **PAI 版本：** 2.5

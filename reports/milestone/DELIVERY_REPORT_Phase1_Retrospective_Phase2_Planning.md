@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 1 MVP 深度复盘 + Phase 2 规划 - 交付报告
+# ReflectGuard Phase 1 MVP 深度复盘 + Phase 2 规划 - 交付报告
 
 **交付时间：** 2026-02-03
 **项目状态：** Phase 1 MVP 完成（95%），Phase 2 规划就绪

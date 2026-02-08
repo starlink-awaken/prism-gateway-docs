@@ -1,6 +1,6 @@
-# Contributing to PRISM-Gateway
+# Contributing to ReflectGuard
 
-Thank you for your interest in contributing to PRISM-Gateway! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to ReflectGuard! This document provides guidelines and instructions for contributing to the project.
 
 ---
 
@@ -624,10 +624,10 @@ Contributors will be:
 - Mentioned in release notes for significant contributions
 - Eligible for contributor badges (when implemented)
 
-Thank you for contributing to PRISM-Gateway!
+Thank you for contributing to ReflectGuard!
 
 ---
 
 **Last Updated:** 2026-02-07
-**Maintained by:** PRISM-Gateway Team
+**Maintained by:** ReflectGuard Team
 **License:** MIT

@@ -1,4 +1,4 @@
-# PRISM-Gateway v2.4.0 Release Notes
+# ReflectGuard v2.4.0 Release Notes
 
 **Release Date:** February 17, 2026
 **Version:** 2.4.0
@@ -309,34 +309,34 @@ initAnalytics(analyticsService, wsServer); // Pass WebSocket server for event br
 
 ## Contributors
 
-- PRISM-Gateway Team
+- ReflectGuard Team
 - Community contributors
 
 ---
 
 ## Support
 
-- **GitHub Issues:** [Report bugs](https://github.com/your-org/prism-gateway/issues)
-- **GitHub Discussions:** [Ask questions](https://github.com/your-org/prism-gateway/discussions)
-- **Security:** security@prism-gateway.org
-- **Documentation:** https://prism-gateway.org/docs
+- **GitHub Issues:** [Report bugs](https://github.com/your-org/reflectguard/issues)
+- **GitHub Discussions:** [Ask questions](https://github.com/your-org/reflectguard/discussions)
+- **Security:** security@reflectguard.org
+- **Documentation:** https://reflectguard.org/docs
 
 ---
 
 ## Download
 
-- **GitHub Release:** https://github.com/your-org/prism-gateway/releases/tag/v2.4.0
-- **NPM:** `npm install prism-gateway@2.4.0`
-- **Bun:** `bun install prism-gateway@2.4.0`
+- **GitHub Release:** https://github.com/your-org/reflectguard/releases/tag/v2.4.0
+- **NPM:** `npm install reflectguard@2.4.0`
+- **Bun:** `bun install reflectguard@2.4.0`
 
 ---
 
-**Full Changelog:** https://github.com/your-org/prism-gateway/blob/main/CHANGELOG.md
+**Full Changelog:** https://github.com/your-org/reflectguard/blob/main/CHANGELOG.md
 **Migration Guide:** See "Upgrade Guide" section above
 **Breaking Changes:** See "Breaking Changes" section above
 
 ---
 
 **Release Date:** February 17, 2026
-**Maintained by:** PRISM-Gateway Team
+**Maintained by:** ReflectGuard Team
 **License:** MIT

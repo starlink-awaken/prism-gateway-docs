@@ -1,4 +1,4 @@
-# PRISM-Gateway 虚拟团队专业 Agent 角色体系设计
+# ReflectGuard 虚拟团队专业 Agent 角色体系设计
 
 **版本：** 1.0.0
 **创建时间：** 2026-02-05
@@ -63,11 +63,11 @@
 
 ### 2.1 角色总览
 
-基于 PRISM-Gateway 项目特点和 Council 分析，定义 **7 个核心角色**：
+基于 ReflectGuard 项目特点和 Council 分析，定义 **7 个核心角色**：
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    PRISM-Gateway 虚拟团队角色体系                              │
+│                    ReflectGuard 虚拟团队角色体系                              │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌───────────────┐  ┌───────────────┐  ┌───────────────┐                    │
@@ -231,7 +231,7 @@
 - 审计文件读写操作（FileLock、MemoryStore）
 - 识别安全风险：
   * 路径遍历漏洞（未验证文件路径）
-  * 权限问题（~/.prism-gateway 权限过宽）
+  * 权限问题（~/.reflectguard 权限过宽）
   * 敏感数据泄露（violation.jsonl 包含敏感信息）
 - 提出修复建议：
   * 添加路径验证函数（阻止 ../ 等路径遍历）
@@ -428,7 +428,7 @@
 - 生成 OpenAPI 规范：
   openapi: 3.0.0
   info:
-    title: PRISM-Gateway API
+    title: ReflectGuard API
     version: 2.0.0
   paths:
     /api/v1/gateway/check:
@@ -718,7 +718,7 @@ interface TaskDefinition {
 {
   "taskId": "TASK-2026-0501",
   "title": "REST API 安全加固",
-  "description": "为 PRISM-Gateway REST API 添加认证、验证和限流机制",
+  "description": "为 ReflectGuard REST API 添加认证、验证和限流机制",
   "assignee": "Pentester",
   "priority": "P0",
   "dependencies": [],
@@ -1231,7 +1231,7 @@ interface TrendPrediction {
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         PRISM-Gateway 共享上下文体系                          │
+│                         ReflectGuard 共享上下文体系                          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  L1: 项目级上下文（所有角色必读）                                            │
@@ -1241,7 +1241,7 @@ interface TrendPrediction {
 │                                                                             │
 │  L2: 模块级上下文（按需阅读）                                               │
 │  ├─ api/CLAUDE.md（API 模块）                                              │
-│  ├─ prism-gateway/src/core/analytics/README.md（Analytics 模块）          │
+│  ├─ reflectguard/src/core/analytics/README.md（Analytics 模块）          │
 │  └─ docs/mcp-server.md（MCP Server 文档）                                  │
 │                                                                             │
 │  L3: 任务级上下文（任务相关）                                               │
@@ -1279,7 +1279,7 @@ interface RoleActivationContext {
     "reports/PHASE2_ARCHITECTURE.md"
   ],
   "optionalDocuments": [
-    "prism-gateway/README.md",
+    "reflectguard/README.md",
     "docs/CODING_STANDARDS.md"
   ],
   "taskContext": {
@@ -1835,7 +1835,7 @@ interface TaskMetrics {
 # Pentester 最佳实践：API 安全加固
 
 ## 场景描述
-PRISM-Gateway REST API 需要添加认证、验证和限流机制
+ReflectGuard REST API 需要添加认证、验证和限流机制
 
 ## 解决方案
 1. STRIDE 威胁建模
@@ -1926,7 +1926,7 @@ const pentesterContext = {
 
 // 2. 角色激活提示词
 const pentesterPrompt = `
-你现在是 PRISM-Gateway 虚拟团队中的 **Pentester（安全专家）** 角色。
+你现在是 ReflectGuard 虚拟团队中的 **Pentester（安全专家）** 角色。
 
 ## 你的核心职责
 - 安全漏洞识别和修复验证
@@ -1941,7 +1941,7 @@ const pentesterPrompt = `
 **截止时间：** 2026-02-07
 
 ## 任务描述
-为 PRISM-Gateway REST API 添加认证、验证和限流机制，确保 API 安全。
+为 ReflectGuard REST API 添加认证、验证和限流机制，确保 API 安全。
 
 ## 你需要做的事情
 1. 阅读项目上下文文档（CLAUDE.md、PHASE2_ARCHITECTURE.md）
@@ -2000,7 +2000,7 @@ const coordinatorAction = {
 
 // 3. QATester 激活
 const qaTesterPrompt = `
-你现在是 PRISM-Gateway 虚拟团队中的 **QATester（质量专家）** 角色。
+你现在是 ReflectGuard 虚拟团队中的 **QATester（质量专家）** 角色。
 
 ## 当前任务
 **任务 ID：** TASK-2026-0502
@@ -2105,7 +2105,7 @@ const collaborationTimeline = [
 
 ## 总结
 
-本文档设计了 PRISM-Gateway 虚拟团队专业 Agent 角色体系，包括：
+本文档设计了 ReflectGuard 虚拟团队专业 Agent 角色体系，包括：
 
 **核心成果：**
 1. ✅ 7 个核心角色定义（Architect、Engineer、Pentester、QATester、Analyst、Writer、Coordinator、Researcher）
@@ -2131,5 +2131,5 @@ const collaborationTimeline = [
 
 **文档版本：** 1.0.0
 **最后更新：** 2026-02-05
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team
 **状态：** ✅ 完成

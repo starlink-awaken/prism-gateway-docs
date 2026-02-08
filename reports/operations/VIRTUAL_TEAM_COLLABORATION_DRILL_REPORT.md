@@ -1,4 +1,4 @@
-# PRISM-Gateway 虚拟团队协作流程实战演练报告
+# ReflectGuard 虚拟团队协作流程实战演练报告
 
 **演练编号:** DRILL-2026-0205
 **演练时间:** 2026-02-05
@@ -40,7 +40,7 @@
 **任务编号:** TASK-DRILL-001
 **优先级:** P0(严重)
 **截止时间:** 3天
-**任务描述:** 为 PRISM-Gateway REST API 添加认证、验证和限流机制
+**任务描述:** 为 ReflectGuard REST API 添加认证、验证和限流机制
 
 ### 1.2 任务分解
 
@@ -213,7 +213,7 @@ const taskAssignMessage: RoleMessage = {
   subject: "P0 任务：REST API 安全加固",
   body: `
 ## 任务描述
-为 PRISM-Gateway REST API 添加认证、验证和限流机制
+为 ReflectGuard REST API 添加认证、验证和限流机制
 
 ## 优先级
 P0（严重）- 立即开始
@@ -342,7 +342,7 @@ const taskCompleteMessage: RoleMessage = {
 | API Key | 中 | 低 | +0ms | 0.5天 |
 
 **威胁模型分析:**
-- 重放攻击风险: **低**(PRISM-Gateway 是内部系统，非公网)
+- 重放攻击风险: **低**(ReflectGuard 是内部系统，非公网)
 - API Key 泄露风险: **中**(可通过HTTPS + 限流缓解)
 
 **Council 决策:**

@@ -1,6 +1,6 @@
 # 安装指南
 
-本文档详细说明如何在不同平台上安装 PRISM-Gateway。
+本文档详细说明如何在不同平台上安装 ReflectGuard。
 
 ## 系统要求
 
@@ -72,7 +72,7 @@ docker run -d \
 # 检查版本
 prism --version
 
-# 输出: PRISM-Gateway v1.1.0
+# 输出: ReflectGuard v1.1.0
 
 # 运行健康检查
 prism health

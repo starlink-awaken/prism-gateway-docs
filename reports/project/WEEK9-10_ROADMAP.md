@@ -1,4 +1,4 @@
-# PRISM-Gateway Week 9-10 执行路线图
+# ReflectGuard Week 9-10 执行路线图
 
 > **版本：** 1.0.0
 > **制定日期：** 2026-02-07
@@ -40,7 +40,7 @@
 
 - **Day 5 (Week 9)**: Analytics 模块重构完成，Dashboard 功能完整
 - **Day 10 (Week 10)**: v2.4.0 发布准备完成，所有测试通过
-- **最终交付**: 高质量、生产就绪的 PRISM-Gateway v2.4.0
+- **最终交付**: 高质量、生产就绪的 ReflectGuard v2.4.0
 
 ---
 
@@ -773,7 +773,7 @@ describe('TimeUtils Boundaries', () => {
 
 **文档结构：**
 ```markdown
-# Contributing to PRISM-Gateway
+# Contributing to ReflectGuard
 
 ## 开发环境设置
 ## 代码规范
@@ -825,7 +825,7 @@ describe('TimeUtils Boundaries', () => {
 1. 更新 package.json
    ```json
    {
-     "name": "prism-gateway",
+     "name": "reflectguard",
      "version": "2.4.0",
      "description": "Personal AI Infrastructure - Gateway & Retrospective System"
    }
@@ -930,7 +930,7 @@ describe('TimeUtils Boundaries', () => {
 
 **发布说明内容：**
 ```markdown
-# PRISM-Gateway v2.4.0 Release Notes
+# ReflectGuard v2.4.0 Release Notes
 
 ## Highlights
 - Analytics 模块重构完成
@@ -1289,13 +1289,13 @@ PATCH: 向后兼容的问题修复
 
 | 文档 | 路径 | 说明 |
 |------|------|------|
-| **项目 README** | `/prism-gateway/README.md` | 项目总览 |
+| **项目 README** | `/reflectguard/README.md` | 项目总览 |
 | **开发指南** | `/docs/DEVELOPMENT_GUIDE.md` | 开发流程 |
 | **API 文档** | `/api/REST_API_GUIDE.md` | API 参考 |
 | **测试指南** | `/docs/TESTING_GUIDE.md` | 测试策略 |
 | **部署指南** | `/docs/DEPLOYMENT_GUIDE.md` | 部署流程 |
 | **安全指南** | `/docs/SECURITY_SCAN_GUIDE.md` | 安全最佳实践 |
-| **Analytics 模块** | `/prism-gateway/src/core/analytics/README.md` | Analytics 文档 |
+| **Analytics 模块** | `/reflectguard/src/core/analytics/README.md` | Analytics 文档 |
 
 ### E. 联系方式
 
@@ -1312,11 +1312,11 @@ PATCH: 向后兼容的问题修复
 
 | 版本 | 日期 | 作者 | 变更说明 |
 |------|------|------|----------|
-| 1.0.0 | 2026-02-07 | PRISM-Gateway Team | 初始版本 |
+| 1.0.0 | 2026-02-07 | ReflectGuard Team | 初始版本 |
 
 ---
 
-**文档维护：** PRISM-Gateway Team
+**文档维护：** ReflectGuard Team
 **最后更新：** 2026-02-07
 **下次审查：** 2026-02-14 (Week 9 结束后)
 

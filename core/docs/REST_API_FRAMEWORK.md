@@ -239,7 +239,7 @@ DI状态: {
 
 ---
 
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team
 **许可证：** MIT License
 
 ---

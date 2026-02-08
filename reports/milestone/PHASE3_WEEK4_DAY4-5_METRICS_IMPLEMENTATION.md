@@ -156,7 +156,7 @@ abstract class MetricCollector {
 
 **Directory Structure**:
 ```
-~/.prism-gateway/metrics/
+~/.reflectguard/metrics/
 ├── raw/
 │   ├── system.cpu.usage/
 │   │   └── 1738936800000.jsonl
@@ -294,7 +294,7 @@ import { MetricsService } from './src/infrastructure/metrics';
 // Initialize service
 const service = new MetricsService({
   storage: {
-    storageRoot: '~/.prism-gateway/metrics',
+    storageRoot: '~/.reflectguard/metrics',
     rawRetentionHours: 24,
     oneMinuteRetentionDays: 7
   },
@@ -444,11 +444,11 @@ export type {
 ```typescript
 // Backup metrics data
 await backupService.createBackup('full');
-// Include ~/.prism-gateway/metrics/ in backup
+// Include ~/.reflectguard/metrics/ in backup
 
 // Restore metrics data
 await backupService.restoreBackup(backupId, {
-  targetDir: '~/.prism-gateway/metrics'
+  targetDir: '~/.reflectguard/metrics'
 });
 ```
 

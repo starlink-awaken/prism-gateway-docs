@@ -187,5 +187,5 @@ open coverage/index.html
 ---
 
 **完整报告：** [TEST_COVERAGE_REPORT.md](./TEST_COVERAGE_REPORT.md)
-**维护者：** PRISM-Gateway QA Team
+**维护者：** ReflectGuard QA Team
 **最后更新：** 2026-02-07

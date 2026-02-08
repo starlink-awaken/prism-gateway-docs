@@ -1,8 +1,8 @@
-# PRISM-Gateway 安全扫描使用指南
+# ReflectGuard 安全扫描使用指南
 
 **版本:** 1.0.0
 **更新:** 2026-02-06
-**维护者:** PRISM-Gateway Pentester Agent
+**维护者:** ReflectGuard Pentester Agent
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## 1. 概述
 
-PRISM-Gateway 安全扫描系统是一套**自动化安全测试解决方案**，覆盖：
+ReflectGuard 安全扫描系统是一套**自动化安全测试解决方案**，覆盖：
 
 - **依赖安全扫描** - 检测第三方库漏洞
 - **代码安全扫描** - 检测代码中的安全问题
@@ -136,7 +136,7 @@ bun run security
 ██████╔╝██║██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗██║  ██║
 ╚═════╝ ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
 
-PRISM-Gateway 本地安全扫描
+ReflectGuard 本地安全扫描
 时间: 2026-02-06 10:00:00 UTC
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -537,6 +537,6 @@ brew install gitleaks  # macOS
 
 ---
 
-**维护者:** PRISM-Gateway Pentester Agent
+**维护者:** ReflectGuard Pentester Agent
 **版本:** 1.0.0
 **最后更新:** 2026-02-06

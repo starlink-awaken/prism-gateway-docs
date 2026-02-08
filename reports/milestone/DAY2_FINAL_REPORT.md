@@ -39,7 +39,7 @@
 **问题诊断：**
 ```bash
 # 检查锁文件目录
-ls ~/.prism-gateway/locks/
+ls ~/.reflectguard/locks/
 ├── principles.shared.*      # 20+ 个孤儿文件
 ├── failure-patterns.shared.* # 20+ 个孤儿文件
 └── failure-patterns.shared  # 旧文件（未删除）
@@ -94,7 +94,7 @@ function cleanupTestEnv(): void {
 ### SHARED 锁文件结构
 
 ```
-~/.prism-gateway/locks/
+~/.reflectguard/locks/
 ├── <lockname>.lock/              # EXCLUSIVE 锁目录（写操作）
 │   └── <lockname>.meta           # 锁元数据
 ├── <lockname>.shared.<pid>_<ts>_<rand>  # SHARED 锁文件（读操作）

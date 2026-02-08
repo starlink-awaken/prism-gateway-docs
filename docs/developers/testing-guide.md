@@ -1,6 +1,6 @@
 # 测试指南
 
-PRISM-Gateway 的测试规范和最佳实践。
+ReflectGuard 的测试规范和最佳实践。
 
 ## 测试策略
 

@@ -336,8 +336,8 @@ Ran 1789 tests across 77 files. [47.65s]
 ## 📞 相关报告
 
 - **第一阶段修复报告：** `reports/TEST_FAILURE_FINAL_SUMMARY.md`
-- **测试失败诊断报告：** `prism-gateway/TEST_FAILURE_DIAGNOSIS.md`
-- **测试失败修复报告：** `prism-gateway/TEST_FAILURE_FIX_REPORT.md`
+- **测试失败诊断报告：** `reflectguard/TEST_FAILURE_DIAGNOSIS.md`
+- **测试失败修复报告：** `reflectguard/TEST_FAILURE_FIX_REPORT.md`
 - **项目状态报告：** `reports/PROJECT_STATUS_REPORT.md`
 - **Week 9-10执行报告：** `reports/WEEK9-10_MULTI_TEAM_EXECUTION_REPORT.md`
 

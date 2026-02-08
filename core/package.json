@@ -1,11 +1,12 @@
 {
-  "name": "prism-gateway",
+  "name": "reflectguard",
   "version": "3.0.0",
-  "description": "PRISM-Gateway: 统一的7维度复盘和Gateway系统",
+  "description": "ReflectGuard: 统一的7维度复盘和Gateway系统",
   "type": "module",
   "main": "src/index.ts",
   "bin": {
-    "prism": "src/cli/index.ts"
+    "reflectguard": "src/cli/index.ts",
+    "rguard": "src/cli/index.ts"
   },
   "scripts": {
     "dev": "bun run src/index.ts",
@@ -38,7 +39,9 @@
     "gateway",
     "retrospective",
     "ai",
-    "prism",
+    "reflectguard",
+    "reflect",
+    "guard",
     "cli",
     "7-dimensions"
   ],

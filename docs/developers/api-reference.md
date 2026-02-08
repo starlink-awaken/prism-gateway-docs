@@ -1,6 +1,6 @@
 # API 参考
 
-PRISM-Gateway 的完整 API 参考。
+ReflectGuard 的完整 API 参考。
 
 ## 核心类
 

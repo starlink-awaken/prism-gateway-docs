@@ -1,10 +1,10 @@
-# PRISM-Gateway 架构图与流程图
+# ReflectGuard 架构图与流程图
 
 ## 1. 系统全景架构图
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                         PRISM-Gateway 统一系统                       │
+│                         ReflectGuard 统一系统                       │
 │                   (Principles, Reflection, Insights,                 │
 │                    Standards, Metrics - Gateway)                     │
 ├─────────────────────────────────────────────────────────────────────┤

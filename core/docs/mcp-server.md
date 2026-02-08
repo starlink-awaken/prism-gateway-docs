@@ -1,8 +1,8 @@
-# PRISM-Gateway MCP Server
+# ReflectGuard MCP Server
 
 ## 概述
 
-PRISM-Gateway MCP Server将Gateway违规检查能力暴露为MCP（Model Context Protocol）工具，供AI Agent调用。
+ReflectGuard MCP Server将Gateway违规检查能力暴露为MCP（Model Context Protocol）工具，供AI Agent调用。
 
 ## 安装
 
@@ -12,14 +12,14 @@ bun install
 
 ## 配置
 
-在MCP客户端配置中添加PRISM-Gateway服务器：
+在MCP客户端配置中添加ReflectGuard服务器：
 
 ```json
 {
   "mcpServers": {
-    "prism-gateway": {
+    "reflectguard": {
       "command": "bun",
-      "args": ["/path/to/prism-gateway/src/integration/mcp/index.ts"]
+      "args": ["/path/to/reflectguard/src/integration/mcp/index.ts"]
     }
   }
 }
@@ -232,10 +232,10 @@ await server.stop();
 ```json
 {
   "mcpServers": {
-    "prism-gateway": {
+    "reflectguard": {
       "command": "bun",
       "args": [
-        "/Users/xiamingxing/.prism-gateway/src/integration/mcp/index.ts"
+        "/Users/xiamingxing/.reflectguard/src/integration/mcp/index.ts"
       ]
     }
   }
@@ -249,10 +249,10 @@ await server.stop();
 ```json
 {
   "cline.mcpServers": {
-    "prism-gateway": {
+    "reflectguard": {
       "command": "bun",
       "args": [
-        "/Users/xiamingxing/.prism-gateway/src/integration/mcp/index.ts"
+        "/Users/xiamingxing/.reflectguard/src/integration/mcp/index.ts"
       ]
     }
   }

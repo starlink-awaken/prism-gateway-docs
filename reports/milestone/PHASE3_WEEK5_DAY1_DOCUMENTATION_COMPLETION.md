@@ -29,7 +29,7 @@ Successfully completed **Phase 3 Week 5 Day 1 user documentation phase**, delive
 
 #### 1. CLI Operations Guide
 
-**File**: `prism-gateway/docs/cli/OPERATIONS_CLI_GUIDE.md`
+**File**: `reflectguard/docs/cli/OPERATIONS_CLI_GUIDE.md`
 
 - **Size**: ~26KB
 - **Lines**: ~1,200
@@ -82,7 +82,7 @@ Successfully completed **Phase 3 Week 5 Day 1 user documentation phase**, delive
 
 #### 2. API Operations Reference
 
-**File**: `prism-gateway/docs/api/OPERATIONS_API_REFERENCE.md`
+**File**: `reflectguard/docs/api/OPERATIONS_API_REFERENCE.md`
 
 - **Size**: ~24KB
 - **Lines**: ~1,100
@@ -149,7 +149,7 @@ Successfully completed **Phase 3 Week 5 Day 1 user documentation phase**, delive
 
 #### 3. Operations Troubleshooting Guide
 
-**File**: `prism-gateway/docs/troubleshooting/OPERATIONS_TROUBLESHOOTING.md`
+**File**: `reflectguard/docs/troubleshooting/OPERATIONS_TROUBLESHOOTING.md`
 
 - **Size**: ~17KB
 - **Lines**: ~900
@@ -376,7 +376,7 @@ All documentation includes:
 ### Documentation Structure
 
 ```
-prism-gateway/docs/
+reflectguard/docs/
 ├── api/
 │   └── OPERATIONS_API_REFERENCE.md          ← NEW (24KB)
 ├── cli/

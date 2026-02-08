@@ -1,6 +1,6 @@
 # Migration Guide: v2.x → v3.0
 
-> Complete guide for upgrading PRISM-Gateway from version 2.x to 3.0
+> Complete guide for upgrading ReflectGuard from version 2.x to 3.0
 
 **Target Versions**: 2.0.x - 2.4.x → 3.0.0
 **Migration Time**: 30-60 minutes
@@ -28,7 +28,7 @@
 
 ### What's New in v3.0?
 
-PRISM-Gateway v3.0 introduces production-grade operational infrastructure:
+ReflectGuard v3.0 introduces production-grade operational infrastructure:
 
 **Major Features**:
 - 🔐 **Security Layer**: JWT + RBAC authentication, rate limiting
@@ -72,13 +72,13 @@ Before starting migration, complete these steps:
 
 ```bash
 # Backup data directory
-cp -r ~/.prism-gateway ~/.prism-gateway.backup.$(date +%Y%m%d_%H%M%S)
+cp -r ~/.reflectguard ~/.reflectguard.backup.$(date +%Y%m%d_%H%M%S)
 
 # Backup configuration
 cp config.json config.json.backup
 
 # Verify backup
-ls -lah ~/.prism-gateway.backup.*
+ls -lah ~/.reflectguard.backup.*
 ```
 
 ### 2. Document Current State
@@ -114,7 +114,7 @@ bun --version
 free -h
 
 # Check available disk space
-df -h ~/.prism-gateway
+df -h ~/.reflectguard
 ```
 
 ### 4. Read Release Notes
@@ -142,7 +142,7 @@ df -h ~/.prism-gateway
   "port": 3000,
   "host": "localhost",
   "logLevel": "info",
-  "dataDir": "~/.prism-gateway"
+  "dataDir": "~/.reflectguard"
 }
 ```
 
@@ -162,7 +162,7 @@ df -h ~/.prism-gateway
     "format": "json"
   },
   "data": {
-    "directory": "~/.prism-gateway"
+    "directory": "~/.reflectguard"
   },
   "security": {
     "jwt": {
@@ -278,7 +278,7 @@ Access-Control-Allow-Origin: http://localhost:3000
 #### Step 1.1: Stop Current Services
 
 ```bash
-# Find running PRISM-Gateway processes
+# Find running ReflectGuard processes
 ps aux | grep prism
 
 # Stop API server
@@ -295,20 +295,20 @@ ps aux | grep prism
 mkdir -p ~/prism-migration-backup
 
 # Backup data directory
-cp -r ~/.prism-gateway ~/prism-migration-backup/data
+cp -r ~/.reflectguard ~/prism-migration-backup/data
 
 # Backup configuration
 cp config.json ~/prism-migration-backup/
 cp .env ~/prism-migration-backup/ 2>/dev/null || true
 
 # Backup current installation
-cp -r prism-gateway ~/prism-migration-backup/codebase
+cp -r reflectguard ~/prism-migration-backup/codebase
 ```
 
 #### Step 1.3: Update Repository
 
 ```bash
-cd prism-gateway
+cd reflectguard
 
 # Fetch latest changes
 git fetch origin
@@ -421,7 +421,7 @@ cat > config.json << 'EOF'
     "destination": "file"
   },
   "data": {
-    "directory": "~/.prism-gateway"
+    "directory": "~/.reflectguard"
   },
   "security": {
     "jwt": {
@@ -459,7 +459,7 @@ cat > config.json << 'EOF'
   },
   "backup": {
     "enabled": true,
-    "directory": "~/.prism-gateway/backups",
+    "directory": "~/.reflectguard/backups",
     "schedule": {
       "enabled": true,
       "cron": "0 2 * * *",
@@ -517,7 +517,7 @@ cat > config.json << 'EOF'
       "data": { "enabled": true, "interval": 600 }
     },
     "storage": {
-      "directory": "~/.prism-gateway/metrics",
+      "directory": "~/.reflectguard/metrics",
       "retention": {
         "raw": { "resolution": "1m", "duration": "24h" },
         "hourly": { "resolution": "1h", "duration": "7d" },
@@ -534,7 +534,7 @@ cat > config.json << 'EOF'
       },
       "file": {
         "enabled": true,
-        "path": "~/.prism-gateway/alerts.log"
+        "path": "~/.reflectguard/alerts.log"
       },
       "webhook": {
         "enabled": false,
@@ -620,7 +620,7 @@ bun test
 **Verify data compatibility**:
 ```bash
 # Check data directory structure
-ls -lah ~/.prism-gateway/
+ls -lah ~/.reflectguard/
 
 # Verify data files are readable
 bun run prism data verify
@@ -653,7 +653,7 @@ bun run api:dev
 
 **Expected Output**:
 ```
-🚀 PRISM-Gateway v3.0.0
+🚀 ReflectGuard v3.0.0
 ✓ Configuration loaded successfully
 ✓ JWT authentication enabled
 ✓ RBAC authorization enabled
@@ -776,7 +776,7 @@ curl -X POST -H "Authorization: Bearer $VIEWER_TOKEN" \
   "port": 3000,
   "host": "localhost",
   "logLevel": "info",
-  "dataDir": "~/.prism-gateway",
+  "dataDir": "~/.reflectguard",
   "enableWebSocket": true,
   "corsOrigins": ["*"]
 }
@@ -797,7 +797,7 @@ curl -X POST -H "Authorization: Bearer $VIEWER_TOKEN" \
     "level": "info"
   },
   "data": {
-    "directory": "~/.prism-gateway"
+    "directory": "~/.reflectguard"
   },
   "security": {
     "jwt": {
@@ -962,7 +962,7 @@ Create a test script to verify migration:
 
 set -e
 
-echo "=== PRISM-Gateway v3.0 Migration Test Suite ==="
+echo "=== ReflectGuard v3.0 Migration Test Suite ==="
 
 # Test 1: Health Check
 echo "Test 1: Health check..."
@@ -1058,8 +1058,8 @@ cp ~/prism-migration-backup/config.json ./config.json
 cp ~/prism-migration-backup/.env ./.env 2>/dev/null || true
 
 # 4. Restore data (if modified)
-rm -rf ~/.prism-gateway
-cp -r ~/prism-migration-backup/data ~/.prism-gateway
+rm -rf ~/.reflectguard
+cp -r ~/prism-migration-backup/data ~/.reflectguard
 
 # 5. Start v2.x services
 bun run api
@@ -1140,10 +1140,10 @@ bun run prism metrics collectors list
 
 ```bash
 # Document your configuration
-cp config.json ~/docs/prism-gateway-config-v3.json
+cp config.json ~/docs/reflectguard-config-v3.json
 
 # Document environment variables
-cp .env ~/docs/prism-gateway-env-v3.env
+cp .env ~/docs/reflectguard-env-v3.env
 
 # Update runbooks with v3.0 commands
 # Update monitoring dashboards
@@ -1282,7 +1282,7 @@ RATE_LIMIT_ENABLED=false
 prism backup create
 
 # Or manual backup
-tar -czf prism-backup-$(date +%Y%m%d).tar.gz ~/.prism-gateway/
+tar -czf prism-backup-$(date +%Y%m%d).tar.gz ~/.reflectguard/
 ```
 
 ---
@@ -1344,12 +1344,12 @@ bun run prism health check --all --detailed
 - [API Reference](./API_REFERENCE.md)
 
 **Community**:
-- GitHub Issues: https://github.com/your-org/prism-gateway/issues
-- Discussions: https://github.com/your-org/prism-gateway/discussions
-- Discord: https://discord.gg/prism-gateway
+- GitHub Issues: https://github.com/your-org/reflectguard/issues
+- Discussions: https://github.com/your-org/reflectguard/discussions
+- Discord: https://discord.gg/reflectguard
 
 **Professional Support**:
-- Email: support@prism-gateway.io
+- Email: support@reflectguard.io
 - Migration assistance available
 - Custom deployment consulting
 
@@ -1404,4 +1404,4 @@ Print this checklist and mark items as you complete them:
 **Migration Guide Version**: 1.0
 **Target Version**: 3.0.0
 **Last Updated**: 2026-02-07
-**Maintained By**: PRISM-Gateway Team
+**Maintained By**: ReflectGuard Team

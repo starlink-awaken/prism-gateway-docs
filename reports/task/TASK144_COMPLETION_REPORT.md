@@ -2,7 +2,7 @@
 
 ## 概述
 
-成功实现了PRISM-Gateway的文件锁机制，解决了多个Agent并发写入同一JSON文件导致数据损坏的问题。
+成功实现了ReflectGuard的文件锁机制，解决了多个Agent并发写入同一JSON文件导致数据损坏的问题。
 
 ## ISC标准验证
 

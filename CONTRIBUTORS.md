@@ -1,6 +1,6 @@
-# PRISM-Gateway 贡献者列表
+# ReflectGuard 贡献者列表
 
-> "Standing on the shoulders of giants" - 我们感谢每一位为 PRISM-Gateway 做出贡献的人。
+> "Standing on the shoulders of giants" - 我们感谢每一位为 ReflectGuard 做出贡献的人。
 
 ## 目录
 
@@ -141,7 +141,7 @@
 活跃贡献者可以在个人资料中使用：
 
 ```markdown
-![PRISM-Gateway Contributor](https://img.shields.io/badge/PRISM--Gateway-Contributor-blue)
+![ReflectGuard Contributor](https://img.shields.io/badge/PRISM--Gateway-Contributor-blue)
 ```
 
 ### 贡献者证书
@@ -197,11 +197,11 @@
 
 ## 贡献者墙
 
-> 感谢每一位让 PRISM-Gateway 变得更好的人！
+> 感谢每一位让 ReflectGuard 变得更好的人！
 
 ```
 ╔═══════════════════════════════════════════════════════════════╗
-║                    PRISM-Gateway Contributors                ║
+║                    ReflectGuard Contributors                ║
 ║                                                               ║
 ║  @隔壁老王  ████████████████████████████████████  Founder    ║
 ║                                                               ║

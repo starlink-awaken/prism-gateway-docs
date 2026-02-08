@@ -1,6 +1,6 @@
 # 编码规范
 
-PRISM-Gateway 项目的编码规范和最佳实践。
+ReflectGuard 项目的编码规范和最佳实践。
 
 ## TypeScript 规范
 

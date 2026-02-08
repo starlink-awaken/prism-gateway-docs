@@ -1,4 +1,4 @@
-# PRISM-Gateway 虚拟团队协同工作机制设计
+# ReflectGuard 虚拟团队协同工作机制设计
 
 **版本：** 1.0.0
 **创建时间：** 2026-02-05
@@ -24,7 +24,7 @@
 
 ### 1.1 虚拟团队角色体系回顾
 
-PRISM-Gateway 已定义 **7 个专业 Agent 角色**：
+ReflectGuard 已定义 **7 个专业 Agent 角色**：
 
 | 角色 | 职责 | 推荐模型 | 激活频率 |
 |------|------|----------|----------|
@@ -1133,7 +1133,7 @@ const taskAssignMessage: RoleMessage = {
   subject: "P0 任务：REST API 安全加固",
   body: `
 ## 任务描述
-为 PRISM-Gateway REST API 添加认证、验证和限流机制
+为 ReflectGuard REST API 添加认证、验证和限流机制
 
 ## 优先级
 P0（严重）- 立即开始
@@ -2183,7 +2183,7 @@ interface CollaborationMetrics {
 
 ## 总结
 
-本文档设计了 PRISM-Gateway 虚拟团队协同工作机制，包括：
+本文档设计了 ReflectGuard 虚拟团队协同工作机制，包括：
 
 **核心成果：**
 1. ✅ **任务路由机制** - 自动分类和路由任务到合适的角色
@@ -2210,5 +2210,5 @@ interface CollaborationMetrics {
 
 **文档版本：** 1.0.0
 **最后更新：** 2026-02-05
-**维护者：** PRISM-Gateway Team
+**维护者：** ReflectGuard Team
 **状态：** ✅ 完成

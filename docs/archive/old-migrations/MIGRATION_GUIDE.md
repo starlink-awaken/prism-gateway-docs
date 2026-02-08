@@ -1,8 +1,8 @@
-# PRISM-Gateway 数据迁移指南
+# ReflectGuard 数据迁移指南
 
 ## 概述
 
-本文档提供从 PRISM-Gateway Phase 1 到 Phase 2 的完整数据迁移指南。
+本文档提供从 ReflectGuard Phase 1 到 Phase 2 的完整数据迁移指南。
 
 ### 迁移特点
 
@@ -399,7 +399,7 @@ ls -la ~/.prism-gateway/level-*/
 
 ### 自定义基础路径
 
-如果 PRISM-Gateway 安装在非标准位置：
+如果 ReflectGuard 安装在非标准位置：
 
 ```bash
 prism migrate --path /custom/path/to/prism-gateway
@@ -425,7 +425,7 @@ done
 
 ```yaml
 # GitHub Actions 示例
-- name: 迁移 PRISM-Gateway
+- name: 迁移 ReflectGuard
   run: |
     prism migrate --dry-run
     prism migrate
@@ -438,7 +438,7 @@ done
 
 ### Shadow Migration Pattern
 
-PRISM-Gateway 使用 Shadow Migration Pattern：
+ReflectGuard 使用 Shadow Migration Pattern：
 
 1. **Phase 1 数据永不修改**
 2. **备份在变更前创建**
@@ -475,7 +475,7 @@ Phase 2 完全兼容 Phase 1 数据格式：
 
 如遇到迁移问题，请提供以下信息：
 
-1. PRISM-Gateway 版本
+1. ReflectGuard 版本
 2. 迁移状态输出 (`prism migrate --status`)
 3. 错误日志
 4. 系统环境信息
@@ -551,4 +551,4 @@ Phase 2 完全兼容 Phase 1 数据格式：
 
 **文档版本**: 1.0.0
 **最后更新**: 2026-02-04
-**维护者**: PRISM-Gateway Team
+**维护者**: ReflectGuard Team

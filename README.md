@@ -1,4 +1,4 @@
-# PRISM-Gateway
+# ReflectGuard
 
 > **7维度复盘系统 + AI Agent 行为准则门禁**
 
@@ -9,9 +9,9 @@
 
 ---
 
-## 什么是 PRISM-Gateway？
+## 什么是 ReflectGuard？
 
-PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），帮助你：
+ReflectGuard 是一套**个人 AI 基础设施系统**（Personal AI Infrastructure），帮助你：
 
 - 🛡️ **Gateway（门禁）** - 在任务执行前检查是否违反行为准则
 - 🔄 **Retrospective（复盘）** - 从7个维度（原则、模式、基准、陷阱、成功、工具、数据）全面复盘
@@ -29,7 +29,7 @@ PRISM-Gateway 是一套**个人 AI 基础设施系统**（Personal AI Infrastruc
 
 ```bash
 # 克隆项目
-cd ~/.prism-gateway
+cd ~/.reflectguard
 
 # 安装依赖（需要 Bun >= 1.0）
 bun install
@@ -42,19 +42,21 @@ bun test
 
 ```bash
 # 检查任务意图是否符合原则
-prism check "实现用户登录功能"
+reflectguard check "实现用户登录功能"
+# 或使用简写
+rguard check "实现用户登录功能"
 
 # 执行快速复盘（5分钟）
-prism retro quick
+reflectguard retro quick
 
 # 查看统计数据
-prism stats
+reflectguard stats
 
 # 启动 Web UI
-prism ui
+reflectguard ui
 ```
 
-更多详情请参考 [快速入门指南](prism-gateway/docs/QUICK_START.md)
+更多详情请参考 [快速入门指南](core/docs/QUICK_START.md)
 
 ---
 
@@ -125,7 +127,7 @@ if (result.status === 'BLOCKED') {
 ### 三层 MEMORY 架构
 
 ```
-~/.prism-gateway/
+~/.reflectguard/
 ├── level-1-hot/      # 实时查询（<100ms）
 │   ├── principles.json
 │   └── patterns/
@@ -155,9 +157,9 @@ if (result.status === 'BLOCKED') {
 ## 文档导航
 
 ### 📖 用户文档
-- [快速入门](prism-gateway/docs/QUICK_START.md) - 5分钟上手
-- [配置指南](prism-gateway/docs/CONFIGURATION_GUIDE.md) - 完整配置参考
-- [迁移指南](prism-gateway/docs/MIGRATION_GUIDE_V3.md) - v2.x → v3.0 升级
+- [快速入门](core/docs/QUICK_START.md) - 5分钟上手
+- [配置指南](core/docs/CONFIGURATION_GUIDE.md) - 完整配置参考
+- [迁移指南](core/docs/MIGRATION_GUIDE_V3.md) - v2.x → v3.0 升级
 - [常见问题](FAQ.md)
 
 ### 👨‍💻 开发者文档
@@ -174,7 +176,7 @@ if (result.status === 'BLOCKED') {
 ### 📊 项目状态
 - [项目状态](PROJECT_STATE.md) - 当前进度和规划
 - [变更日志](CHANGELOG.md) - 版本历史
-- [发布说明](prism-gateway/RELEASE_NOTES_V3.0.md) - v3.0.0 新功能
+- [发布说明](core/RELEASE_NOTES_V3.0.md) - v3.0.0 新功能
 
 ---
 
@@ -237,8 +239,8 @@ if (result.status === 'BLOCKED') {
 ### 支持
 
 - 📖 [文档中心](docs/)
-- 💬 [GitHub Discussions](https://github.com/starlink-awaken/prism-gateway-docs/discussions)
-- 🐛 [问题反馈](https://github.com/starlink-awaken/prism-gateway-docs/issues)
+- 💬 [GitHub Discussions](https://github.com/starlink-awaken/reflectguard-docs/discussions)
+- 🐛 [问题反馈](https://github.com/starlink-awaken/reflectguard-docs/issues)
 - 📧 [支持政策](SUPPORT.md)
 
 ---
@@ -251,7 +253,7 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 ## 相关链接
 
-- **主项目:** [prism-gateway/](prism-gateway/)
+- **主项目:** [core/](core/) (核心代码和实现)
 - **文档索引:** [INDEX.md](INDEX.md)
 - **完整文档:** [docs/](docs/)
 - **API 文档:** [api/](api/)

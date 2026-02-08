@@ -1,6 +1,6 @@
-# PRISM-Gateway 快速入门
+# ReflectGuard 快速入门
 
-欢迎来到 PRISM-Gateway！本指南将帮助你在 5 分钟内完成系统安装和首次使用。
+欢迎来到 ReflectGuard！本指南将帮助你在 5 分钟内完成系统安装和首次使用。
 
 ## 前置条件
 
@@ -17,7 +17,7 @@
 cd ~/.prism-gateway
 
 # 或克隆文档仓库
-cd ~/workspace/agent/prism-gateway-docs
+cd ~/workspace/agent/reflectguard-docs
 ```
 
 ### 2. 安装依赖

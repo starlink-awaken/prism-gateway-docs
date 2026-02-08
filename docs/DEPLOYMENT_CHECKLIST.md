@@ -1,4 +1,4 @@
-# PRISM-Gateway 部署快速清单
+# ReflectGuard 部署快速清单
 
 > 部署、验证和运维的快速检查清单
 
@@ -311,6 +311,6 @@ chmod +x collect-info.sh
 
 ---
 
-**文档维护者：** PRISM-Gateway Team
+**文档维护者：** ReflectGuard Team
 **许可证：** MIT License
 **PAI 版本：** 2.5

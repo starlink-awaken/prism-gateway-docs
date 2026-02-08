@@ -1,4 +1,4 @@
-# PRISM-Gateway Migration Rollback Plan
+# ReflectGuard Migration Rollback Plan
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04
@@ -37,7 +37,7 @@ This fundamental design choice makes rollback safe and simple:
 │                                                                 │
 │  Before Migration:                                              │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │ ~/.prism-gateway/                                       │   │
+│  │ ~/.reflectguard/                                       │   │
 │  │ ├── level-1-hot/           [Phase 1 data]               │   │
 │  │ ├── level-2-warm/          [Phase 1 data]               │   │
 │  │ └── level-3-cold/          [Phase 1 data]               │   │
@@ -46,10 +46,10 @@ This fundamental design choice makes rollback safe and simple:
 │                          ▼                                      │
 │  Migration (creates backup and new dirs):                       │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │ ~/.prism-gateway-backup-TIMESTAMP/   [Backup]           │   │
+│  │ ~/.reflectguard-backup-TIMESTAMP/   [Backup]           │   │
 │  │     └── level-*/               [Copy of Phase 1]        │   │
 │  │                                                          │   │
-│  │ ~/.prism-gateway/                                       │   │
+│  │ ~/.reflectguard/                                       │   │
 │  │ ├── level-1-hot/           [UNCHANGED]                  │   │
 │  │ ├── level-2-warm/          [UNCHANGED]                  │   │
 │  │ ├── level-3-cold/          [UNCHANGED]                  │   │
@@ -63,7 +63,7 @@ This fundamental design choice makes rollback safe and simple:
 │                          ▼                                      │
 │  Rollback (remove Phase 2 only):                               │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │ ~/.prism-gateway/                                       │   │
+│  │ ~/.reflectguard/                                       │   │
 │  │ ├── level-1-hot/           [STILL INTACT]               │   │
 │  │ ├── level-2-warm/          [STILL INTACT]               │   │
 │  │ └── level-3-cold/          [STILL INTACT]               │   │
@@ -208,7 +208,7 @@ const ROLLBACK_STEPS: RollbackStep[] = [
     name: 'remove_phase2_directories',
     description: 'Remove Phase 2 specific directories',
     execute: async () => {
-      const basePath = join(homedir(), '.prism-gateway');
+      const basePath = join(homedir(), '.reflectguard');
       const dirs = ['analytics', 'cache', 'config', 'logs', '.migration'];
 
       for (const dir of dirs) {
@@ -219,7 +219,7 @@ const ROLLBACK_STEPS: RollbackStep[] = [
       }
     },
     verify: async () => {
-      const basePath = join(homedir(), '.prism-gateway');
+      const basePath = join(homedir(), '.reflectguard');
       const dirs = ['analytics', 'cache', 'config', 'logs', '.migration'];
 
       for (const dir of dirs) {
@@ -239,7 +239,7 @@ const ROLLBACK_STEPS: RollbackStep[] = [
       // Read and validate Phase 1 data
     },
     verify: async () => {
-      const basePath = join(homedir(), '.prism-gateway');
+      const basePath = join(homedir(), '.reflectguard');
       const principlesPath = join(basePath, 'level-1-hot', 'principles.json');
       return existsSync(principlesPath);
     },
@@ -263,7 +263,7 @@ const ROLLBACK_STEPS: RollbackStep[] = [
     name: 'log_rollback',
     description: 'Log rollback completion',
     execute: async () => {
-      const logPath = join(homedir(), '.prism-gateway', 'rollback-log.json');
+      const logPath = join(homedir(), '.reflectguard', 'rollback-log.json');
       await writeFile(
         logPath,
         JSON.stringify({
@@ -289,7 +289,7 @@ export class RollbackManager {
   private backupPath: string | null;
 
   constructor() {
-    this.basePath = join(homedir(), '.prism-gateway');
+    this.basePath = join(homedir(), '.reflectguard');
     this.backupPath = null;
   }
 
@@ -410,7 +410,7 @@ export async function rollbackCommand(options: {
   reason?: string;
   force?: boolean;
 }): Promise<void> {
-  console.log('=== PRISM-Gateway Rollback ===\n');
+  console.log('=== ReflectGuard Rollback ===\n');
 
   // Confirm unless force flag is set
   if (!options.force) {
@@ -467,7 +467,7 @@ interface RollbackVerification {
 }
 
 async function verifyRollback(): Promise<RollbackVerification[]> {
-  const basePath = join(homedir(), '.prism-gateway');
+  const basePath = join(homedir(), '.reflectguard');
 
   return [
     {
@@ -687,7 +687,7 @@ export class ReMigrationHandler {
     }
 
     // Check for residual Phase 2 files
-    const basePath = join(homedir(), '.prism-gateway');
+    const basePath = join(homedir(), '.reflectguard');
     const phase2Dirs = ['analytics', 'cache', 'config', 'logs', '.migration'];
     for (const dir of phase2Dirs) {
       if (existsSync(join(basePath, dir))) {
@@ -715,7 +715,7 @@ If automated rollback fails:
 #!/bin/bash
 # Emergency manual rollback script
 
-BASE_PATH="$HOME/.prism-gateway"
+BASE_PATH="$HOME/.reflectguard"
 
 echo "=== Emergency Rollback ==="
 echo "Stopping any running services..."
@@ -748,7 +748,7 @@ If Phase 1 data is corrupted:
 # Data recovery from backup
 
 BACKUP_PATH="$1"
-BASE_PATH="$HOME/.prism-gateway"
+BASE_PATH="$HOME/.reflectguard"
 
 if [ -z "$BACKUP_PATH" ]; then
     echo "Usage: $0 <backup_path>"
@@ -809,7 +809,7 @@ echo "Corrupted data saved to: $BASE_PATH.corrupted.*"
 ### B. Rollback Status Output
 
 ```
-=== PRISM-Gateway Rollback Status ===
+=== ReflectGuard Rollback Status ===
 
 Migration State: Not Migrated
 Last Rollback: 2026-02-04T15:30:00Z

@@ -1,4 +1,4 @@
-# PRISM-Gateway 文档中心
+# ReflectGuard 文档中心
 
 > **最后更新：** 2026-02-07
 > **状态：** 按角色分类组织（4个角色，40+ 文档）
@@ -11,7 +11,7 @@
 
 ### 👤 [users/](./users/) - 用户文档（8个）
 
-面向 PRISM-Gateway 最终用户的使用指南。
+面向 ReflectGuard 最终用户的使用指南。
 
 **包含内容：**
 - 快速开始指南
@@ -33,7 +33,7 @@
 
 ### 👨‍💻 [developers/](./developers/) - 开发者文档（7个）
 
-面向 PRISM-Gateway 开发者的技术文档。
+面向 ReflectGuard 开发者的技术文档。
 
 **包含内容：**
 - 开发环境搭建
@@ -295,11 +295,11 @@
 ---
 
 **整理完成时间：** 2026-02-07
-**文档组织者：** PRISM-Gateway Team
+**文档组织者：** ReflectGuard Team
 **文档目标：** 让每个角色的用户都能快速找到所需文档
 **文档原则：** 结构清晰、内容完整、易于查找、持续更新
 
 ---
 
-*PRISM-Gateway 文档中心 - Personal AI Infrastructure*
+*ReflectGuard 文档中心 - Personal AI Infrastructure*
 *版本：v3.0.0*

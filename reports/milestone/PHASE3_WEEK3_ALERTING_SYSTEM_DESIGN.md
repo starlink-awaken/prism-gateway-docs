@@ -11,7 +11,7 @@
 
 ### 1.1 核心目标
 
-为 PRISM-Gateway 系统设计和实现一个智能告警系统，及时通知系统异常和重要事件，支持多种通知渠道和灵活的告警规则。
+为 ReflectGuard 系统设计和实现一个智能告警系统，及时通知系统异常和重要事件，支持多种通知渠道和灵活的告警规则。
 
 **关键要求**:
 - **多渠道通知**: 支持日志、文件、Webhook、邮件等多种渠道
@@ -94,7 +94,7 @@
 │  ┌────────────────────────────────────────────────────────┐     │
 │  │              告警历史 (Alert History)                   │     │
 │  ├────────────────────────────────────────────────────────┤     │
-│  │ ~/.prism-gateway/alerts/                                │     │
+│  │ ~/.reflectguard/alerts/                                │     │
 │  │   ├── active/     (活跃告警)                            │     │
 │  │   ├── history/    (历史告警)                            │     │
 │  │   └── manifest.json (告警索引)                          │     │
@@ -625,7 +625,7 @@ Resolved At: ${alert.resolvedAt?.toISOString()}
 
   private formatEmailBody(alert: Alert): string {
     return `
-PRISM-Gateway Alert
+ReflectGuard Alert
 
 Severity: ${alert.severity.toUpperCase()}
 Source: ${alert.source}
@@ -637,7 +637,7 @@ ${alert.details ? `Details:\n${JSON.stringify(alert.details, null, 2)}` : ''}
 Time: ${alert.timestamp.toISOString()}
 
 ---
-This is an automated alert from PRISM-Gateway.
+This is an automated alert from ReflectGuard.
     `.trim();
   }
 
@@ -1235,5 +1235,5 @@ router.get('/alerts/stats', async (c) => {
 **文档版本**: 1.0.0
 **最后更新**: 2026-02-07
 **作者**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **下一步**: Phase 3 Week 3 实现阶段

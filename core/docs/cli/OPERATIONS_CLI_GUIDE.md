@@ -1,4 +1,4 @@
-# PRISM-Gateway Operations CLI Guide
+# ReflectGuard Operations CLI Guide
 
 > Comprehensive guide for Backup, Health Check, Metrics, and Alerting CLI commands
 
@@ -23,7 +23,7 @@
 
 ## Overview
 
-PRISM-Gateway provides a unified CLI for managing operational tasks:
+ReflectGuard provides a unified CLI for managing operational tasks:
 
 ```bash
 prism <command> [subcommand] [options]
@@ -51,7 +51,7 @@ prism alerts config
 
 ### `prism backup create`
 
-Create a new backup of PRISM-Gateway data.
+Create a new backup of ReflectGuard data.
 
 **Syntax:**
 ```bash
@@ -89,7 +89,7 @@ prism backup create --type full --exclude "*.tmp,*.log"
   Files: 1,234
   Compression: 72.3%
   Duration: 12.4s
-  Location: ~/.prism-gateway/backups/backup_20260207_140512.tar.gz
+  Location: ~/.reflectguard/backups/backup_20260207_140512.tar.gz
 ```
 
 ---
@@ -148,7 +148,7 @@ prism backup restore <backup-id> [options]
 ```
 
 **Options:**
-- `--target, -t <path>` - Target directory for restoration (default: ~/.prism-gateway)
+- `--target, -t <path>` - Target directory for restoration (default: ~/.reflectguard)
 - `--dry-run` - Preview what would be restored without actual restoration
 - `--overwrite` - Overwrite existing files (default: prompt)
 - `--verify` - Verify backup integrity before restoration
@@ -982,9 +982,9 @@ For more information:
 
 - **General Help**: `prism --help`
 - **Command Help**: `prism <command> --help`
-- **Full Documentation**: https://docs.prism-gateway.dev
-- **Issue Tracker**: https://github.com/prism-gateway/prism-gateway/issues
-- **Community**: https://discord.gg/prism-gateway
+- **Full Documentation**: https://docs.reflectguard.dev
+- **Issue Tracker**: https://github.com/reflectguard/reflectguard/issues
+- **Community**: https://discord.gg/reflectguard
 
 ---
 

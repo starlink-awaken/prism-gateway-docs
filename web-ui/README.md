@@ -1,6 +1,6 @@
-# PRISM-Gateway Web UI
+# ReflectGuard Web UI
 
-> Modern React-based dashboard for PRISM-Gateway (Phase 3 Week 2)
+> Modern React-based dashboard for ReflectGuard (Phase 3 Week 2)
 
 **Version:** 2.4.0
 **Status:** 🚧 MVP Development
@@ -294,14 +294,14 @@ CMD ["nginx", "-g", "daemon off;"]
 - **Technology Decision:** `reports/PHASE3_WEEK2_TECH_STACK_DECISION.md`
 - **API Documentation:** `api/analytics-api.md`
 - **Phase 3 Plan:** `reports/PHASE3_ITERATION_PLAN.md`
-- **Main Project:** `prism-gateway/README.md`
+- **Main Project:** `reflectguard/README.md`
 
 ---
 
 ## Contributors
 
 - **Phase 3 Week 2 Lead:** AI Assistant with Claude Sonnet 4.5
-- **Project Owner:** PRISM-Gateway Team
+- **Project Owner:** ReflectGuard Team
 
 ## License
 

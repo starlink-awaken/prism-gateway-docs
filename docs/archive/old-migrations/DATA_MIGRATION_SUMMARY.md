@@ -1,4 +1,4 @@
-# PRISM-Gateway Phase 1 to Phase 2 Data Migration Summary
+# ReflectGuard Phase 1 to Phase 2 Data Migration Summary
 
 **Document Version:** 1.0.0
 **Created:** 2026-02-04
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This document provides a comprehensive overview of the PRISM-Gateway data migration strategy from Phase 1 to Phase 2. The design follows **First Principles** thinking, prioritizing **data integrity** above all else.
+This document provides a comprehensive overview of the ReflectGuard data migration strategy from Phase 1 to Phase 2. The design follows **First Principles** thinking, prioritizing **data integrity** above all else.
 
 ### Key Design Decisions
 

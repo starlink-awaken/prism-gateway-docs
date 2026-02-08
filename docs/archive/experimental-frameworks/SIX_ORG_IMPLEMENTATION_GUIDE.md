@@ -1,4 +1,4 @@
-# PRISM-Gateway 六组织协同实施指南
+# ReflectGuard 六组织协同实施指南
 
 > 从零到一，逐步建立高效协作体系
 
@@ -177,7 +177,7 @@ const ORG_LEADER_FOCUS = {
 # GitHub Projects 配置清单
 
 Projects Board:
-  name: "PRISM-Gateway Development"
+  name: "ReflectGuard Development"
   visibility: private
   templates:
 

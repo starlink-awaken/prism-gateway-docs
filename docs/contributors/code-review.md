@@ -1,6 +1,6 @@
 # 代码审查规范
 
-PRISM-Gateway 项目的代码审查标准和流程。
+ReflectGuard 项目的代码审查标准和流程。
 
 ## 审查目标
 

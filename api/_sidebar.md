@@ -1,4 +1,4 @@
-# PRISM-Gateway API Documentation
+# ReflectGuard API Documentation
 
 - [Home](README.md)
 - [Getting Started](#getting-started)

@@ -11,7 +11,7 @@
 
 ### 整体状态：🟢 成功完成
 
-PRISM-Gateway 成功完成 Week 9-10 所有任务，实现了**多项目组协同开发模式**的首次应用。通过四个专业功能团队（Security、Analytics、Testing、Documentation）的并行协作，在 **10 天内完成了原计划 105 工时的工作**，实际耗时约 **66 工时**（效率提升 **37%**）。
+ReflectGuard 成功完成 Week 9-10 所有任务，实现了**多项目组协同开发模式**的首次应用。通过四个专业功能团队（Security、Analytics、Testing、Documentation）的并行协作，在 **10 天内完成了原计划 105 工时的工作**，实际耗时约 **66 工时**（效率提升 **37%**）。
 
 ### 关键成就
 
@@ -332,7 +332,7 @@ PRISM-Gateway 成功完成 Week 9-10 所有任务，实现了**多项目组协�
 
 - **成果：**
   - ✅ 使用 MIT License
-  - ✅ 包含版权信息（2026 PRISM-Gateway Contributors）
+  - ✅ 包含版权信息（2026 ReflectGuard Contributors）
   - ✅ 所有源文件添加 license header
 
 **创建 SECURITY.md** ✅
@@ -544,7 +544,7 @@ PRISM-Gateway 成功完成 Week 9-10 所有任务，实现了**多项目组协�
 
 ## 📞 联系方式
 
-**项目负责人：** PRISM-Gateway Team
+**项目负责人：** ReflectGuard Team
 **报告生成者：** PAI (Personal AI Infrastructure)
 **报告版本：** 1.0
 **下次审查：** Week 11 结束（2026-02-21）
@@ -558,8 +558,8 @@ PRISM-Gateway 成功完成 Week 9-10 所有任务，实现了**多项目组协�
 ---
 
 **附录：**
-- [Week 9-10 详细路线图](../prism-gateway/WEEK9-10_ROADMAP.md)
+- [Week 9-10 详细路线图](../reflectguard/WEEK9-10_ROADMAP.md)
 - [项目状态报告](./PROJECT_STATUS_REPORT.md)
 - [P2 任务优先级评估](./P2_TASK_PRIORITY_ASSESSMENT.md)
-- [测试覆盖率详细报告](../prism-gateway/TEST_COVERAGE_REPORT.md)
-- [TODO 标记完整清单](../prism-gateway/TODO_MARKERS_REPORT.md)
+- [测试覆盖率详细报告](../reflectguard/TEST_COVERAGE_REPORT.md)
+- [TODO 标记完整清单](../reflectguard/TODO_MARKERS_REPORT.md)

@@ -29,7 +29,7 @@ Successfully completed **Phase 3 Week 5 Day 2-3 documentation polish and quality
 
 #### 1. Main README Update (v3.0.0-rc1)
 
-**File**: `prism-gateway/README.md`
+**File**: `reflectguard/README.md`
 
 - **Size**: ~26KB (from 12KB)
 - **Lines**: ~600 (2x previous version)
@@ -112,7 +112,7 @@ Successfully completed **Phase 3 Week 5 Day 2-3 documentation polish and quality
 
 #### 2. Configuration Reference Guide
 
-**File**: `prism-gateway/docs/CONFIGURATION_GUIDE.md`
+**File**: `reflectguard/docs/CONFIGURATION_GUIDE.md`
 
 - **Size**: ~45KB
 - **Lines**: ~900

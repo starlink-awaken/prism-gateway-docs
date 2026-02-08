@@ -11,7 +11,7 @@
 
 ### 1.1 核心目标
 
-为 PRISM-Gateway 系统设计和实现一个轻量级、可靠的备份服务，确保关键数据的安全性和可恢复性。
+为 ReflectGuard 系统设计和实现一个轻量级、可靠的备份服务，确保关键数据的安全性和可恢复性。
 
 **关键要求**:
 - **轻量级**: 无需外部数据库，基于文件系统
@@ -69,7 +69,7 @@
 │  ┌──────────────────────────────────────────────────────┐   │
 │  │                 备份存储 (Backup Storage)             │   │
 │  ├──────────────────────────────────────────────────────┤   │
-│  │ ~/.prism-gateway/backups/                            │   │
+│  │ ~/.reflectguard/backups/                            │   │
 │  │   ├── full/       (全量备份, 保留 7 天)               │   │
 │  │   ├── incremental/ (增量备份, 保留 30 天)             │   │
 │  │   └── manifest.json (备份元数据索引)                  │   │
@@ -243,7 +243,7 @@ export class BackupEngine {
  * 负责备份文件的组织、索引、清理
  */
 export class StorageManager {
-  private backupRoot: string; // ~/.prism-gateway/backups/
+  private backupRoot: string; // ~/.reflectguard/backups/
   private manifest: BackupManifest;
 
   /**
@@ -660,7 +660,7 @@ export interface FileDiff {
  * 7. 压缩为 full_{timestamp}.tar.gz
  * 8. 计算压缩文件的 SHA256 校验和
  * 9. 创建备份元数据
- * 10. 保存到 ~/.prism-gateway/backups/full/
+ * 10. 保存到 ~/.reflectguard/backups/full/
  * 11. 更新 manifest.json
  * 12. 清理临时目录
  */
@@ -1226,7 +1226,7 @@ prism backup create --type full
 # Backup ID: 20260207T150000_full_abc123
 # Size: 15.2 MB (compressed from 52.3 MB, 71% reduction)
 # Duration: 8.3s
-# Path: ~/.prism-gateway/backups/full/20260207T150000_full_abc123.tar.gz
+# Path: ~/.reflectguard/backups/full/20260207T150000_full_abc123.tar.gz
 
 # 创建增量备份
 prism backup create --type incremental
@@ -1444,7 +1444,7 @@ async function createDifferentialBackup(): Promise<BackupResult> {
  */
 async function createSnapshot(): Promise<BackupResult> {
   // 使用 btrfs subvolume snapshot
-  await exec(`btrfs subvolume snapshot ~/.prism-gateway ~/.prism-gateway/.snapshots/${timestamp}`);
+  await exec(`btrfs subvolume snapshot ~/.reflectguard ~/.reflectguard/.snapshots/${timestamp}`);
 }
 ```
 
@@ -1479,5 +1479,5 @@ interface EncryptionConfig {
 **文档版本**: 1.0.0
 **最后更新**: 2026-02-07
 **作者**: AI Assistant (Claude Sonnet 4.5)
-**审核人**: PRISM-Gateway Team
+**审核人**: ReflectGuard Team
 **下一步**: Task 3.2 健康检查系统设计

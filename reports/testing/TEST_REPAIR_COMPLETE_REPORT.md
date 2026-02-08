@@ -394,8 +394,8 @@ QATester诊断后发现：
 
 - **最终完成报告：** `reports/TEST_FAILURE_FINAL_COMPLETE_REPORT.md`
 - **第一阶段总结：** `reports/TEST_FAILURE_FINAL_SUMMARY.md`
-- **诊断报告：** `prism-gateway/TEST_FAILURE_DIAGNOSIS.md`
-- **修复报告：** `prism-gateway/TEST_FAILURE_FIX_REPORT.md`
+- **诊断报告：** `reflectguard/TEST_FAILURE_DIAGNOSIS.md`
+- **修复报告：** `reflectguard/TEST_FAILURE_FIX_REPORT.md`
 - **项目状态报告：** `reports/PROJECT_STATUS_REPORT.md`
 - **Week 9-10执行报告：** `reports/WEEK9-10_MULTI_TEAM_EXECUTION_REPORT.md`
 

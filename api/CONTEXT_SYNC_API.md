@@ -1,7 +1,7 @@
 # 增量上下文同步 API 文档
 
 > **API 版本：** 1.0.0
-> **基础路径：** `~/.prism-gateway/src/core/context-sync/`
+> **基础路径：** `~/.reflectguard/src/core/context-sync/`
 > **最后更新：** 2026-02-06
 
 ---
@@ -76,7 +76,7 @@ interface ContextSection {
 const exampleSection: ContextSection = {
   id: 'sec-20260206-001',
   title: '项目愿景',
-  content: 'PRISM-Gateway 是一套**个人 AI 基础设施系统**...',
+  content: 'ReflectGuard 是一套**个人 AI 基础设施系统**...',
   lineStart: 38,
   lineEnd: 50,
   hash: 'sha256:a1b2c3d4e5f6...',
@@ -190,7 +190,7 @@ const exampleDelta: ChangeDelta = {
       section: {
         id: 'sec-20260206-001',
         title: '项目愿景',
-        content: 'PRISM-Gateway 是一套**个人 AI 基硃设施系统**（已更新）...',
+        content: 'ReflectGuard 是一套**个人 AI 基硃设施系统**（已更新）...',
         lineStart: 38,
         lineEnd: 50,
         hash: 'sha256:newhash...',
@@ -200,7 +200,7 @@ const exampleDelta: ChangeDelta = {
         createdAt: '2026-02-01T10:00:00Z',
         updatedAt: '2026-02-06T10:30:00Z'
       },
-      diff: '@@ -38,7 +38,7 @@\n-PRISM-Gateway 是一套**个人 AI 基础设施系统**\n+PRISM-Gateway 是一套**个人 AI 基础设施系统**（已更新）',
+      diff: '@@ -38,7 +38,7 @@\n-ReflectGuard 是一套**个人 AI 基础设施系统**\n+ReflectGuard 是一套**个人 AI 基础设施系统**（已更新）',
       diffStats: {
         additions: 1,
         deletions: 1,
@@ -1164,7 +1164,7 @@ interface ContextSyncConfig {
  * 默认配置
  */
 const DEFAULT_CONFIG: ContextSyncConfig = {
-  basePath: '~/.prism-gateway/level-1-hot/context',
+  basePath: '~/.reflectguard/level-1-hot/context',
 
   cache: {
     maxSize: 1000,
